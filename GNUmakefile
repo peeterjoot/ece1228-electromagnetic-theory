@@ -1,5 +1,6 @@
 THISDIR := ece1228-electromagnetic-theory
 THISBOOK := ece1228
+BASEVER := b77152c
 
 include ../latex/make.bookvars
 
