@@ -1,6 +1,5 @@
 THISDIR := ece1228-electromagnetic-theory
 THISBOOK := ece1228
-BASEVER := b77152c
 
 include ../latex/make.bookvars
 
@@ -102,12 +101,12 @@ emtProblemSet9.pdf : emtProblemSet9Problem2.tex
 emtProblemSet9.pdf : emtProblemSet9Problem3.tex
 emtProblemSet9.pdf : ps9mathematica.tex
 
-julia.tex : $(HOME)/physicsplay/julia/METADATA
-mathematica.tex : $(HOME)/physicsplay/mathematica/METADATA
-matlab.tex : $(HOME)/physicsplay/matlab/METADATA
+julia.tex : ../julia/METADATA
+mathematica.tex : ../mathematica/METADATA
+matlab.tex : ../matlab/METADATA
 
-ps5mathematica.tex : ../METADATA $(HOME)/physicsplay/mathematica/METADATA
+ps5mathematica.tex : ../METADATA ../mathematica/METADATA
 	(cd .. ; ./METADATA -mathematica -latex -ece1228 -filter ece1228-emt/ps5/ ) > $@
 
-ps9mathematica.tex : ../METADATA $(HOME)/physicsplay/mathematica/METADATA
+ps9mathematica.tex : ../METADATA ../mathematica/METADATA
 	(cd .. ; ./METADATA -mathematica -latex -ece1228 -filter ece1228-emt/ps9/ ) > $@
