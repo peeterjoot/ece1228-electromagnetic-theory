@@ -26,8 +26,10 @@
 %
 %These are notes for the UofT course ECE1228H, Electromagnetic Theory, taught by Prof. M. Mojahedi, covering \textchapref{{1}} \%citep{balanis1989advanced} content.
 
-\paragraph{Maxwell's equations}
+\paragraph{Conventions for Maxwell's equations}
 \index{Maxwell's equations!time domain}
+
+In these course notes, Maxwell's equations will be written in one of two forms.  The first is the standard bold face vectors, where the fields are assumed to be real.
 
 \begin{itemize}
 \item Faraday's Law
@@ -44,11 +46,43 @@
 \end{dmath}
 \item Gauss's law for magnetism
 \begin{dmath}\label{eqn:emtLecture1:100}
-\spacegrad \cdot \BB(\Br, t) = \rho_{\txtm\txtv}(\Br, t)
+\spacegrad \cdot \BB(\Br, t) = \rho_{\txtm\txtv}(\Br, t),
 \end{dmath}
 \end{itemize}
 
-After unpacking, we have a total of eight equations, with four vectoral field variables, and 8 sources, all interrelated by partial derivatives in space and time coordinates.
+In chapters where frequency domain analysis is used, Maxwell's equations will be written in script
+
+\begin{dmath}\label{eqn:emtLecture1:160}
+\begin{aligned}
+\spacegrad \cross \bcE &= -\PD{t}{\bcB} - \bcM \\
+\spacegrad \cross \bcH &= \PD{t}{\bcD} + \bcJ \\
+\spacegrad \cross \bcB &= q_{mv} \\
+\spacegrad \cross \bcD &= q_{ev} \\
+\end{aligned}
+\end{dmath}
+
+with bold face reserved for complex valued field variables.  In the frequency domain (called time harmonic form in this class), the frequency dependence is of the form
+
+\begin{dmath}\label{eqn:emtLecture1:140}
+   \bcX = \Real\lr{ \BX e^{j\omega t} }.
+\end{dmath}
+
+In this form, Maxwell's equations are
+
+\begin{dmath}\label{eqn:emtLecture1:180}
+\begin{aligned}
+\spacegrad \cross \BE &= -j \omega \BB - \BM \\
+\spacegrad \cross \BH &= j \omega \BD + \BJ \\
+\spacegrad \cross \BB &= \rho_{mv} \\
+\spacegrad \cross \BD &= \rho_{ev} \\
+\end{aligned}
+\end{dmath}
+
+Where there is no ambiguity, bold face vectors will be used, even in the time domain.
+
+\paragraph{Units.}
+
+Regardless of the convensions, after unpacking, we have a total of eight equations, with four vectoral field variables, and 8 sources, all interrelated by partial derivatives in space and time coordinates.
 
 It will be left to homework to show that without the displacement current \( \PDi{t}{\BD} \), these equations will not satisfy conservation relations.
 
