@@ -26,19 +26,19 @@
 %\chapter{Calculating the magnetostatic field from the moment}
 %\label{chap:magneticFieldFromMoment}
 % \citep{jackson1975cew}
-
+%
 \makeproblem{Magnetic field from moment.}{problem:magneticFieldFromMoment:1}{
 The vector potential, to first order, for a magnetostatic localized current distribution was found to be
-
+%
 \begin{dmath}\label{eqn:magneticFieldFromMoment:20}
 \BA(\Bx) = \frac{\mu_0}{4 \pi} \frac{\Bm \cross \Bx}{\Abs{\Bx}^3}.
 \end{dmath}
-
+%
 Use this to calculate the magnetic field.
 } % problem
-
+%
 \makeanswer{problem:magneticFieldFromMoment:1}{\withproblemsetsParagraph{
-
+%
 \index{magnetic field}
 \index{magnetic moment}
 \index{triple cross product}
@@ -65,11 +65,11 @@ Use this to calculate the magnetic field.
 +\Bm \lr{\spacegrad \inv{r^3} } \cdot \Bx
 }.
 \end{dmath}
-
+%
 Here I've used \( \Ba \cross \lr{ \Bb \cross \Bc } = -\Ba \cdot \lr{ \Bb \wedge \Bc } \), and then expanded that with \( \Ba \cdot \lr{ \Bb \wedge \Bc } = (\Ba \cdot \Bb) \Bc - (\Ba \cdot \Bc) \Bb \).  Since one of these vectors is the gradient, care must be taken to have it operate on the appropriate terms in such an expansion.
-
+%
 Since we have \( \spacegrad \cdot \Bx = 3 \), \( (\Bm \cdot \spacegrad) \Bx = \Bm \), and \( \spacegrad 1/r^n = -n \Bx/r^{n+2} \), this reduces to
-
+%
 \begin{dmath}\label{eqn:magneticFieldFromMoment:60}
 \BB
 =
@@ -84,9 +84,9 @@ Since we have \( \spacegrad \cdot \Bx = 3 \), \( (\Bm \cdot \spacegrad) \Bx = \B
 \frac{\mu_0}{4 \pi}
 \frac{3 (\Bm \cdot \ncap) \ncap -\Bm}{r^3},
 \end{dmath}
-
+%
 which is the desired result.
 }} % answer
-
+%
 %}
 %\EndNoBibArticle

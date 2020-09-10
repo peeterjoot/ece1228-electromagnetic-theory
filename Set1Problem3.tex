@@ -6,7 +6,7 @@
 \index{irrotational}
 \makeproblem{Solenoidal and irrotational fields.}{emt:problemSet1:3}{
 In terms of \(\BE\) or \(\BH\) give an example for each of the following conditions:
-
+%
 \makesubproblem{}{emt:problemSet1:3a}
 Field is solenoidal and irrotational.
 \makesubproblem{}{emt:problemSet1:3b}
@@ -16,13 +16,13 @@ Field is non-solenoidal and irrotational.
 \makesubproblem{}{emt:problemSet1:3d}
 Field is non-solenoidal and rotational.
 } % makeproblem
-
+%
 \makeanswer{emt:problemSet1:3}{\withproblemsetsParagraph{
 \makeSubAnswer{}{emt:problemSet1:3a}
-
+%
 We can find a \( \BH \) for which \( \spacegrad \cdot \BH = 0 \) and \( \spacegrad \cross \BH = 0 \).
 For simple media where \( \BB = \mu \BH \), let \( \BH = \mu \spacegrad \cross \BA \).  This automatically satisfies \( \spacegrad \cdot \BH = 0 \), and has curl
-
+%
 \begin{dmath}\label{eqn:emtProblemSet1Problem3:20}
 \spacegrad \cross \BH
 =
@@ -30,18 +30,18 @@ For simple media where \( \BB = \mu \BH \), let \( \BH = \mu \spacegrad \cross \
 =
 \mu \lr{ \spacegrad (\spacegrad \cdot \BA) -\spacegrad^2 \BA} .
 \end{dmath}
-
+%
 Seeking a \( \BA \) for which this is zero, a trial function such as \( \BA = \Be_1 \psi \) seems like a reasonable first try, for which we have
-
+%
 \begin{dmath}\label{eqn:emtProblemSet1Problem3:40}
 \spacegrad \cross \BH
 =
 \mu \lr{ \spacegrad (\partial_x \psi) - \Be_1 \spacegrad^2 \psi}.
 \end{dmath}
-
+%
 If \( \psi \) is any polynomial in \( y \) or \( z\) that has degrees less than two, this will be zero.  One such function is
 \( \BA = A \Be_1 y \), which gives
-
+%
 \begin{dmath}\label{eqn:emtProblemSet1Problem3:60}
 \BH =
 \mu \begin{vmatrix}
@@ -87,7 +87,7 @@ non-solenoidal and irrotational properties
 \end{dmath}
 \makeSubAnswer{}{emt:problemSet1:3d}
 A field \( \BF \) that is non-solenoidal \( \spacegrad \cdot \BF \ne 0 \) and rotational \( \spacegrad \cross \BF \ne 0 \) is sought.
-
+%
 Any electric field solution to the general Maxwell's equations for which there is a non-zero charge density, and a magnetic field component has these characteristics.  In simple media where \( \BD = \epsilon \BE \) such a solution will satisfy both Faraday's law and Gauss's law
 \begin{equation}\label{eqn:emtProblemSet1Problem3:160}
 \begin{aligned}

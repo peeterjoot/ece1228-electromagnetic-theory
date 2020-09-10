@@ -4,43 +4,43 @@
 %
 \makeproblem{Electric Dipole.}{emt:problemSet2:1}{
 \index{dipole!electric}
-
+%
 An electric dipole is shown in \cref{fig:problemset2:problemset2Fig1}.
-
+%
 \imageFigure{../figures/ece1228-electromagnetic-theory/problemset2Fig1}{Electric dipole configuration.}{fig:problemset2:problemset2Fig1}{0.3}
-
+%
 \makesubproblem{}{emt:problemSet2:1b}
 \index{potential!electric dipole}
 Find the Potential \( V \) at an arbitrary point \( \BA \).
-
+%
 \makesubproblem{}{emt:problemSet2:1a}
 Calculate the field \( \BE \) from the above potential.
-
+%
 (show that it is the same result we obtained in the class).
 } % makeproblem
-
+%
 \makeanswer{emt:problemSet2:1}{\withproblemsetsParagraph{
-
+%
 \makeSubAnswer{}{emt:problemSet2:1a}
-
+%
 Following \cref{fig:dipoleSignConventionL3:dipoleSignConventionL3Fig3}, the vector from the origin to the observation point is
-
+%
 %\imageFigure{../figures/ece1228-electromagnetic-theory/dipoleSignConventionL3Fig3}{Dipole sign convention.}{fig:dipoleSignConventionL3:dipoleSignConventionL3Fig3}{0.3}
-
+%
 \begin{equation}\label{eqn:emtProblemSet2Problem1:20}
 \Br = \BR_1 + \Bd/2
 = \BR_2 - \Bd/2,
 \end{equation}
-
+%
 or
-
+%
 \begin{equation}\label{eqn:emtProblemSet2Problem1:40}
 \begin{aligned}
 \BR_1 &= \Br - \Bd/2 \equiv \BR_{+} \\
 \BR_2 &= \Br + \Bd/2 \equiv \BR_{-}.
 \end{aligned}
 \end{equation}
-
+%
 The potential for this superposition is
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:60}
 V
@@ -55,9 +55,9 @@ V
 \frac{1}{\Abs{\BR_{-}}}
 }.
 \end{dmath}
-
+%
 The magnitudes can be expanded in Taylor series
-
+%
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:80}
 \Abs{\BR_{\pm}}^{-1}
 =
@@ -89,9 +89,9 @@ r^{-1}
 + \cdots
 }.
 \end{dmath}
-
+%
 Here \( r = \Abs{\Br} \), and the Taylor series was taken in the \( \Bd \ll r \) limit.  The sums and differences of these magnitudes, are to first order
-
+%
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:100}
 \inv{\Abs{\BR_{+}}}
 -
@@ -101,18 +101,18 @@ Here \( r = \Abs{\Br} \), and the Taylor series was taken in the \( \Bd \ll r \)
 =
 \frac{1}{r^2} \rcap \cdot \Bd,
 \end{dmath}
-
+%
 for
 %\begin{dmath}\label{eqn:emtProblemSet2Problem1:120}
 \boxedEquation{eqn:emtProblemSet2Problem1:120}{
    V = \frac{\rcap \cdot \Bd}{4 \pi \epsilon_0 r^2 }.
 }
 %\end{dmath}
-
+%
 \makeSubAnswer{}{emt:problemSet2:1b}
-
+%
 The electric field follows from \( \BE = -\spacegrad V \).  First note that
-
+%
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:140}
 \spacegrad \inv{r^n}
 =
@@ -122,7 +122,7 @@ The electric field follows from \( \BE = -\spacegrad V \).  First note that
 =
 -n \frac{\rcap}{r^{n+1}}.
 \end{dmath}
-
+%
 Computing the gradient of the dot product, we find
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:160}
 \spacegrad \frac{\rcap}{r^2} \cdot \Bd
@@ -139,17 +139,17 @@ Computing the gradient of the dot product, we find
 =
 \frac{\Bd - 3 (\rcap \cdot \Bd) \rcap}{r^3},
 \end{dmath}
-
+%
 so
-
+%
 \begin{dmath}\label{eqn:emtProblemSet2Problem1:180}
 V(\Br)
 = \frac{q}{4 \pi \epsilon_0}
 \frac{3 (\rcap \cdot \Bd) \rcap -\Bd}{r^3}.
 \end{dmath}
-
+%
 With \( \Bp = q \Bd \), this is the result found in class
-
+%
 %\begin{dmath}\label{eqn:emtProblemSet2Problem1:200}
 \boxedEquation{eqn:emtProblemSet2Problem1:200}{
 V(\Br)

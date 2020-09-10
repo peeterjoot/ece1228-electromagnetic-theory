@@ -25,40 +25,40 @@
 %\generatetitle{Dipole field from multipole moment sum}
 %\chapter{Dipole field from multipole moment sum}
 %\label{chap:dipoleFromSphericalMoments}
-
+%
 \makeproblem{Dipole multipole moment.}{problem:dipoleFromSphericalMoments:1}{
 Following Jackson \citep{jackson1975cew}, derive the electric field contribution from the dipole terms of the multipole sum, but don't skip the details.
 } % problem
-
+%
 \makeanswer{problem:dipoleFromSphericalMoments:1}{\withproblemsetsParagraph{
 The components of the electric field can be obtained directly from the multipole moments
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:20}
 \Phi(\Bx)
 = \inv{4 \pi \epsilon_0} \sum \frac{4 \pi}{ (2 l + 1) r^{l + 1} } q_{l m} Y_{l m},
 \end{dmath}
-
+%
 so for the \( l,m \) contribution to this sum the components of the electric field are
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:40}
 E_r
 =
 \inv{\epsilon_0} \sum \frac{l+1}{ (2 l + 1) r^{l + 2} } q_{l m} Y_{l m},
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:60}
 E_\theta
 = -\inv{\epsilon_0} \sum \frac{1}{ (2 l + 1) r^{l + 2} } q_{l m} \partial_\theta Y_{l m}
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:80}
 E_\phi
 = -\inv{\epsilon_0} \sum \frac{1}{ (2 l + 1) r^{l + 2} \sin\theta } q_{l m} \partial_\phi Y_{l m}
 = -\inv{\epsilon_0} \sum \frac{j m}{ (2 l + 1) r^{l + 2} \sin\theta } q_{l m} Y_{l m}.
 \end{dmath}
-
+%
 Here I've translated from CGS to SI.  Let's calculate the \( l = 1 \) electric field components directly from these expressions and check against the previously calculated results.
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:100}
 E_r
 =
@@ -78,21 +78,21 @@ E_r
 =
 \frac{1}{4 \pi \epsilon_0 r^3} 2 \Bp \cdot \rcap.
 \end{dmath}
-
+%
 Note that
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:120}
 \partial_\theta Y_{11} = -\sqrt{\frac{3}{8\pi}} \cos\theta e^{j \phi},
 \end{dmath}
-
+%
 and
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:140}
 \partial_\theta Y_{1,-1} = \sqrt{\frac{3}{8\pi}} \cos\theta e^{-j \phi},
 \end{dmath}
-
+%
 so
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:160}
 E_\theta
 =
@@ -112,9 +112,9 @@ E_\theta
 =
 -\frac{1}{4 \pi \epsilon_0 r^3} \Bp \cdot \thetacap.
 \end{dmath}
-
+%
 For the \(\phicap\) component, the \( m = 0 \) term is killed.  This leaves
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:180}
 E_\phi
 =
@@ -148,7 +148,7 @@ j q_{11} Y_{11} - j (-1)^{2m} q_{11}^\conj Y_{11}^\conj
 =
 -\frac{\Bp \cdot \phicap}{ 4 \pi \epsilon_0 r^3}.
 \end{dmath}
-
+%
 That is
 %\begin{dmath}\label{eqn:dipoleFromSphericalMoments:200}
 \boxedEquation{eqn:dipoleFromSphericalMoments:200}{
@@ -165,11 +165,11 @@ E_\phi &= -
 \end{aligned}
 }
 %\end{dmath}
-
+%
 These are consistent with equations (4.12) from the text for when \( \Bp \) is aligned with the z-axis.
-
+%
 Observe that we can sum each of the projections of \( \BE \) to construct the total electric field due to this \( l = 1 \) term of the multipole moment sum
-
+%
 \begin{dmath}\label{eqn:dipoleFromSphericalMoments:n}
 \BE
 =
@@ -189,9 +189,9 @@ Observe that we can sum each of the projections of \( \BE \) to construct the to
 \Bp
 },
 \end{dmath}
-
+%
 which recovers the expected dipole moment approximation.
 }} % answer
-
+%
 %}
 %\EndArticle
