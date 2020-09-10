@@ -36,23 +36,17 @@ Instead of integrating over a loop as done in class, a better way to tackle this
 
 \index{Stokes' theorem}
 The form of Stokes' theorem that we want, following the notation of \citep{aMacdonaldVAGC}, is
-
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:80}
 \int_V d^3 \Bx \cdot \lr{ \boldpartial \wedge \BA } = \oint_{\partial V} d^2 \Bx \cdot \BA.
 \end{dmath}
-
 The \R{3} translation of this relation into traditional vector algebra, after applying some duality relations, is
-
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:100}
 \int_V dV \spacegrad \cross \BA = \oint_{\partial V} dA \ncap \cross \BA,
 \end{dmath}
-
 where \( \ncap \) is the outwards normal.  Proving the general multivector Stokes relationship is beyond the scope of this problem, but we can validate
 \cref{eqn:emtProblemSet3Problem1:100} by integrating the LHS over the infinitesimal rectangular prism sketched in \cref{fig:ps3Problem1ElementalVolume:ps3Problem1ElementalVolumeFig1}.
-
 \imageFigure{../figures/ece1228-electromagnetic-theory/ps3Problem1ElementalVolumeFig1}{Elemental volume.}{fig:ps3Problem1ElementalVolume:ps3Problem1ElementalVolumeFig1}{0.2}
-
-\begin{dmath}\label{eqn:emtProblemSet3Problem1:120}
+\begin{equation}\label{eqn:emtProblemSet3Problem1:120}
 \begin{aligned}
 \oint_{\partial V} dA \ncap \cross \BA
 &=
@@ -61,43 +55,33 @@ where \( \ncap \) is the outwards normal.  Proving the general multivector Stoke
 &+\oint_{\partial V} dz dx \Be_2 \cross \lr{ \BA(y_0 + \Delta y) - \BA(y_0) } \\
 &=
 \int_{V} dx dy \Be_3 \cross \lr{ dz \PD{z}{\BA} }
-+\int_{V} dy dz \Be_1 \cross \lr{ dx \PD{x}{\BA} }
-+\int_{V} dz dx \Be_2 \cross \lr{ dy \PD{y}{\BA} } \\
++\int_{V} dy dz \Be_1 \cross \lr{ dx \PD{x}{\BA} } \\
+&\quad +\int_{V} dz dx \Be_2 \cross \lr{ dy \PD{y}{\BA} } \\
 &=
 \int_{V} dx dy dz \spacegrad \cross \BA.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 Now, let's apply this to Ampere-Maxwell equation
-
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:140}
 \spacegrad \cross \BH = \BJ_{ic} + \PD{t}{\BD},
 \end{dmath}
-
 where \( \BJ_{ic} = \BJ_s \delta(y) \).  We have
-
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:160}
 \oint dA \ncap \cross \BH = \int dV \lr{ \BJ_s \delta(y) + \PD{t}{\BD} }.
 \end{dmath}
-
 This integral will be evaluated using the pillbox configuration of \cref{fig:ps3Problem1Pillbox:ps3Problem1PillboxFig1}.
-
 \imageFigure{../figures/ece1228-electromagnetic-theory/ps3Problem1PillboxFig1}{Pillbox integration volume.}{fig:ps3Problem1Pillbox:ps3Problem1PillboxFig1}{0.2}
 
 The delta function picks up only the contribution of \( \int dA \BJ_s(y=0) \), but \( \BJ_s \) only has a value on that surface anyways.  Taking the pillbox volume to zero in the \( \Delta y \rightarrow 0 \) limit, the LHS integral has only contributions from the top and bottom faces of the pillbox, and the \( \BD \) term, which is assumed finite, will get killed.  That leaves
-
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:180}
-\int dA \ncap \cross \lr{ \BH_2 - \BH_1 } = \int dA \BJ_s
+\int dA \ncap \cross \lr{ \BH_2 - \BH_1 } = \int dA \BJ_s.
 \end{dmath}
-
 Both sets of integrands can now be brought under one integral
 \begin{dmath}\label{eqn:emtProblemSet3Problem1:200}
 \int dA \lr{ \ncap \cross \lr{ \BH_2 - \BH_1 } - \BJ_s } = 0.
 \end{dmath}
-
 This is valid for any pillbox surface, so the integrand must be zero,
 which proves the desired boundary relation
-
 %\begin{dmath}\label{eqn:emtProblemSet3Problem1:220}
 \boxedEquation{eqn:emtProblemSet3Problem1:240}{
 \ncap \cross \lr{ \BH_2 - \BH_1 } - \BJ_s = 0.

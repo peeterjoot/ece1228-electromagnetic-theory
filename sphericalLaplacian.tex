@@ -37,20 +37,20 @@
 \index{gradient!spherical coordinates}
 \index{divergence!spherical coordinates}
 \index{curl!spherical coordinates}
-
+%
 \paragraph{Unit vectors}
-
+%
 Two of the spherical unit vectors we can immediately write by inspection.
-
-\begin{dmath}\label{eqn:sphericalLaplacian:20}
+%
+\begin{equation}\label{eqn:sphericalLaplacian:20}
 \begin{aligned}
 \rcap &= \Be_1 \sin\theta \cos\phi + \Be_2 \sin\theta \sin\phi + \Be_3 \cos\theta \\
 \phicap &= -\Be_1 \sin\theta + \Be_2 \cos\phi
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 We can compute \( \thetacap \) by utilizing the right hand triplet property
-
+%
 \begin{dmath}\label{eqn:sphericalLaplacian:40}
 \thetacap
 =
@@ -70,9 +70,9 @@ S_\theta C_\phi & S_\theta S_\phi & C_\theta \\
 +\Be_2 \cos\theta \sin\phi
 -\Be_3 \sin\theta.
 \end{dmath}
-
+%
 Here I've used \( C_\theta = \cos\theta, S_\phi = \sin\phi, \cdots \) as a convenient shorthand.  Observe that with \( i = \Be_1 \Be_2 \), these unit vectors admit a small factorization that makes further manipulation easier
-
+%
 %\begin{dmath}\label{eqn:sphericalLaplacian:80}
 \boxedEquation{eqn:sphericalLaplacian:80}{
 \begin{aligned}
@@ -85,9 +85,9 @@ Here I've used \( C_\theta = \cos\theta, S_\phi = \sin\phi, \cdots \) as a conve
 %\rcap = \Be_1 e^{i\phi} S_\theta + \Be_3 C_\theta
 %\thetacap = C_\theta \Be_1 e^{i\phi} - S_\theta \Be_3
 %\phicap = \Be_2 e^{i\phi}
-
+%
 It should also be the case that \( \rcap \thetacap \phicap = I \), where \( I = \Be_1 \Be_2 \Be_3 = \Be_{123}\) is the \R{3} pseudoscalar, which is straightforward to check
-
+%
 \begin{dmath}\label{eqn:sphericalLaplacian:60}
 \rcap \thetacap \phicap
 =
@@ -102,11 +102,11 @@ It should also be the case that \( \rcap \thetacap \phicap = I \), where \( I = 
 =
 \Be_{123}.
 \end{dmath}
-
+%
 This property could also have been used to compute \(\thetacap\).
-
+%
 \paragraph{Gradient}
-
+%
 To compute the gradient, note that the coordinate vectors for the spherical parameterization are
 \begin{subequations}
 \label{eqn:sphericalLaplacian:100}
@@ -132,7 +132,7 @@ To compute the gradient, note that the coordinate vectors for the spherical para
 = r \sin\theta \phicap.
 \end{dmath}
 \end{subequations}
-
+%
 Since these are all normal, the dual vectors defined by \( \Bx^j \cdot \Bx_k = \delta^j_k \), can be obtained by inspection
 \begin{equation}\label{eqn:sphericalLaplacian:180}
 \begin{aligned}
@@ -141,7 +141,7 @@ Since these are all normal, the dual vectors defined by \( \Bx^j \cdot \Bx_k = \
 \Bx^\phi &= \inv{r \sin\theta} \phicap.
 \end{aligned}
 \end{equation}
-
+%
 The gradient follows immediately
 \begin{dmath}\label{eqn:sphericalLaplacian:200}
 \spacegrad =
@@ -149,7 +149,7 @@ The gradient follows immediately
 \Bx^\theta \PD{\theta}{} +
 \Bx^\phi \PD{\phicap}{},
 \end{dmath}
-
+%
 or
 %\begin{dmath}\label{eqn:sphericalLaplacian:240}
 \boxedEquation{eqn:sphericalLaplacian:240}{
@@ -163,16 +163,16 @@ or
 %\rcap \partial_{r} +
 %\frac{\thetacap}{r} \partial_{\theta} +
 %\frac{\phicap}{r\sin\theta} \partial_{\phi}
-
+%
 More information on this general dual-vector technique of computing the gradient in curvilinear coordinate systems can be found in
 \citep{aMacdonaldVAGC}.
-
+%
 \paragraph{Partials}
-
+%
 To compute the divergence, curl and Laplacian, we'll need the partials of each of the unit vectors \( \PDi{\theta}{\rcap}, \PDi{\phi}{\rcap}, \PDi{\theta}{\thetacap}, \PDi{\phi}{\thetacap}, \PDi{\phi}{\phicap} \).
-
+%
 The \( \thetacap \) partials are
-
+%
 \begin{dmath}\label{eqn:sphericalLaplacian:260}
 \PD{\theta}{\thetacap}
 =
@@ -195,9 +195,9 @@ C_\theta \Be_2 e^{i\phi}
 =
 C_\theta \phicap.
 \end{dmath}
-
+%
 The \( \phicap \) partials are
-
+%
 \begin{dmath}\label{eqn:sphericalLaplacian:300}
 \PD{\theta}{\phicap}
 =
@@ -229,9 +229,9 @@ C_\theta \Be_1 e^{i\phi} - S_\theta \Be_3
 -\rcap S_\theta
 - \thetacap C_\theta.
 \end{dmath}
-
+%
 The \( \rcap \) partials are were computed as a side effect of evaluating \( \Bx_\theta \), and \( \Bx_\phi \), and are
-
+%
 \begin{dmath}\label{eqn:sphericalLaplacian:340}
 \PD{\theta}{\rcap}
 %=
@@ -254,7 +254,7 @@ The \( \rcap \) partials are were computed as a side effect of evaluating \( \Bx
 =
 S_\theta \phicap.
 \end{dmath}
-
+%
 In summary
 %\begin{dmath}\label{eqn:sphericalLaplacian:380}
 \boxedEquation{eqn:sphericalLaplacian:380}{
@@ -268,20 +268,16 @@ In summary
 \end{aligned}
 }
 %\end{dmath}
-
+%
 \paragraph{Divergence and curl.}
-
 The divergence and curl can be computed from the vector product of the spherical coordinate gradient and the spherical representation of a vector.  That is
-
 \begin{equation}\label{eqn:sphericalLaplacian:400}
 \spacegrad \BA
 = \spacegrad \cdot \BA + \spacegrad \wedge \BA
 = \spacegrad \cdot \BA + I \spacegrad \cross \BA.
 \end{equation}
-
 That gradient vector product is
-
-\begin{dmath}\label{eqn:sphericalLaplacian:420}
+\begin{equation}\label{eqn:sphericalLaplacian:420}
 \begin{aligned}
 \spacegrad \BA
 &=
@@ -318,13 +314,12 @@ That gradient vector product is
 +\thetacap \rcap \partial_\theta A_r + \partial_\theta A_\theta + \thetacap \phicap \partial_\theta A_\phi
 } \\
 &+ \frac{1}{r S_\theta}
-\lr{
- \phicap (S_\theta \phicap) A_r + \phicap (C_\theta \phicap) A_\theta - \phicap (\rcap S_\theta + \thetacap C_\theta) A_\phi
-+\phicap \rcap \partial_\phi A_r + \phicap \thetacap \partial_\phi A_\theta + \partial_\phi A_\phi
-}.
+\Bigl(
+ \phicap (S_\theta \phicap) A_r + \phicap (C_\theta \phicap) A_\theta - \phicap (\rcap S_\theta + \thetacap C_\theta) A_\phi \\
+&\qquad+\phicap \rcap \partial_\phi A_r + \phicap \thetacap \partial_\phi A_\theta + \partial_\phi A_\phi
+\Bigr)
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 The scalar component of this is the divergence
 \begin{dmath}\label{eqn:sphericalLaplacian:440}
 \spacegrad \cdot \BA
@@ -350,7 +345,7 @@ C_\theta A_\theta
 C_\theta A_\theta
 + \frac{1}{r S_\theta} \partial_\phi A_\phi,
 \end{dmath}
-
+%
 which can be factored as
 %\begin{dmath}\label{eqn:sphericalLaplacian:460}
 \boxedEquation{eqn:sphericalLaplacian:460}{
@@ -361,7 +356,7 @@ which can be factored as
 + \frac{1}{r S_\theta} \partial_\phi A_\phi.
 }
 %\end{dmath}
-
+%
 The bivector grade of \( \spacegrad \BA \) is the bivector curl
 \begin{dmath}\label{eqn:sphericalLaplacian:480}
 \spacegrad \wedge \BA
@@ -428,36 +423,33 @@ I
 + I \phicap \lr{
      \inv{r} \partial_r (r A_\theta)
    - \inv{r} \partial_\theta A_r
-}
+}.
 \end{dmath}
-
 This gives
 %\begin{dmath}\label{eqn:sphericalLaplacian:500}
 \boxedEquation{eqn:sphericalLaplacian:520}{
+\begin{aligned}
 \spacegrad \cross \BA
-=
+&=
    \rcap \lr{
        \inv{r S_\theta} \partial_\theta (S_\theta A_\phi)
       -\frac{1}{r S_\theta} \partial_\phi A_\theta
-   }
-   + \thetacap \lr{
+   } \\
+&\quad+ \thetacap \lr{
       \frac{1}{r S_\theta} \partial_\phi A_r
       -\inv{r} \partial_r (r A_\phi)
-   }
-   + \phicap \lr{
+   } \\
+&\quad + \phicap \lr{
         \inv{r} \partial_r (r A_\theta)
       - \inv{r} \partial_\theta A_r
    }.
+\end{aligned}
 }
 %\end{dmath}
-
 This and the divergence result above both check against the back cover of \citep{jackson1975cew}.
-
 \paragraph{Laplacian}
-
 Using the divergence and curl it's possible to compute the Laplacian from those, but we saw in cylindrical coordinates that it was much harder to do it that way than to do it directly.
-
-\begin{dmath}\label{eqn:sphericalLaplacian:540}
+\begin{equation}\label{eqn:sphericalLaplacian:540}
 \begin{aligned}
 \spacegrad^2 \psi
 &=
@@ -522,12 +514,10 @@ Using the divergence and curl it's possible to compute the Laplacian from those,
 &
 \quad   + \frac{\phicap}{r S_\theta} (S_\theta \phicap) \partial_{r} \psi
    + \frac{\phicap}{r^2 S_\theta} (C_\theta \phicap) \partial_{\theta} \psi
-   + \frac{\phicap}{r^2 S_\theta^2} (-\rcap S_\theta - \thetacap C_\theta) \partial_{\phi} \psi
+   + \frac{\phicap}{r^2 S_\theta^2} (-\rcap S_\theta - \thetacap C_\theta) \partial_{\phi} \psi.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 All the bivector factors are expected to cancel out, but this should be checked.  Those with an \( \rcap \thetacap \) factor are
-
 \begin{dmath}\label{eqn:sphericalLaplacian:560}
      \partial_r \lr{ \inv{r} \partial_\theta \psi}
    - \frac{1}{r} \partial_{\theta r} \psi
@@ -539,7 +529,6 @@ All the bivector factors are expected to cancel out, but this should be checked.
    + \frac{1}{r^2} \partial_{\theta} \psi
 = 0,
 \end{dmath}
-
 and those with a \( \thetacap \phicap \) factor are
 \begin{dmath}\label{eqn:sphericalLaplacian:580}
      \frac{1}{r^2} \partial_{\theta} \lr{ \frac{1}{S_\theta} \partial_{\phi} \psi }
@@ -552,7 +541,6 @@ and those with a \( \thetacap \phicap \) factor are
    + \frac{1}{r^2 S_\theta^2} C_\theta \partial_{\phi} \psi
 = 0,
 \end{dmath}
-
 and those with a \( \phicap \rcap \) factor are
 \begin{dmath}\label{eqn:sphericalLaplacian:600}
    - \inv{S_\theta} \partial_r \lr{ \inv{r} \partial_\phi \psi }
@@ -565,7 +553,6 @@ and those with a \( \phicap \rcap \) factor are
    - \frac{1}{r^2 S_\theta} \partial_{\phi} \psi
 = 0.
 \end{dmath}
-
 This leaves
 \begin{dmath}\label{eqn:sphericalLaplacian:620}
 \spacegrad^2 \psi
@@ -576,9 +563,7 @@ This leaves
    + \frac{1}{r^2 S_\theta} C_\theta \partial_{\theta}  \psi
    + \frac{1}{r^2 S_\theta^2} \partial_{\phi \phi} \psi.
 \end{dmath}
-
 This factors nicely as
-
 %\begin{dmath}\label{eqn:sphericalLaplacian:640}
 \boxedEquation{eqn:sphericalLaplacian:640}{
 \spacegrad^2 \psi
@@ -589,8 +574,6 @@ This factors nicely as
 ,
 }
 %\end{dmath}
-
 which checks against the back cover of Jackson.  Here it has been demonstrated explicitly that this operator expression is valid for multivector fields \( \psi \) as well as scalar fields \( \psi \).
-
 %}
 %\EndArticle

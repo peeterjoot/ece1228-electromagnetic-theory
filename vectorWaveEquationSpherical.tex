@@ -24,20 +24,20 @@
 %\generatetitle{Vector wave equation in spherical coordinates}
 %\label{chap:vectorWaveEquationSpherical}
 % \citep{jackson1975cew}
-
+%
 For a vector \( \BA \) in spherical coordinates, let's compute the Laplacian
-
+%
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:20}
 \spacegrad^2 \BA,
 \end{dmath}
-
+%
 to see the form of the wave equation.  The spherical vector representation has a curvilinear basis
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:40}
 \BA = \rcap A_r + \thetacap A_\theta + \phicap A_\phi,
 \end{dmath}
-
+%
 and the spherical Laplacian has been found to have the representation
-
+%
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:60}
 \spacegrad^2 \psi
 =
@@ -45,10 +45,10 @@ and the spherical Laplacian has been found to have the representation
    + \frac{1}{r^2 \sin\theta} \PD{\theta}{} \lr{ \sin\theta \PD{\theta}{ \psi } }
    + \frac{1}{r^2 \sin^2\theta} \PDSq{\phi}{ \psi}.
 \end{dmath}
-
+%
 Evaluating the Laplacian will require the following curvilinear basis derivatives
-
-\begin{dmath}\label{eqn:vectorWaveEquationSpherical:80}
+%
+\begin{equation}\label{eqn:vectorWaveEquationSpherical:80}
 \begin{aligned}
 \partial_\theta \rcap      &= \thetacap \\
 \partial_\theta \thetacap  &= -\rcap \\
@@ -57,16 +57,16 @@ Evaluating the Laplacian will require the following curvilinear basis derivative
 \partial_\phi \thetacap    &= C_\theta \phicap \\
 \partial_\phi \phicap      &= -\rcap S_\theta - \thetacap C_\theta.
 \end{aligned}
-\end{dmath}
+\end{equation}
 %s/\\partial_\\theta \\rcap/\\thetacap/cg
 %s/\\partial_\\theta \\thetacap/-\\rcap/cg
 %s/\\partial_\\theta \\phicap/0/cg
 %s/\\partial_\\phi \\rcap/S_\\theta \\phicap/cg
 %s/\\partial_\\phi \\thetacap/C_\\theta \\phicap/cg
 %s/\\partial_\\phi \\phicap/-\\rcap S_\\theta - \\thetacap C_\\theta/cg
-
+%
 We'll need to evaluate a number of derivatives.  Starting with the \( \rcap \) components
-
+%
 \begin{subequations}
 \label{eqn:vectorWaveEquationSpherical:100}
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:120}
@@ -134,9 +134,9 @@ We'll need to evaluate a number of derivatives.  Starting with the \( \rcap \) c
 }
 \end{dmath}
 \end{subequations}
-
+%
 This gives
-
+%
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:180}
 \spacegrad^2 (\rcap A_r)
 =
@@ -190,9 +190,9 @@ This gives
 \phicap
 \frac{2}{r^2 S_\theta} \partial_\phi A_r.
 \end{dmath}
-
+%
 Next, let's compute the derivatives of the \( \thetacap \) projection.
-
+%
 \begin{subequations}
 \label{eqn:vectorWaveEquationSpherical:200}
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:220}
@@ -314,7 +314,7 @@ C_\theta (-\rcap S_\theta - \thetacap C_\theta) \psi
 +2 \phicap C_\theta \partial_\phi \psi,
 \end{dmath}
 \end{subequations}
-
+%
 which gives
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:360}
 \spacegrad^2 (\thetacap A_\theta)
@@ -367,9 +367,9 @@ which gives
    C_\theta \partial_\phi A_\theta
 }.
 \end{dmath}
-
+%
 Finally, we can compute the derivatives of the \( \phicap \) projection.
-
+%
 \begin{subequations}
 \label{eqn:vectorWaveEquationSpherical:280}
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:300}
@@ -413,7 +413,7 @@ Finally, we can compute the derivatives of the \( \phicap \) projection.
 },
 \end{dmath}
 \end{subequations}
-
+%
 which gives
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:380}
 \spacegrad^2 \lr{ \phicap A_\phi }
@@ -441,9 +441,9 @@ which gives
    \spacegrad^2 A_\phi - \inv{r^2} A_\phi
 }.
 \end{dmath}
-
+%
 The vector Laplacian resolves into three augmented scalar wave equations, all highly coupled
-
+%
 %\begin{dmath}\label{eqn:vectorWaveEquationSpherical:420}
 \boxedEquation{eqn:vectorWaveEquationSpherical:420}{
 \begin{aligned}
@@ -457,8 +457,8 @@ The vector Laplacian resolves into three augmented scalar wave equations, all hi
 &=
   \frac{1}{r^2} \frac{C_\theta}{S_\theta} A_r
 + \frac{2}{r^2} \partial_\theta A_r
-- \frac{1}{r^2} C_\theta A_r
-+ \spacegrad^2 A_\theta
+- \frac{1}{r^2} C_\theta A_r \\
+&\quad + \spacegrad^2 A_\theta
 - \inv{r^2} A_\theta
 - \inv{r^2 S_\theta^2} C_\theta^2 A_\theta
 -2 \inv{r^2 S_\theta^2} C_\theta \partial_\phi A_\phi \\
@@ -470,19 +470,15 @@ The vector Laplacian resolves into three augmented scalar wave equations, all hi
 \end{aligned}
 }
 %\end{dmath}
-
 I'd guess one way to decouple these equations would be to impose a constraint that allows all the non-wave equation terms in one of the component equations to be killed, and then substitute that constraint into the remaining equations.  Let's try one such constraint
-
 \begin{dmath}\label{eqn:vectorWaveEquationSpherical:480}
 A_r
 =
 - \inv{S_\theta} \partial_\theta (S_\theta A_\theta)
 - \inv{S_\theta} \partial_\phi A_\phi.
 \end{dmath}
-
 This gives
-
-\begin{dmath}\label{eqn:vectorWaveEquationSpherical:520}
+\begin{equation}\label{eqn:vectorWaveEquationSpherical:520}
 \begin{aligned}
 \rcap \cdot \lr{ \spacegrad^2 \BA }
 &=
@@ -516,11 +512,10 @@ This gives
  -\frac{2}{r^2 S_\theta^2} \partial_{\phi\phi} A_\theta
 + \spacegrad^2 A_\phi - \inv{r^2} A_\phi
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 It looks like some additional cancellations may be had in the \( \thetacap \) projection of this constrained vector Laplacian.  I'm not inclined to try to take this reduction any further without a thorough check of all the algebra (using Mathematica to do so would make sense).
-
+%
 I also guessing that such a solution might be how the \( \textrm{TE}^r \) and \( \textrm{TM}^r \) modes were defined, but that doesn't appear to be the case according to \citep{balanis1989advanced}.  There the wave equation is formulated in terms of the vector potentials (picking one to be zero and the other to be radial only).  The solution obtained from such a potential wave equation then directly defines the \( \textrm{TE}^r \) and \( \textrm{TM}^r \) modes.  It would be interesting to see how the modes derived in that analysis transform with application of the vector Laplacian derived above.
-
+%
 %}
 %\EndArticle

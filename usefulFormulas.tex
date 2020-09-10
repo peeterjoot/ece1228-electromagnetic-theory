@@ -3,7 +3,7 @@
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
 %\paragraph{Useful identities.}
-
+%
 \index{gradient!radial functions}
 %\begin{equation}\label{eqn:emtLecture3:540}
 \begin{equation}\label{eqn:usefulFormulas:620}
@@ -22,7 +22,7 @@
 \begin{equation}\label{eqn:usefulFormulas:680}
 -\spacegrad^2 \inv{R} = 4\pi \delta(\BR)
 \end{equation}
-
+%
 \index{curl}
 \begin{dmath}\label{eqn:emtLecture1:60}
 \spacegrad \cross \Bf
@@ -35,16 +35,16 @@
 f_x & f_y & f_z
 \end{vmatrix}.
 \end{dmath}
-
+%
 \index{Laplacian!decomposition}
 \begin{equation}\label{eqn:usefulFormulas:700}
 \spacegrad \cross \lr{ \spacegrad \cross \BA } = \spacegrad \lr{ \spacegrad \cdot \BA } - \spacegrad^2 \BA.
 \end{equation}
-
+%
 \paragraph{Proofs.}
-
+%
 This result was used in ps1 problem 3,5, and 6.
-
+%
 \index{curl of curl}
 \begin{dmath}\label{eqn:emtProblemSet1Appendix:460}
 \spacegrad \cross \lr{ \spacegrad \cross \BA }
@@ -60,34 +60,34 @@ This result was used in ps1 problem 3,5, and 6.
 =
 \spacegrad \lr{ \spacegrad \cdot \BA } - \spacegrad^2 \BA.
 \end{dmath}
-
+%
 \paragraph{Cylindrical coordinates}
-
-\begin{dmath}\label{eqn:usefulFormulas:720}
+%
+\begin{equation}\label{eqn:usefulFormulas:720}
 \begin{aligned}
 \rhocap &= \Be_1 e^{\Be_1 \Be_2 \phi} \\
 \phicap &= \Be_2 e^{\Be_1 \Be_2 \phi} \\
 \zcap &= \Be_3
 \end{aligned}
-\end{dmath}
-
-\begin{dmath}\label{eqn:usefulFormulas:740}
+\end{equation}
+%
+\begin{equation}\label{eqn:usefulFormulas:740}
 \begin{aligned}
 \partial_\phi \rhocap &= \phicap \\
 \partial_\phi \phicap &= -\rhocap
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 \begin{dmath}\label{eqn:usefulFormulas:760}
 \spacegrad = \rhocap \partial_\rho + \frac{\phicap}{\rho} \partial_\phi + \zcap \partial_z
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:780}
 \spacegrad \cdot \BA
 =
 \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:800}
 \spacegrad \cross \BA
 =
@@ -108,7 +108,7 @@ This result was used in ps1 problem 3,5, and 6.
    - \partial_\phi A_\rho
 }
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:820}
 \spacegrad^2
 =
@@ -116,18 +116,18 @@ This result was used in ps1 problem 3,5, and 6.
 + \frac{1}{\rho^2} \PDSq{\phi}{}
 + \PDSq{z}{}
 \end{dmath}
-
+%
 \paragraph{Spherical coordinates}
-
-\begin{dmath}\label{eqn:usefulFormulas:840}
+%
+\begin{equation}\label{eqn:usefulFormulas:840}
 \begin{aligned}
 \rcap &= \Be_1 e^{i\phi} \sin\theta + \Be_3 \cos\theta \\
 \thetacap &= \cos\theta \Be_1 e^{i\phi} - \sin\theta \Be_3 \\
 \phicap &= \Be_2 e^{i\phi}
 \end{aligned}
-\end{dmath}
-
-\begin{dmath}\label{eqn:usefulFormulas:860}
+\end{equation}
+%
+\begin{equation}\label{eqn:usefulFormulas:860}
 \begin{aligned}
 \partial_{\theta}{\rcap}      &= \thetacap \\
 \partial_{\phi}{\rcap}        &= S_\theta \phicap \\
@@ -136,8 +136,8 @@ This result was used in ps1 problem 3,5, and 6.
 \partial_{\theta}{\phicap}    &= 0 \\
 \partial_{\phi}{\phicap}      &= -\rcap S_\theta - \thetacap C_\theta.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 \begin{dmath}\label{eqn:usefulFormulas:880}
 \spacegrad
 =
@@ -145,7 +145,7 @@ This result was used in ps1 problem 3,5, and 6.
 \frac{\thetacap}{r} \PD{\theta}{} +
 \frac{\phicap}{r\sin\theta} \PD{\phicap}{}.
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:900}
 \spacegrad \cdot \BA
 =
@@ -153,7 +153,7 @@ This result was used in ps1 problem 3,5, and 6.
 + \inv{r S_\theta} \partial_\theta (S_\theta A_\theta)
 + \frac{1}{r S_\theta} \partial_\phi A_\phi.
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:920}
 \spacegrad \cross \BA
 =
@@ -170,7 +170,7 @@ This result was used in ps1 problem 3,5, and 6.
       - \inv{r} \partial_\theta A_r
    }
 \end{dmath}
-
+%
 \begin{dmath}\label{eqn:usefulFormulas:940}
 \spacegrad^2 \psi
 =
@@ -178,11 +178,11 @@ This result was used in ps1 problem 3,5, and 6.
    + \frac{1}{r^2 \sin\theta} \PD{\theta}{} \lr{ \sin\theta \PD{\theta}{ \psi } }
    + \frac{1}{r^2 \sin^2\theta} \PDSq{\phi}{ \psi}
 \end{dmath}
-
+%
 \paragraph{Vector calculus.}
-
+%
 Enumerate various vc theorems (divergence, curl, the cross product version used in the BC problem, ...)
-
+%
 \paragraph{Normal and tangential decomposition.}
-
+%
 \input{emtProblemSet3Appendix.tex}

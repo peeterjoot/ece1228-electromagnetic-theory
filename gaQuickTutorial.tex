@@ -2,16 +2,16 @@
 % Copyright © 2016 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-
+%
 Having used Geometric Algebra in a couple problems, it is justified to provide an overview.  Further details can be found in
 \citep{dorst2007gac},
 \citep{doran2003gap},
 \citep{aMacdonaldVAGC},
 and
 \citep{hestenes1999nfc}.
-
+%
 Geometric Algebra defines a non-commutative, associative vector product
-
+%
 \begin{equation}\label{eqn:gaTutorial:20}
 \Ba \Bb \Bc
 =
@@ -19,26 +19,26 @@ Geometric Algebra defines a non-commutative, associative vector product
 =
 \Ba (\Bb \Bc),
 \end{equation}
-
+%
 where the square of a vector equals the squared vector magnitude
-
+%
 \begin{dmath}\label{eqn:gaTutorial:40}
 \Ba^2 = \Abs{\Ba}^2,
 \end{dmath}
-
+%
 In Euclidean spaces such a squared vector is always positive, but that is not necessarily the case in the mixed signature spaces used in special relativity.
-
+%
 There are a number of consequences of these two simple vector multiplication rules.
-
+%
 \begin{itemize}
 \item Squared unit vectors have a unit magnitude (up to a sign).  In a Euclidean space such a product is always positive
-
+%
 \begin{dmath}\label{eqn:gaTutorial:60}
 (\Be_1)^2 = 1.
 \end{dmath}
-
+%
 \item Products of perpendicular vectors anticommute.
-
+%
 \begin{dmath}\label{eqn:gaTutorial:80}
 2
 =
@@ -47,18 +47,18 @@ There are a number of consequences of these two simple vector multiplication rul
 = \Be_1^2 + \Be_2 \Be_1 + \Be_1 \Be_2 + \Be_2^2
 = 2 + \Be_2 \Be_1 + \Be_1 \Be_2.
 \end{dmath}
-
+%
 A product of two perpendicular vectors is called a bivector, and can be used to represent an oriented plane.  The last line above shows an example of a scalar and bivector sum, called a multivector.  In general Geometric Algebra allows sums of scalars, vectors, bivectors, and higher degree analogues (grades) be summed.
-
+%
 Comparison of the RHS and LHS of \cref{eqn:gaTutorial:80} shows that we must have
-
+%
 \begin{dmath}\label{eqn:gaTutorial:100}
 \Be_2 \Be_1 = -\Be_1 \Be_2.
 \end{dmath}
-
+%
 It is true in general that the product of two perpendicular vectors anticommutes.  When, as above, such a product is a product of
 two orthonormal vectors, it behaves like a non-commutative imaginary quantity, as it has an imaginary square in Euclidean spaces
-
+%
 \begin{dmath}\label{eqn:gaTutorial:120}
 (\Be_1 \Be_2)^2
 =
@@ -75,18 +75,18 @@ two orthonormal vectors, it behaves like a non-commutative imaginary quantity, a
 (\Be_2 \Be_2)
 =-1.
 \end{dmath}
-
+%
 Such ``imaginary'' (unit bivectors) have important applications describing rotations in Euclidean spaces, and boosts in Minkowski spaces.
-
+%
 \item
 The product of three perpendicular vectors, such as
-
+%
 \begin{dmath}\label{eqn:gaTutorial:140}
 I = \Be_1 \Be_2 \Be_3,
 \end{dmath}
-
+%
 is called a trivector.  In \R{3}, the product of three orthonormal vectors is called a pseudoscalar for the space, and can represent an oriented volume element.  The quantity \( I \) above is the typical orientation picked for the \R{3} unit pseudoscalar.  This quantity also has characteristics of an imaginary number
-
+%
 \begin{dmath}\label{eqn:gaTutorial:160}
 I^2
 =
@@ -112,9 +112,9 @@ I^2
 =
 -1.
 \end{dmath}
-
+%
 \item The product of two vectors in \R{3} can be expressed as the sum of a symmetric scalar product and antisymmetric bivector product
-
+%
 \begin{dmath}\label{eqn:gaTutorial:480}
 \Ba \Bb
 =
@@ -128,23 +128,22 @@ I^2
 +
 \sum_{0 < i < j \le n} \Be_i \Be_j (a_i b_j - a_j b_i).
 \end{dmath}
-
+%
 The first (symmetric) term is clearly the dot product.  The antisymmetric term is designated the wedge product.  In general these are written
-
+%
 \begin{dmath}\label{eqn:gaTutorial:500}
 \Ba \Bb = \Ba \cdot \Bb + \Ba \wedge \Bb,
 \end{dmath}
-
 where
-\begin{dmath}\label{eqn:gaTutorial:520}
+\begin{equation}\label{eqn:gaTutorial:520}
 \begin{aligned}
 \Ba \cdot \Bb &\equiv \inv{2} \lr{ \Ba \Bb + \Bb \Ba } \\
 \Ba \wedge \Bb &\equiv \inv{2} \lr{ \Ba \Bb - \Bb \Ba },
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 The coordinate expansion of both can be seen above, but in \R{3} the wedge can also be written
-
+%
 \begin{equation}\label{eqn:gaTutorial:540}
 \Ba \wedge \Bb
 =
@@ -154,25 +153,25 @@ The coordinate expansion of both can be seen above, but in \R{3} the wedge can a
 I
 (\Ba \cross \Bb).
 \end{equation}
-
+%
 This allows for an handy dot plus cross product expansion of the vector product
-
+%
 \begin{dmath}\label{eqn:gaTutorial:180}
 \Ba \Bb = \Ba \cdot \Bb + I (\Ba \cross \Bb).
 \end{dmath}
-
+%
 This result should be familiar to the student of quantum spin states where one writes
-
+%
 \begin{dmath}\label{eqn:gaTutorial:200}
 (\Bsigma \cdot \Ba) (\Bsigma \cdot \Bb) = (\Ba \cdot \Bb) + i (\Ba \cross \Bb) \cdot \Bsigma.
 \end{dmath}
-
+%
 This correspondence is because the Pauli spin basis is a specific matrix representation of a Geometric Algebra, satisfying the same commutator and anticommutator relationships.  A number of other algebra structures, such as complex numbers, and quaterions can also be modelled as Geometric Algebra elements.
 \item It is often useful to utilize the grade selection operator
 \( \gpgrade{M}{n} \) and scalar grade selection operator \( \gpgradezero{M} = \gpgrade{M}{0} \)
 to select the scalar, vector, bivector, trivector, or higher grade algebraic elements.  For example, operating on vectors \( \Ba, \Bb, \Bc \), we have
-
-\begin{dmath}\label{eqn:gaTutorial:580}
+%
+\begin{equation}\label{eqn:gaTutorial:580}
 \begin{aligned}
 \gpgradezero{ \Ba \Bb }
 &= \Ba \cdot \Bb \\
@@ -192,18 +191,18 @@ to select the scalar, vector, bivector, trivector, or higher grade algebraic ele
 \gpgradethree{\Ba \Bb \Bc} &=
 \Ba \wedge \Bb \wedge \Bc.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Note that the wedge product of any number of vectors such as \( \Ba \wedge \Bb \wedge \Bc \) is associative and can be expressed in terms of the complete antisymmetrization of the product of those vectors.  A consequence of that is the fact a wedge product that includes any colinear vectors in the product is zero.
 \end{itemize}
-
+%
 \makeexample{Helmholz equations.}{example:emtProblemSet1Appendix:1}{
-
+%
 As an example of the power of \cref{eqn:gaTutorial:180}, consider the following Helmholtz equation derivation (wave equations for the electric and magnetic fields in the frequency domain.)
-
+%
 Application of \cref{eqn:gaTutorial:180} to
 Maxwell equations in the frequency domain for source free simple media gives
-
+%
 \begin{subequations}
 \label{eqn:emtProblemSet1Problem6:340}
 \begin{dmath}\label{eqn:emtProblemSet1Problem6:360}
@@ -213,11 +212,11 @@ Maxwell equations in the frequency domain for source free simple media gives
 \spacegrad I \BB = -j \omega \mu \epsilon \BE.
 \end{dmath}
 \end{subequations}
-
+%
 These equations use the engineering (not physics) sign convention for the phasors where the time domain fields are of the form \( \bcE(\Br, t) = \Real( \BE e^{j\omega t}) \).
-
+%
 Operation with the gradient from the left produces the Helmholtz equation for each of the fields using nothing more than multiplication and simple substitution
-
+%
 \begin{subequations}
 \label{eqn:emtProblemSet1Problem6:400}
 \begin{dmath}\label{eqn:emtProblemSet1Problem6:420}
@@ -227,23 +226,23 @@ Operation with the gradient from the left produces the Helmholtz equation for ea
 \spacegrad^2 I \BB = - \mu \epsilon \omega^2 I \BB.
 \end{dmath}
 \end{subequations}
-
+%
 There was no reason to go through the headache of looking up or deriving the expansion of \( \spacegrad \cross (\spacegrad \cross \BA ) \) as is required with the traditional vector algebra demonstration of these identities.
-
+%
 Observe that the usual Helmholtz equation for \( \BB \) doesn't have a pseudoscalar factor.  That result can be obtained by just cancelling the factors \( I \) since the \R{3} Euclidean pseudoscalar commutes with all grades (this isn't the case in \R{2} nor in Minkowski spaces.)
 } % example
-
+%
 \makeexample{Factoring the Laplacian.}{example:emtProblemSet1Appendix:2}{
-
+%
 There are various ways to demonstrate the identity
 %In \cref{eqn:gaTutorial:460} the identity
-
+%
 \begin{dmath}\label{eqn:gaTutorial:660}
 \spacegrad \cross \lr{ \spacegrad \cross \BA } = \spacegrad \lr{ \spacegrad \cdot \BA } - \spacegrad^2 \BA,
 \end{dmath}
-
+%
 such as the use of (somewhat obscure) tensor contraction techniques.  We can also do this with Geometric Algebra (using a different set of obscure techniques) by factoring the Laplacian action on a vector
-
+%
 \begin{dmath}\label{eqn:gaTutorial:700}
 \spacegrad^2 \BA
 =
@@ -261,7 +260,7 @@ such as the use of (somewhat obscure) tensor contraction techniques.  We can als
 +
 \spacegrad \cdot (\spacegrad \wedge \BA).
 \end{dmath}
-
+%
 Should we wish to express the last term using cross products, a grade one selection operation can be used
 \begin{dmath}\label{eqn:gaTutorial:680}
 \spacegrad \cdot (\spacegrad \wedge \BA)
@@ -276,7 +275,7 @@ Should we wish to express the last term using cross products, a grade one select
 =
 -\spacegrad \cross (\spacegrad \cross \BA).
 \end{dmath}
-
+%
 Here coordinate expansion was not required in any step.
 } % example
-
+%

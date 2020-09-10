@@ -102,40 +102,34 @@ This matches \cref{eqn:emtProblemSet2Problem2:120} as expected.
 For the finite problem, there is still rotational symmetry, but the \( \zcap \) term of the field is no longer cancelled out, and we have a \( z \) dependence in the field.
 
 Let
-\begin{dmath}\label{eqn:emtProblemSet2Problem2:240}
+\begin{equation}\label{eqn:emtProblemSet2Problem2:240}
 \begin{aligned}
 \BA &= z \zcap + \rho\rhocap \\
 \Br' &= z' \zcap,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 for which
-
-\begin{dmath}\label{eqn:emtProblemSet2Problem2:260}
+\begin{equation}\label{eqn:emtProblemSet2Problem2:260}
 \begin{aligned}
 \BA - \Br' &= (z - z') \zcap + \rho \rhocap \\
 \Abs{\BA - \Br'}^2 &= (z - z')^2 + \rho^2.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 \begin{dmath}\label{eqn:emtProblemSet2Problem2:180}
 \BE(\BA)
 =
 \frac{\rho_l}{ 4 \pi \epsilon_0 } \int_{a}^b dz \frac{ \rho \rhocap + (z - z') \zcap }{ \lr{\rho^2 + (z-z')^2}^{3/2} }.
 \end{dmath}
-
 Let \( z' - z = \rho u \), for
 \begin{dmath}\label{eqn:emtProblemSet2Problem2:280}
 \BE(\rho, z)
 =
 \frac{\rho_l}{ 4 \pi \epsilon_0 \rho } \int_{(a-z)/\rho}^{(b-z)/\rho} du \frac{ \rhocap - u \zcap }{ \lr{1 + u^2}^{3/2} }.
 \end{dmath}
-
 Note that
 \begin{dmath}\label{eqn:emtProblemSet2Problem2:200}
 \int du \frac{ u }{ \lr{1 + u^2}^{3/2} } = -\inv{\sqrt{1 + u^2}},
 \end{dmath}
-
 so
 \begin{dmath}\label{eqn:emtProblemSet2Problem2:220}
 \BE(\rho, z) =
@@ -145,7 +139,6 @@ so
 \evalrange{ \frac{u \rhocap}{\sqrt{1 + u^2}} }{(a-z)/\rho}{(b-z)/\rho}
 }.
 \end{dmath}
-
 This expands to
 %\begin{dmath}\label{eqn:emtProblemSet2Problem2:300}
 \boxedEquation{eqn:emtProblemSet2Problem2:320}{
@@ -157,6 +150,5 @@ This expands to
 }.
 }
 %\end{dmath}
-
 Observe that we recover \cref{eqn:emtProblemSet2Problem2:120} when \( z = 0, a = -b, b \rightarrow \infty \), as expected.
 }}

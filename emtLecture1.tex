@@ -17,7 +17,7 @@
 %
 %\beginArtNoToc
 %\generatetitle{ECE1228H Electromagnetic Theory.  Lecture 1: Introduction.  Taught by Prof.\ M. Mojahedi}
-\chapter{Introduction}
+\mychapter{Introduction.}
 %\label{chap:emt1}
 %
 %\paragraph{Disclaimer}
@@ -25,12 +25,12 @@
 %Peeter's lecture notes from class.  These may be incoherent and rough.
 %
 %These are notes for the UofT course ECE1228H, Electromagnetic Theory, taught by Prof. M. Mojahedi, covering \textchapref{{1}} \%citep{balanis1989advanced} content.
-
+%
 \paragraph{Conventions for Maxwell's equations}
 \index{Maxwell's equations!time domain}
-
+%
 In these course notes, Maxwell's equations will be written in one of two forms.  The first is the standard bold face vectors, where the fields are assumed to be real.
-
+%
 \begin{itemize}
 \item Faraday's Law
 \begin{dmath}\label{eqn:emtLecture1:20}
@@ -49,43 +49,43 @@ In these course notes, Maxwell's equations will be written in one of two forms. 
 \spacegrad \cdot \BB(\Br, t) = \rho_{\txtm\txtv}(\Br, t),
 \end{dmath}
 \end{itemize}
-
+%
 In chapters where frequency domain analysis is used, Maxwell's equations will be written in script
-
-\begin{dmath}\label{eqn:emtLecture1:160}
+%
+\begin{equation}\label{eqn:emtLecture1:160}
 \begin{aligned}
 \spacegrad \cross \bcE &= -\PD{t}{\bcB} - \bcM \\
 \spacegrad \cross \bcH &= \PD{t}{\bcD} + \bcJ \\
 \spacegrad \cross \bcB &= q_{mv} \\
 \spacegrad \cross \bcD &= q_{ev} \\
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 with bold face reserved for complex valued field variables.  In the frequency domain (called time harmonic form in this class), the frequency dependence is of the form
-
+%
 \begin{dmath}\label{eqn:emtLecture1:140}
    \bcX = \Real\lr{ \BX e^{j\omega t} }.
 \end{dmath}
-
+%
 In this form, Maxwell's equations are
-
-\begin{dmath}\label{eqn:emtLecture1:180}
+%
+\begin{equation}\label{eqn:emtLecture1:180}
 \begin{aligned}
 \spacegrad \cross \BE &= -j \omega \BB - \BM \\
 \spacegrad \cross \BH &= j \omega \BD + \BJ \\
 \spacegrad \cross \BB &= \rho_{mv} \\
 \spacegrad \cross \BD &= \rho_{ev} \\
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Where there is no ambiguity, bold face vectors will be used, even in the time domain.
-
+%
 \paragraph{Units.}
-
+%
 Regardless of the convensions, after unpacking, we have a total of eight equations, with four vectoral field variables, and 8 sources, all interrelated by partial derivatives in space and time coordinates.
-
+%
 It will be left to homework to show that without the displacement current \( \PDi{t}{\BD} \), these equations will not satisfy conservation relations.
-
+%
 The fields are and sources are
 \index{units}
 \begin{itemize}
@@ -98,15 +98,15 @@ The fields are and sources are
 \item \( \BJ_{\txtc} \) Impressed (source) electric current density \si{A/m^2}.  This is the charge passing through a plane in a unit time.  Here \( \txtc \) is for ``conduction''.
 \item \( \BM_{\txti} \) Impressed (source) magnetic current density \si{V/m^2}
 \end{itemize}
-
+%
 In an undergrad context we'll have seen the electric and magnetic fields in the Lorentz force law
-
+%
 \begin{dmath}\label{eqn:emtLecture1:120}
 \BF = q \Bv \cross \BB + q\BE.
 \end{dmath}
-
+%
 In SI there are 7 basic units.  These include
-
+%
 \begin{itemize}
 \item Length \si{m}.
 \item mass \si{kg}.
@@ -120,10 +120,10 @@ In SI there are 7 basic units.  These include
 \item Mole (amount of substance)
 \index{unit!mole}
 \end{itemize}
-
+%
 \index{unit!Coulomb}
 Note that the Coulomb is not a fundamental unit, but the Ampere is.  This is because it is easier to measure.
 
 For homework: show that magnetic field lines must close on themselves when there are no magnetic sources (zero divergence).  This is opposed to electric fields that spread out from the charge.
-
+%
 %\EndNoBibArticle

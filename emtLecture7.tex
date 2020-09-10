@@ -18,17 +18,16 @@
 %
 %\beginArtNoToc
 %\generatetitle{ECE1228H Electromagnetic Theory.  Lecture 8: Wave equation.  Taught by Prof.\ M. Mojahedi}
-\chapter{Wave equation}
+\mychapter{Wave equation.}
 %\label{chap:emt7}
-
+%
 %\paragraph{Disclaimer}
 %
 %Peeter's lecture notes from class.  These may be incoherent and rough.
 %
 %These are notes for the UofT course ECE1228H, Electromagnetic Theory, taught by Prof. M. Mojahedi, covering \textchapref{{1}} \citep{balanis1989advanced} content.
 %
-\paragraph{Wave equation}
-
+\paragraph{Wave equation.}
 Using an expansion of the triple cross product in terms of the Laplacian
 \begin{dmath}\label{eqn:emtLecture7:40}
 \spacegrad \cross \lr{ \spacegrad \cross \Bf }
@@ -38,36 +37,33 @@ Using an expansion of the triple cross product in terms of the Laplacian
 -\spacegrad^2 \Bf
 + \spacegrad \lr{ \spacegrad \cdot \Bf },
 \end{dmath}
-
 we can evaluate the cross products
-
-\begin{dmath}\label{eqn:emtLecture7:60}
+\begin{equation}\label{eqn:emtLecture7:60}
 \begin{aligned}
 \spacegrad \cross \lr{ \spacegrad \cross \bcE } &= \spacegrad \cross \lr{ -\PD{t}{\bcB} - \bcM } \\
 \spacegrad \cross \lr{ \spacegrad \cross \bcH } &= \spacegrad \cross \lr{ \PD{t}{\bcD} + \bcJ },
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtLecture7:80}
+\begin{equation}\label{eqn:emtLecture7:80}
 \begin{aligned}
 -\spacegrad^2 \bcE + \spacegrad \lr{ \spacegrad \cdot \bcE } &= -\mu \PD{t}{} \spacegrad \cross \bcH - \spacegrad \cross \bcM \\
 -\spacegrad^2 \bcH + \spacegrad \lr{ \spacegrad \cdot \bcH } &= \epsilon \PD{t}{} \lr{ \spacegrad \cross \bcE } + \spacegrad \cross \bcJ,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 or
-
-\begin{dmath}\label{eqn:emtLecture7:100}
+%
+\begin{equation}\label{eqn:emtLecture7:100}
 \begin{aligned}
 -\spacegrad^2 \bcE + \inv{\epsilon} \spacegrad \rho_{ev} &= -\mu \PD{t}{} \lr{ \PD{t}{\bcD} + \bcJ } - \spacegrad \cross \bcM \\
 -\spacegrad^2 \bcH + \inv{\mu} \spacegrad \rho_{mv} &= \epsilon \PD{t}{} \lr{ -\PD{t}{\bcB} - \bcM } + \spacegrad \cross \bcJ,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 This decouples the equations for the electric and the magnetic fields
-
-\begin{dmath}\label{eqn:emtLecture7:120}
+%
+\begin{equation}\label{eqn:emtLecture7:120}
 \begin{aligned}
 \spacegrad^2 \bcE &=
    \mu \epsilon \PDSq{t}{\bcE} +
@@ -80,17 +76,17 @@ This decouples the equations for the electric and the magnetic fields
    \epsilon \PD{t}{\bcM } -
    \spacegrad \cross \bcJ,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Splitting the current between induced and bound (?) currents
-
+%
 \begin{equation}\label{eqn:emtLecture7:260}
 \bcJ = \bcJ_i + \bcJ_c = \bcJ_i + \sigma \bcE,
 \end{equation}
-
+%
 these become
-
-\begin{dmath}\label{eqn:emtLecture7:160}
+%
+\begin{equation}\label{eqn:emtLecture7:160}
 \begin{aligned}
 \spacegrad^2 \bcE &=
    \mu \epsilon \PDSq{t}{\bcE} +
@@ -108,13 +104,13 @@ these become
    \spacegrad \cross \bcJ_i
 .
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 \paragraph{Time harmonic form}
-
+%
 Assuming time harmonic dependence \( \bcX = \BX e^{j\omega t} \), we find
-
-\begin{dmath}\label{eqn:emtLecture7:140}
+%
+\begin{equation}\label{eqn:emtLecture7:140}
 \begin{aligned}
 \spacegrad^2 \BE &=
    \lr{ - \omega^2 \mu \epsilon +
@@ -130,24 +126,24 @@ Assuming time harmonic dependence \( \bcX = \BX e^{j\omega t} \), we find
 -
    \spacegrad \cross \BJ_i.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 For a lossy medium where \( \epsilon = \epsilon' -j \omega \epsilon'' \), the leading term factor is
-
+%
 \begin{dmath}\label{eqn:emtLecture7:180}
 - \omega^2 \mu \epsilon + j \omega \mu \sigma
 =
 - \omega^2 \mu \epsilon' + j \omega \mu \lr{ \sigma + \omega \epsilon'' }.
 \end{dmath}
-
+%
 With the definition
 \begin{equation}\label{eqn:emtLecture7:200}
 \gamma^2 = \lr{ \alpha + j \beta }^2 = - \omega^2 \mu \epsilon' + j \omega \mu \lr{ \sigma + \omega \epsilon'' },
 \end{equation}
-
+%
 the wave equations have the form
-
-\begin{dmath}\label{eqn:emtLecture7:220}
+%
+\begin{equation}\label{eqn:emtLecture7:220}
 \begin{aligned}
 \spacegrad^2 \BE &=
 \gamma^2 \BE +
@@ -161,10 +157,10 @@ the wave equations have the form
 -
    \spacegrad \cross \BJ_i.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Here
-
+%
 \begin{itemize}
 \item \( \alpha \) is the attenuation constant [\si{Np/m}]
 \item \( \beta \) is the phase velocity [\si{rad/m}]
@@ -172,13 +168,13 @@ Here
 \end{itemize}
 
 We are usually interested in solutions in regions free of magnetic currents, induced electric currents, and free of any charge densities, in which case the wave equations are just
-
-\begin{dmath}\label{eqn:emtLecture7:240}
+%
+\begin{equation}\label{eqn:emtLecture7:240}
 \begin{aligned}
 \spacegrad^2 \BE &= \gamma^2 \BE  \\
 \spacegrad^2 \BH &= \gamma^2 \BH.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 %\EndArticle
 %\EndNoBibArticle

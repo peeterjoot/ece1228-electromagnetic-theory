@@ -25,11 +25,11 @@
 %\generatetitle{Fresnel angular sum and difference formulas}
 %\chapter{Fresnel angular sum and difference formulas}
 %\label{chap:fresnelSumAndDifferenceAngleFormulas}
-
+%
 \makeoproblem{Fresnel sum and difference formulas.}{problem:fresnelSumAndDifferenceAngleFormulas:1}{\citep{hecht1998hecht} pr. 4.39}{
-
+%
 Given a \( \mu_1 = \mu_2 \) constraint, show that the Fresnel equations have the form
-
+%
 \begin{subequations}
 \label{eqn:fresnelSumAndDifferenceAngleFormulas:260}
 \begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:280}
@@ -60,11 +60,11 @@ t^{\textrm{TM}}
 \end{dmath}
 \end{subequations}
 } % problem
-
+%
 \makeanswer{problem:fresnelSumAndDifferenceAngleFormulas:1}{\withproblemsetsParagraph{
-
+%
 We need a couple trig identities to start with.
-
+%
 \begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:20}
 \sin(a + b)
 =
@@ -80,50 +80,50 @@ e^{ja} e^{+ jb}
 =
 \sin a \cos b + \cos a \sin b.
 \end{dmath}
-
+%
 Allowing for both signs we have
-
-\begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:240}
+%
+\begin{equation}\label{eqn:fresnelSumAndDifferenceAngleFormulas:240}
 \begin{aligned}
 \sin(a + b) &= \sin a \cos b + \cos a \sin b \\
 \sin(a - b) &= \sin a \cos b - \cos a \sin b.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 The mixed sine and cosine product can be expressed as a sum of sines
-
+%
 \begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:40}
 2 \sin a \cos b = \sin(a + b) + \sin(a - b).
 \end{dmath}
-
+%
 With \( 2 x = a + b, 2 y = a - b \), or \( a = x + y, b = x - y \), we find
-
-\begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:60}
+%
+\begin{equation}\label{eqn:fresnelSumAndDifferenceAngleFormulas:60}
 \begin{aligned}
 2 \sin(x + y) \cos (x - y) &= \sin( 2 x ) + \sin( 2 y ) \\
 2 \sin(x - y) \cos (x + y) &= \sin( 2 x ) - \sin( 2 y ).
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Returning to the problem.  When \( \mu_1 = \mu_2 \) the Fresnel equations were found to be
-
-\begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:100}
+%
+\begin{equation}\label{eqn:fresnelSumAndDifferenceAngleFormulas:100}
 \begin{aligned}
 r^{\textrm{TE}} &= \frac { n_1 \cos\theta_i - n_2 \cos\theta_t } { n_1 \cos\theta_i + n_2 \cos\theta_t } \\
 r^{\textrm{TM}} &= \frac{n_2 \cos\theta_i - n_1 \cos\theta_t }{ n_2 \cos\theta_i + n_1 \cos\theta_t } \\
 t^{\textrm{TE}} &= \frac{ 2 n_1 \cos\theta_i } { n_1 \cos\theta_i + n_2 \cos\theta_t } \\
 t^{\textrm{TM}} &= \frac{2 n_1 \cos\theta_i }{ n_2 \cos\theta_i + n_1 \cos\theta_t }.
 \end{aligned}
-\end{dmath}
-
+\end{equation}
+%
 Using Snell's law, one of \( n_1, n_2 \) can be eliminated, for example
-
+%
 \begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:120}
 n_1 = n_2 \frac{\sin \theta_t}{\sin\theta_i}.
 \end{dmath}
-
+%
 Inserting this and proceeding with the application of the trig identities above, we have
-
+%
 \begin{subequations}
 \label{eqn:fresnelSumAndDifferenceAngleFormulas:140}
 \begin{dmath}\label{eqn:fresnelSumAndDifferenceAngleFormulas:160}
@@ -177,6 +177,6 @@ t^{\textrm{TM}}
 \end{dmath}
 \end{subequations}
 }} % answer
-
+%
 %}
 %\EndArticle

@@ -1,0 +1,13 @@
+This book contains course notes from the Fall 2016 session of the University of Toronto Electromagnetic Theory
+course (ECE1228H), taught by Prof. M. Mojahedi.
+
+The syllabus described this course as covering the fundamentals of electromagnetic theory, including topics such as
+- Maxwell's equations
+- constitutive relations and boundary conditions
+- wave polarization.
+- Field representations: potentials
+- Green's functions and integral equations.
+- Theorems and concepts: duality, uniqueness, images, equivalence, reciprocity and Babinet's principles.
+- Plane cylindrical and spherical waves and waveguides.
+- radiation and scattering.
+
