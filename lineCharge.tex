@@ -183,17 +183,19 @@ There's another weird thing about this result.  Since this has no \( z \) depend
 %
 This recovers the radial component of the field from \cref{eqn:lineCharge:240}, but where did the \( \zcap \) component go?    The required potential appears to be
 %
-\begin{dmath}\label{eqn:lineCharge:340}
+\begin{equation}\label{eqn:lineCharge:340}
+\begin{aligned}
 \phi(\rho, z)
-=
+&=
 \frac{\lambda_0}{4 \pi \epsilon_0 }
-\ln \frac{ b + \sqrt{ \rho^2 + b^2 }}{ a + \sqrt{\rho^2 + a^2}}
--
+\ln \frac{ b + \sqrt{ \rho^2 + b^2 }}{ a + \sqrt{\rho^2 + a^2}} \\
+&\quad -
 \frac{z \lambda_0}{4 \pi \epsilon_0 }
 \lr{ \frac{1}{\sqrt{\rho^2 + b^2}}
 -\frac{1}{\sqrt{\rho^2 + a^2}}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 When computing the electric field \( \BE(\rho, \theta, z) \), it was convenient to pick the coordinate system so that \( z = 0 \).  Doing this with the potential gives the wrong answers.  The reason for this appears to be that this kills the potential term that is linear in \( z \) before taking its gradient, and we need that term to have the \( \zcap \) field component that is expected for a charge distribution that is non-symmetric about the origin on the z-axis!
 %

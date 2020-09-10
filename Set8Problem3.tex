@@ -145,7 +145,7 @@ D
 \begin{bmatrix}
 E \\
 F
-\end{bmatrix}
+\end{bmatrix}.
 \end{aligned}
 \end{equation}
 %
@@ -226,7 +226,7 @@ F
 \begin{bmatrix}
 E \\
 F
-\end{bmatrix}
+\end{bmatrix}.
 \end{dmath}
 %
 A digression is now required, since the problem asks for this matrix in terms of the reflection coefficients, and we have both the reflection coefficients and transmission coefficients in the mix.  For TE we have
@@ -243,8 +243,8 @@ A digression is now required, since the problem asks for this matrix in terms of
 {\mu_2 \beta_1 + \mu_1 \beta_2} \\
 \tau_{21} &= 2 \frac
 {\mu_1 \beta_2}
-{\mu_2 \beta_1 + \mu_1 \beta_2} \\
-\end{aligned}.
+{\mu_2 \beta_1 + \mu_1 \beta_2}.
+\end{aligned}
 \end{equation}
 %
 Rearranging for \( \tau_{12} \) and \( \tau_{21} \) gives
@@ -347,7 +347,7 @@ F
 \begin{bmatrix}
 E \\
 F
-\end{bmatrix}
+\end{bmatrix}.
 \end{dmath}
 %
 Since
@@ -401,7 +401,7 @@ E'_{r,i+1}
 \begin{bmatrix}
 E'_{l,i+1} \\
 E'_{r,i+1}
-\end{bmatrix}
+\end{bmatrix}.
 \end{dmath}
 %
 With the leading coefficient including a \( g = 1/(1 - \rho_{ij}^2) \) factor, the desired matrix elements can be read off
@@ -439,23 +439,25 @@ b &= - \rho_{ij}( e^{j \phi_j} - e^{- j\phi_j} ) e^{-j\phi_i} \\
 \hat{b} &=
 \rho_{ij}( e^{j\phi_j} - e^{- j \phi_j} )
 e^{j\phi_i}
-,
+.
 \end{aligned}
 }
 %
 The complete transfer matrix is
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:680}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:680}
+\begin{aligned}
 \BM
-=
-\inv{1 - \rho_{i,j}^2}
-\begin{bmatrix}
+&=
+\inv{1 - \rho_{i,j}^2} \times \\
+&\qquad \begin{bmatrix}
 (e^{j \phi_j} - e^{-j \phi_j} \rho_{ij}^2)
 e^{ j\phi_i }
 & - \rho_{ij}( e^{j \phi_j} - e^{- j\phi_j} ) e^{-j\phi_i} \\
 \rho_{ij}( e^{j\phi_j} - e^{- j \phi_j} ) e^{j\phi_i} &
 (e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2) e^{-j \phi_i} \\
-\end{bmatrix}
-\end{dmath}
+\end{bmatrix}.
+\end{aligned}
+\end{equation}
 %
 %
 %%\begin{dmath}\label{eqn:emtproblemSet8Problem3:560}

@@ -54,9 +54,9 @@ Measuring the angles \( \theta_i, \theta_r, \theta_t \) from the normal, with \(
 %
 \begin{equation}\label{eqn:emtLecture10:620}
 \begin{aligned}
-\Bk_{i} &= \Be_3 k_1 e^{i\theta_i} = k_1\lr{ \Be_3 \cos\theta_i + \Be_1\sin\theta_i } \\
-\Bk_{r} &= -\Be_3 k_1 e^{-i\theta_r} = k_1 \lr{ -\Be_3 \cos\theta_r + \Be_1 \sin\theta_r } \\
-\Bk_{t} &= \Be_3 k_2 e^{i\theta_t} = k_2 \lr{ \Be_3 \cos\theta_t + \Be_1 \sin\theta_t }
+\Bk_{i} &= \Be_3 k_1 e^{i\theta_i} = k_1\lr{ \Be_3 \cos\theta_i + \Be_1\sin\theta_i }, \\
+\Bk_{r} &= -\Be_3 k_1 e^{-i\theta_r} = k_1 \lr{ -\Be_3 \cos\theta_r + \Be_1 \sin\theta_r }, \\
+\Bk_{t} &= \Be_3 k_2 e^{i\theta_t} = k_2 \lr{ \Be_3 \cos\theta_t + \Be_1 \sin\theta_t }.
 \end{aligned}
 \end{equation}
 %
@@ -64,8 +64,8 @@ So the time harmonic electric fields are
 %
 \begin{equation}\label{eqn:emtLecture10:640}
 \begin{aligned}
-   \BE_i &= \Be_2 E_i \exp\lr{ - j k_1 \lr{ z\cos\theta_i + x \sin\theta_i} } \\
-   \BE_r &= \Be_2 r E_i \exp\lr{ - j k_1 \lr{ -z \cos\theta_r + x \sin\theta_r}} \\
+   \BE_i &= \Be_2 E_i \exp\lr{ - j k_1 \lr{ z\cos\theta_i + x \sin\theta_i} }, \\
+   \BE_r &= \Be_2 r E_i \exp\lr{ - j k_1 \lr{ -z \cos\theta_r + x \sin\theta_r}}, \\
    \BE_t &= \Be_2 t E_i \exp\lr{ - j k_2 \lr{ z \cos\theta_t + x \sin\theta_t}}.
 \end{aligned}
 \end{equation}
@@ -78,7 +78,7 @@ The magnetic fields follow from Faraday's law
 = \inv{-j \omega \mu } \spacegrad \cross \Be_2 e^{-j \Bk \cdot \Bx}
 = \inv{j \omega \mu } \Be_2 \cross \spacegrad e^{-j \Bk \cdot \Bx}
 = -\inv{\omega \mu } \Be_2 \cross \Bk e^{-j \Bk \cdot \Bx}
-= \inv{\omega \mu } \Bk \cross \BE
+= \inv{\omega \mu } \Bk \cross \BE.
 \end{dmath}
 %
 We have
@@ -119,10 +119,10 @@ The boundary conditions at \( z = 0 \) with \( \ncap = \Be_3 \) are
 %
 \begin{equation}\label{eqn:emtLecture10:960}
 \begin{aligned}
-\ncap \cross \BH_1 &= \ncap \cross \BH_2  \\
-\ncap \cdot \BB_1 &= \ncap \cdot \BB_2  \\
-\ncap \cross \BE_1 &= \ncap \cross \BE_2  \\
-\ncap \cdot \BD_1 &= \ncap \cdot \BD_2,
+\ncap \cross \BH_1 &= \ncap \cross \BH_2, \\
+\ncap \cdot \BB_1 &= \ncap \cdot \BB_2, \\
+\ncap \cross \BE_1 &= \ncap \cross \BE_2, \\
+\ncap \cdot \BD_1 &= \ncap \cdot \BD_2.
 \end{aligned}
 \end{equation}
 %
@@ -246,8 +246,8 @@ or
 %\begin{dmath}\label{eqn:emtLecture10:1240}
 \boxedEquation{eqn:emtLecture10:1260}{
 \begin{aligned}
-r &= \frac{\mu_2 k_{1z} - \mu_1 k_{2z}}{\mu_2 k_{1z} + \mu_1 k_{2z}} \\
-t &= \frac{2 \mu_2 k_{1z}}{\mu_2 k_{1z} + \mu_1 k_{2z}}
+r &= \frac{\mu_2 k_{1z} - \mu_1 k_{2z}}{\mu_2 k_{1z} + \mu_1 k_{2z}}, \\
+t &= \frac{2 \mu_2 k_{1z}}{\mu_2 k_{1z} + \mu_1 k_{2z}}.
 \end{aligned}
 }
 %\end{dmath}
@@ -313,8 +313,8 @@ Imposing the constraints \cref{eqn:emtLecture10:960}, at \( x = z = 0 \) we have
 \begin{aligned}
 \inv{\eta_1}\lr{1 + r} &= \frac{t}{\eta_2} \\
 \cos\theta_i - r \cos\theta_r &= t \cos\theta_t  \\
-\epsilon_1 \lr{ \sin\theta_i  + r \sin\theta_r}  &= t \epsilon_2 \sin\theta_t
-\end{aligned}.
+\epsilon_1 \lr{ \sin\theta_i  + r \sin\theta_r}  &= t \epsilon_2 \sin\theta_t.
+\end{aligned}
 \end{equation}
 %
 At \( t = 0 \), the first and third of these give \( \theta_i = \theta_r \).  Assuming this incident and reflection angle equality holds for all values of \( t \), we have
@@ -406,9 +406,9 @@ Multiplication of the numerator and denominator by \( c/\eta_1 \eta_2 \), noting
 \begin{aligned}
 r
 &=
-\frac{\frac{n_2}{\mu_2} \cos\theta_i - \frac{n_1}{\mu_1} \cos\theta_t }{ \frac{n_2}{\mu_2} \cos\theta_i + \frac{n_1}{\mu_1} \cos\theta_t } \\
+\frac{\frac{n_2}{\mu_2} \cos\theta_i - \frac{n_1}{\mu_1} \cos\theta_t }{ \frac{n_2}{\mu_2} \cos\theta_i + \frac{n_1}{\mu_1} \cos\theta_t }, \\
 t &=
-\frac{2 \frac{n_1}{\mu_1} \cos\theta_i }{ \frac{n_2}{\mu_2} \cos\theta_i + \frac{n_1}{\mu_1} \cos\theta_t } \\
+\frac{2 \frac{n_1}{\mu_1} \cos\theta_i }{ \frac{n_2}{\mu_2} \cos\theta_i + \frac{n_1}{\mu_1} \cos\theta_t },
 \end{aligned}
 \end{equation}
 %
