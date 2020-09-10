@@ -65,7 +65,7 @@ This is accomplished because an applied magnetic field acting on the magnetic mo
 %
 \begin{equation}\label{eqn:emtLecture4:60}
 \begin{aligned}
-\Btau_B &= d\Bm \cross \BB_a \\
+\Btau_B &= d\Bm \cross \BB_a, \\
 \Btau_E &= d\Bp \cross \BE_a.
 \end{aligned}
 \end{equation}
@@ -107,8 +107,8 @@ It can be shown, as with the electric dipoles related bound charge densities of 
 %
 \begin{equation}\label{eqn:emtLecture4:160}
 \begin{aligned}
-\BJ_{sm} &= \BM \cross \ncap \\
-\BJ_{vm} &= \spacegrad \cross \BM,
+\BJ_{sm} &= \BM \cross \ncap, \\
+\BJ_{vm} &= \spacegrad \cross \BM.
 \end{aligned}
 \end{equation}
 %
@@ -119,12 +119,12 @@ It can be shown, as with the electric dipoles related bound charge densities of 
 We have two constitutive relationships so far
 \begin{equation}\label{eqn:emtLecture4:180}
 \begin{aligned}
-\BD &= \epsilon \BE \\
-\BB &= \mu \BH
+\BD &= \epsilon \BE,\\
+\BB &= \mu \BH,
 \end{aligned}
 \end{equation}
 %
-but this needs to be augmented by
+but these need to be augmented by Ohm's law
 %
 \index{Ohm's law}
 \begin{dmath}\label{eqn:emtLecture4:200}
@@ -139,12 +139,12 @@ There are a couple ways to discuss this.  One is to model \( \epsilon \) as a co
 The boundary conditions are
 %
 \begin{itemize}
-\item \( \ncap \cross \lr{ \BE_2 - \BE_1 } = - \BM_s \)
+\item \( \ncap \cross \lr{ \BE_2 - \BE_1 } = - \BM_s \).
 This means that the tangential components of \( \BE \) is continuous across the boundary (those components of \(\BE_1,\BE_2\) are equal on the boundary), when \( \BM_s \) is zero.
 %
 Here \( \BM_s \) is the (fictitious) magnetic current density in [\si{V/m}].
 %
-\item \( \ncap \cross \lr{ \BH_2 - \BH_1 } = \BJ_s \)
+\item \( \ncap \cross \lr{ \BH_2 - \BH_1 } = \BJ_s \).
 %
 \index{tangential field component}
 This means that the tangential components of the magnetic fields \( \BH \) are discontinuous when the electric surface current density \( \BJ_s \) [\si{A/m}] is non-zero, but continuous otherwise.  The latter is sketched in \cref{fig:emtLecture4:emtLecture4Fig5}.
@@ -153,14 +153,14 @@ This means that the tangential components of the magnetic fields \( \BH \) are d
 %
 Here \( \BJ_s \) is the movement of the free current on the surface.  The bound charges are incorporated into \( \BD \).
 %
-\item \( \ncap \cdot \lr{ \BD_2 - \BD_1 } = \rho_{es} \)
+\item \( \ncap \cdot \lr{ \BD_2 - \BD_1 } = \rho_{es} \).
 %
 \index{normal field component}
 Here \( \rho_{es} \) is the electric surface charge density [\si{C/m^2}].
 %
 This means that the normal component of the electric displacement field \( \BD \) is discontinuous across the boundary in the presence of electric surface charge densities, but continuous when that is zero.
 %
-\item \( \ncap \cdot \lr{ \BB_2 - \BB_1 } = \rho_{ms} \)
+\item \( \ncap \cdot \lr{ \BB_2 - \BB_1 } = \rho_{ms} \).
 %
 \index{magnetic surface charge density}
 Here \( \rho_{ms} \) is the (fictional) magnetic surface charge density [\si{Weber/m^2}].
@@ -174,16 +174,16 @@ In the absence of any free charges or currents, these relationships are consider
 \begin{subequations}
 \label{eqn:emtLecture4:220}
 \begin{dmath}\label{eqn:emtLecture4:240}
-\ncap \cross \lr{ \BE_2 - \BE_1 } = 0
+\ncap \cross \lr{ \BE_2 - \BE_1 } = 0,
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture4:260}
-\ncap \cross \lr{ \BH_2 - \BH_1 } = 0
+\ncap \cross \lr{ \BH_2 - \BH_1 } = 0,
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture4:280}
-\ncap \cdot \lr{ \BD_2 - \BD_1 } = 0
+\ncap \cdot \lr{ \BD_2 - \BD_1 } = 0,
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture4:420}
-\ncap \cdot \lr{ \BB_2 - \BB_1 } = 0
+\ncap \cdot \lr{ \BB_2 - \BB_1 } = 0.
 \end{dmath}
 \end{subequations}
 %
@@ -203,7 +203,7 @@ In the limit, with the height \( \Delta y \rightarrow 0 \), this is
 \oint_C \BH \cdot d\Bl
 \approx
 H_1 \cdot (\Delta x \xcap)
--H_2 \cdot (\Delta x \xcap)
+-H_2 \cdot (\Delta x \xcap).
 \end{dmath}
 %
 Similarly
@@ -219,7 +219,7 @@ and
 =
 \int_S \sigma \BE \cdot d\Bs
 \approx
-\sigma \BE \cdot \zcap \Delta x \Delta y,
+\sigma \BE \cdot \zcap \Delta x \Delta y.
 \end{equation}
 %
 However, if \( \Delta y \) approaches zero, both of these terms are killed.
@@ -268,7 +268,7 @@ It will be left to homework to show, using the continuity equation and Gauss's l
 inside a conductor, that free charges distribute themselves exclusively on the surface on the medium.  Because of this there is no electric field inside the medium (Gauss's law).  What does this imply about the magnetic field in the same medium.  We must have
 %
 \begin{dmath}\label{eqn:emtLecture5:20}
-\spacegrad \cross \BE = - \PD{t}{\BB}
+\spacegrad \cross \BE = - \PD{t}{\BB},
 \end{dmath}
 %
 so if \( \BE \) is zero in the medium the magnetic field must be either constant with respect to time, or zero.  In a general electrodynamic configuration, both the magnetic and electric fields vary with time, which seems to imply that \( \BB \) must be zero if \( \BE \) is zero in that space.
@@ -289,7 +289,7 @@ For many calculations, we can proceed with the assumption that there are no appr
 so there is no tangential component to an electric field of a conductor.  We also have
 %
 \begin{dmath}\label{eqn:emtLecture5:60}
-\ncap \cdot \BD_2 = \rho_{es}
+\ncap \cdot \BD_2 = \rho_{es}.
 \end{dmath}
 %
 Assuming there is also no magnetic field either in the conductor, we also have

@@ -48,9 +48,12 @@ It is left as an exercise to show that
 \end{dmath}
 %
 or
-\begin{dmath}\label{eqn:emtLecture5:180}
-\oint d\Ba \cdot \lr{ \BE \cross \BH } + \int dV \lr{ \BH \cdot \lr{ \BM_i + \BM_d }  + \BE \cdot \lr{ \BJ_i + \BJ_c + \BJ_d }} = 0,
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture5:180}
+\begin{aligned}
+\oint &d\Ba \cdot \lr{ \BE \cross \BH } + \int dV \lr{ \BH \cdot \lr{ \BM_i + \BM_d }  + \BE \cdot \lr{ \BJ_i + \BJ_c + \BJ_d }} \\
+&= 0,
+\end{aligned}
+\end{equation}
 %
 or
 \begin{equation}\label{eqn:emtLecture5:200}
@@ -135,7 +138,7 @@ We also have a term
 =
 \int dV \BE \cdot (\sigma \BE)
 =
-\int dV \sigma \Abs{\BE}^2
+\int dV \sigma \Abs{\BE}^2.
 %\equiv ...
 \end{dmath}
 %
@@ -144,7 +147,7 @@ This is the rate of change of stored electric energy.
 %
 The remaining term is
 \begin{dmath}\label{eqn:emtLecture5:380}
-\oint d\Ba \cdot \lr{ \BE \cross \BH }
+\oint d\Ba \cdot \lr{ \BE \cross \BH }.
 \end{dmath}
 %
 This is a density of the power that is leaving the volume.  The vector \( \BE \cross \BH \) is special, called the Poynting vector, and coincidentally points in the direction that the energy leaves the bounding surface per unit time.  We write
@@ -194,7 +197,7 @@ i_c(t) = C \ddt{V_c}.
 When we use Laplace or Fourier techniques to solve circuits with such differential equation elements.  The price that we paid for that was that we have to start dealing with complex-valued (phasor) quantities.  We can do this for field equations as well.  The goal is to remove the time domain coupling in Maxwell equations like
 %
 \begin{dmath}\label{eqn:emtLecture5:460}
-\spacegrad \cross \BE(\Br, t) = -\PD{t}{\BB}(\Br, t)
+\spacegrad \cross \BE(\Br, t) = -\PD{t}{\BB}(\Br, t),
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture5:480}
 \spacegrad \cross \BH(\Br, t) = \sigma \BE + \PD{t}{\BD}(\Br, t).
@@ -240,7 +243,7 @@ Let's write our Fourier transform pairs as
 \calF(\BA(\Br, t)) =
 \BA(\Br, \omega)
 =
-\int_{-\infty}^\infty \BA(\Br, t) e^{-j \omega t} dt
+\int_{-\infty}^\infty \BA(\Br, t) e^{-j \omega t} dt,
 \end{equation}
 \begin{equation}\label{eqn:emtLecture5:560}
 \BA(\Br, t) = \calF^{-1}(\BA(\Br, \omega))
@@ -272,19 +275,19 @@ is
 The four Maxwell's equations can be written as
 %
 \begin{itemize}
-\item Faraday's Law
+\item Faraday's Law:
 \begin{dmath}\label{eqn:emtLecture5:640}
-\spacegrad \cross \BE( \Br, \omega ) = - j \omega \BB(\Br, \omega) - \BM_i
+\spacegrad \cross \BE( \Br, \omega ) = - j \omega \BB(\Br, \omega) - \BM_i.
 \end{dmath}
-\item Ampere-Maxwell equation
+\item Ampere-Maxwell equation:
 \begin{dmath}\label{eqn:emtLecture5:660}
-\spacegrad \cross \BH( \Br, \omega ) = \BJ_\txtc(\Br, \omega) + \BD(\Br, \omega)
+\spacegrad \cross \BH( \Br, \omega ) = \BJ_\txtc(\Br, \omega) + \BD(\Br, \omega).
 \end{dmath}
-\item Gauss's law
+\item Gauss's law:
 \begin{dmath}\label{eqn:emtLecture5:680}
-\spacegrad \cdot \BD(\Br, \omega) = \rho_{\txte\txtv}(\Br, \omega)
+\spacegrad \cdot \BD(\Br, \omega) = \rho_{\txte\txtv}(\Br, \omega).
 \end{dmath}
-\item Gauss's law for magnetism
+\item Gauss's law for magnetism:
 \begin{dmath}\label{eqn:emtLecture5:700}
 \spacegrad \cdot \BB(\Br, \omega) = \rho_{\txtm\txtv}(\Br, \omega).
 \end{dmath}
@@ -294,7 +297,7 @@ Now we can more easily model non-simple media with
 %
 \begin{equation}\label{eqn:emtLecture5:740}
 \begin{aligned}
-\BB(\Br, \omega) &= \mu(\omega) \BH(\Br, \omega) \\
+\BB(\Br, \omega) &= \mu(\omega) \BH(\Br, \omega), \\
 \BD(\Br, \omega) &= \epsilon(\omega) \BE(\Br, \omega).
 \end{aligned}
 \end{equation}
@@ -302,13 +305,13 @@ Now we can more easily model non-simple media with
 so Maxwell's equations are
 %
 \begin{dmath}\label{eqn:emtLecture5:760}
-\spacegrad \cross \BE( \Br, \omega ) = - j \omega \mu(\omega) \BH(\Br, \omega) - \BM_i
+\spacegrad \cross \BE( \Br, \omega ) = - j \omega \mu(\omega) \BH(\Br, \omega) - \BM_i,
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture5:780}
-\spacegrad \cross \BH( \Br, \omega ) = \BJ_\txtc(\Br, \omega) + \epsilon(\omega) \BE(\Br, \omega)
+\spacegrad \cross \BH( \Br, \omega ) = \BJ_\txtc(\Br, \omega) + \epsilon(\omega) \BE(\Br, \omega),
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture5:800}
-\epsilon(\omega) \spacegrad \cdot \BE(\Br, \omega) = \rho_{\txte\txtv}(\Br, \omega)
+\epsilon(\omega) \spacegrad \cdot \BE(\Br, \omega) = \rho_{\txte\txtv}(\Br, \omega),
 \end{dmath}
 \begin{dmath}\label{eqn:emtLecture5:820}
 \mu(\omega) \spacegrad \cdot \BH(\Br, \omega) = \rho_{\txtm\txtv}(\Br, \omega).

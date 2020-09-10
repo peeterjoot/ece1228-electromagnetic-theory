@@ -26,16 +26,18 @@
 %\label{chap:poyntingTimeHarmonic}
 \makeproblem{Frequency domain time averaged Poynting theorem}{problem:poyntingTimeHarmonic:1}{
 The time domain Poynting relationship was found to be
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:20}
+\begin{equation}\label{eqn:poyntingTimeHarmonic:20}
+\begin{aligned}
 0
-=
+&=
 \spacegrad \cdot \lr{ \BE \cross \BH }
 + \frac{\epsilon}{2} \BE \cdot \PD{t}{\BE}
-+ \frac{\mu}{2} \BH \cdot \PD{t}{\BH}
-+ \BH \cdot \BM_i
++ \frac{\mu}{2} \BH \cdot \PD{t}{\BH} \\
+&\qquad + \BH \cdot \BM_i
 + \BE \cdot \BJ_i
 + \sigma \BE \cdot \BE.
-\end{dmath}
+\end{aligned}
+\end{equation}
 Derive the equivalent relationship for the time averaged portion of the time-harmonic Poynting vector.
 } % problem
 \makeanswer{problem:poyntingTimeHarmonic:1}{\withproblemsetsParagraph{
@@ -62,8 +64,8 @@ so if we are looking for the relationships that effect only the time averaged Po
 The time-harmonic Maxwell's equations are
 \begin{equation}\label{eqn:poyntingTimeHarmonic:80}
 \begin{aligned}
-\spacegrad \cross \BE &= - j \omega \mu \BH - \BM_i \\
-\spacegrad \cross \BH &= j \omega \epsilon \BE + \BJ_i + \sigma \BE \\
+\spacegrad \cross \BE &= - j \omega \mu \BH - \BM_i, \\
+\spacegrad \cross \BH &= j \omega \epsilon \BE + \BJ_i + \sigma \BE.
 \end{aligned}
 \end{equation}
 The latter after conjugation is
@@ -71,24 +73,26 @@ The latter after conjugation is
 \spacegrad \cross \BH^\conj = -j \omega \epsilon^\conj \BE^\conj + \BJ_i^\conj + \sigma^\conj \BE^\conj.
 \end{dmath}
 For the divergence we have
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:120}
-\spacegrad \cdot \lr{ \BE \cross \BH^\conj }
-=
+\begin{equation}\label{eqn:poyntingTimeHarmonic:120}
+\begin{aligned}
+\spacegrad &\cdot \lr{ \BE \cross \BH^\conj } \\
+&=
 \BH^\conj \cdot \lr{ \spacegrad \cdot \BE }
--\BE \cdot \lr{ \spacegrad \cdot \BH^\conj }
-=
+-\BE \cdot \lr{ \spacegrad \cdot \BH^\conj } \\
+&=
 \BH^\conj \cdot \lr{ - j \omega \mu \BH - \BM_i }
 - \BE \cdot \lr{ -j \omega \epsilon^\conj \BE^\conj + \BJ_i^\conj + \sigma^\conj \BE^\conj },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:140}
+\begin{equation}\label{eqn:poyntingTimeHarmonic:140}
 0
-=
-\spacegrad \cdot \lr{ \BE \cross \BH^\conj }
-+
+&=
+\spacegrad \cdot \lr{ \BE \cross \BH^\conj } \\
+&\qquad +
 \BH^\conj \cdot \lr{ j \omega \mu \BH + \BM_i }
 + \BE \cdot \lr{ -j \omega \epsilon^\conj \BE^\conj + \BJ_i^\conj + \sigma^\conj \BE^\conj },
-\end{dmath}
+\end{equation}
 so
 %\begin{dmath}\label{eqn:poyntingTimeHarmonic:160}
 \boxedEquation{eqn:poyntingTimeHarmonic:160}{

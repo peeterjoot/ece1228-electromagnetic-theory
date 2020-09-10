@@ -32,8 +32,8 @@ We will model the medium using a frequency representation of the permittivity
 %
 \begin{equation}\label{eqn:emtLecture6:20}
 \begin{aligned}
-\epsilon(\omega) &= \epsilon'(\omega) - j \epsilon''(\omega) \\
-\mu(\omega) &= \mu'(\omega) - j \mu''(\omega)
+\epsilon(\omega) &= \epsilon'(\omega) - j \epsilon''(\omega), \\
+\mu(\omega) &= \mu'(\omega) - j \mu''(\omega).
 \end{aligned}
 \end{equation}
 %
@@ -42,19 +42,19 @@ The real part is the phase, whereas the imaginary part is the loss.
 \begin{dmath}\label{eqn:emtLecture6:40}
 n = \frac{c}{v}
 = \frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}}
-= \sqrt{\epsilon_r \mu_r}
+= \sqrt{\epsilon_r \mu_r}.
 \end{dmath}
 %
 We can also write
 %
 \begin{dmath}\label{eqn:emtLecture6:60}
-n(\omega) = n'(\omega) - j n''(\omega)
+n(\omega) = n'(\omega) - j n''(\omega).
 \end{dmath}
 %
 If we are considering an electric dipole
 %
 \begin{dmath}\label{eqn:emtLecture6:80}
-\BP_i = Q_i \Bx_i
+\BP_i = Q_i \Bx_i.
 \end{dmath}
 %
 With
@@ -66,10 +66,10 @@ With
 and a time harmonic representation for the electric field
 %
 \begin{dmath}\label{eqn:emtLecture6:120}
-\BE = \BE_0 e^{j \omega t}.
+\BE = \BE_0 e^{j \omega t},
 \end{dmath}
 %
-The dipole moment is assumed to be
+the dipole moment is assumed to be
 %
 \begin{dmath}\label{eqn:emtLecture6:140}
 \BP = \lim_{\Delta v \rightarrow 0} \frac{ \sum_{i = 1}^{N \Delta v} \BP_i }{\Delta v}
@@ -89,9 +89,9 @@ The forces of interest are
 %
 \begin{equation}\label{eqn:emtLecture6:160}
 \begin{aligned}
-F_{\textrm{friction}} &= -D \frac{dx}{dt} = -D v \\
-F_{\textrm{elastic}} &= -S x \\
-F_{\textrm{external}} &= Q E = Q E_0 e^{j \omega t}
+F_{\textrm{friction}} &= -D \frac{dx}{dt} = -D v, \\
+F_{\textrm{elastic}} &= -S x, \\
+F_{\textrm{external}} &= Q E = Q E_0 e^{j \omega t}.
 \end{aligned}
 \end{equation}
 %
@@ -101,21 +101,21 @@ Adding all the forces, the electrical system, in one dimension, can be assumed t
 F = m \frac{d^2 x}{dt^2}
 =
 -D \frac{dx}{dt}
--D v \\
--S x \\
+-D v 
+-S x 
 + Q E_0 e^{j \omega t},
 \end{equation}
 %
 or
 \begin{dmath}\label{eqn:emtLecture6:200}
-\frac{d^2 x}{dt^2} + \frac{D}{m} \ddt{x} + \frac{S}{m} x = \frac{Q E_0}{m} e^{j \omega t}
+\frac{d^2 x}{dt^2} + \frac{D}{m} \ddt{x} + \frac{S}{m} x = \frac{Q E_0}{m} e^{j \omega t}.
 \end{dmath}
 %
 Let's define
 %
 \begin{equation}\label{eqn:emtLecture6:220}
 \begin{aligned}
-\gamma &= \frac{D}{m} \\
+\gamma &= \frac{D}{m}, \\
 \omega_0^2 &= \frac{S}{m},
 \end{aligned}
 \end{equation}
@@ -142,8 +142,8 @@ x = x_0 e^{j\omega t}
 \end{equation}
 %
 \begin{enumerate}[I]
-\item Assume that dipoles are identical
-\item Assume no coupling between dipoles
+\item Assume that dipoles are identical.
+\item Assume no coupling between dipoles.
 \item There are N dipoles per unit volume.  In other words, N is the number of dipoles per unit volume.
 \end{enumerate}
 %

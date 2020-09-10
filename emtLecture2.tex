@@ -35,7 +35,7 @@ Given Maxwell's equations at a point
 \spacegrad \cross \BE &= -\PD{t}{\BB} \\
 \spacegrad \cross \BH &= \BJ + \PD{t}{\BD} \\
 \spacegrad \cdot \BD &= \rho_\txtv \\
-\spacegrad \cdot \BB &= 0
+\spacegrad \cdot \BB &= 0,
 \end{aligned}
 \end{equation}
 %
@@ -53,25 +53,25 @@ These are
 \begin{equation}\label{eqn:emtLecture2:40}
 \begin{aligned}
 \iint_S \lr{ \spacegrad \cross \BA } \cdot d\Bs &= \oint_C \BA \cdot d\Bl \\
-\iint_V \lr{ \spacegrad \cdot \BA } d\Bs &= \oint_A \BA \cdot d\Bs \\
+\iint_V \lr{ \spacegrad \cdot \BA } d\Bs &= \oint_A \BA \cdot d\Bs.
 \end{aligned}
 \end{equation}
 %
 \index{Faraday's law}
-Application of the Stokes' to Faraday's law we get
+Application of Stokes' to Faraday's law we get
 %
 \begin{dmath}\label{eqn:emtLecture2:60}
-\oint_C \BE \cdot d\Bl = -\PD{t}{} \iint \BB \cdot d\Bs
+\oint_C \BE \cdot d\Bl = -\PD{t}{} \iint \BB \cdot d\Bs,
 \end{dmath}
 %
-UNITS: \( V/m \times m \)
+which has units \( \si{V} = \si{V/m \times m} \).
 %
 The quantity
 \begin{dmath}\label{eqn:emtLecture2:80}
 \iint \BB \cdot d\Bs,
 \end{dmath}
 %
-is called the magnetic flux of \( \BB \), and changing of this flux is responsible for the generation of electromotive force.
+is called the magnetic flux of \( \BB \).  Changing of this flux is responsible for the generation of electromotive force.
 \index{magnetic flux}
 %
 %F2:
@@ -173,7 +173,7 @@ Similar to the above we can write \( \BM = \chi_\txtm \BH \) then
 %
 \begin{dmath}\label{eqn:emtLecture2:280}
 \BM = \mu_0 \BH + \mu_0 \BM = \mu_0 \lr{ 1 + \chi_\txtm } \BH
-= \mu_0 \mu_r \BH
+= \mu_0 \mu_r \BH,
 \end{dmath}
 %
 so with \( \mu_r = 1 + \chi_\txtm \), and \( \mu = \mu_0 \mu_r \) we have
@@ -243,7 +243,7 @@ Suppose that we have a linear material where
 \spacegrad \cross \BE &= -\PD{t}{\BB} \\
 \spacegrad \cross \BH &= \BJ + \PD{t}{\BD} \\
 \spacegrad \cdot \BE &= \frac{\rho_\txtv}{\epsilon_0} \\
-\spacegrad \cdot \BH &= 0
+\spacegrad \cdot \BH &= 0.
 \end{aligned}
 \end{equation}
 %
