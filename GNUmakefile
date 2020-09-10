@@ -38,7 +38,7 @@ DO_SPELL_CHECK := $(shell cat spellcheckem.txt)
 include ../latex/make.rules
 
 #all:: emtLecture10.pdf
-all :: emtLecture10PartII.pdf
+#all :: emtLecture10PartII.pdf
 
 .PHONY: spellcheck
 spellcheck: $(patsubst %.tex,%.sp,$(filter-out $(DONT_SPELL_CHECK),$(DO_SPELL_CHECK)))
