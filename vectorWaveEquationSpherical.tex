@@ -316,9 +316,10 @@ C_\theta (-\rcap S_\theta - \thetacap C_\theta) \psi
 \end{subequations}
 %
 which gives
-\begin{dmath}\label{eqn:vectorWaveEquationSpherical:360}
-\spacegrad^2 (\thetacap A_\theta)
-=
+\begin{equation}\label{eqn:vectorWaveEquationSpherical:360}
+\begin{aligned}
+\spacegrad^2 &(\thetacap A_\theta) \\
+&=
 \rcap
 \lr{
    \inv{r^2 S_\theta}
@@ -329,8 +330,8 @@ which gives
    -
    \inv{r^2 S_\theta^2}
    C_\theta S_\theta A_\theta
-}
-+
+} \\
+&\quad +
 \thetacap \lr{
    \inv{r^2} \partial_r \lr{ r^2 \partial_r A_\theta }
    +
@@ -344,13 +345,13 @@ which gives
       -C_\theta C_\theta A_\theta
       +\partial_{\phi\phi} A_\theta
    }
-}
-+
+} \\
+&\quad +
 \phicap \lr{
    \inv{r^2 S_\theta^2}
    2 C_\theta \partial_\phi A_\theta
-}
-=
+} \\
+&=
 -2 \rcap
    \inv{r^2 S_\theta}
       \partial_\theta (S_\theta A_\theta)
@@ -360,13 +361,14 @@ which gives
    -\inv{r^2}
       A_\theta
    -\inv{r^2 S_\theta^2} C_\theta^2 A_\theta
-}
-+
+} \\
+&\quad +
 2 \phicap \lr{
    \inv{r^2 S_\theta^2}
    C_\theta \partial_\phi A_\theta
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Finally, we can compute the derivatives of the \( \phicap \) projection.
 %

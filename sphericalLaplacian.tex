@@ -38,7 +38,7 @@
 \index{divergence!spherical coordinates}
 \index{curl!spherical coordinates}
 %
-\paragraph{Unit vectors}
+\paragraph{Unit vectors.}
 %
 Two of the spherical unit vectors we can immediately write by inspection.
 %
@@ -105,7 +105,7 @@ It should also be the case that \( \rcap \thetacap \phicap = I \), where \( I = 
 %
 This property could also have been used to compute \(\thetacap\).
 %
-\paragraph{Gradient}
+\paragraph{Gradient.}
 %
 To compute the gradient, note that the coordinate vectors for the spherical parameterization are
 \begin{subequations}
@@ -167,7 +167,7 @@ or
 More information on this general dual-vector technique of computing the gradient in curvilinear coordinate systems can be found in
 \citep{aMacdonaldVAGC}.
 %
-\paragraph{Partials}
+\paragraph{Partials.}
 %
 To compute the divergence, curl and Laplacian, we'll need the partials of each of the unit vectors \( \PDi{\theta}{\rcap}, \PDi{\phi}{\rcap}, \PDi{\theta}{\thetacap}, \PDi{\phi}{\thetacap}, \PDi{\phi}{\phicap} \).
 %
@@ -447,7 +447,7 @@ This gives
 }
 %\end{dmath}
 This and the divergence result above both check against the back cover of \citep{jackson1975cew}.
-\paragraph{Laplacian}
+\paragraph{Laplacian.}
 Using the divergence and curl it's possible to compute the Laplacian from those, but we saw in cylindrical coordinates that it was much harder to do it that way than to do it directly.
 \begin{equation}\label{eqn:sphericalLaplacian:540}
 \begin{aligned}
@@ -518,17 +518,19 @@ Using the divergence and curl it's possible to compute the Laplacian from those,
 \end{aligned}
 \end{equation}
 All the bivector factors are expected to cancel out, but this should be checked.  Those with an \( \rcap \thetacap \) factor are
-\begin{dmath}\label{eqn:sphericalLaplacian:560}
-     \partial_r \lr{ \inv{r} \partial_\theta \psi}
+\begin{equation}\label{eqn:sphericalLaplacian:560}
+\begin{aligned}
+     \partial_r &\lr{ \inv{r} \partial_\theta \psi}
    - \frac{1}{r} \partial_{\theta r} \psi
-   + \frac{1}{r^2} \partial_{\theta} \psi
-=
+   + \frac{1}{r^2} \partial_{\theta} \psi \\
+&=
      -\inv{r^2} \partial_\theta \psi
      +\inv{r} \partial_{r \theta} \psi
    - \frac{1}{r} \partial_{\theta r} \psi
-   + \frac{1}{r^2} \partial_{\theta} \psi
-= 0,
-\end{dmath}
+   + \frac{1}{r^2} \partial_{\theta} \psi \\
+&= 0,
+\end{aligned}
+\end{equation}
 and those with a \( \thetacap \phicap \) factor are
 \begin{dmath}\label{eqn:sphericalLaplacian:580}
      \frac{1}{r^2} \partial_{\theta} \lr{ \frac{1}{S_\theta} \partial_{\phi} \psi }

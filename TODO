@@ -1,6 +1,17 @@
-- Equation grammar check.
+- Proofing checklist:
 
-- Add periods into section, paragraph, subsection, figure captions.
-
-- Do a final check of indexing at the very end.  Trying to do this incrementally as things are added.  done up to L5, ps4.
-
+#   - Equation grammar.
+   - Periods captions for chapters, problems, examples, figures, section, subsection, paragraphs.
+#   - Run urlcheckerpy
+#   - Run thethe.py
+#   - Don't use dmath+aligned.
+#   - Fix gutter overflow issues.
+#   - Look for dmaths in makeproblem, makeexamples that lead to inset equation numbers.
+#   - Check for equations that overlap equation numbers.
+#   - Check the size of the figures.
+   - Check indexes for entries with different spelling/case.
+   - Make sure all the indexing is done: done up to L5, ps4.
+   - make dist, tag
+   - push
+   - copy to kdp, leanpub, landing page.
+   - bump version.
