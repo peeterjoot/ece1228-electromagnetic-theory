@@ -1,0 +1,11 @@
+- Convert to 6x9 format
+- Remove blank lines surrounding equations
+- Update email address.
+- Spell checking rules.
+- Don't use dmath+aligned.
+- Fix gutter overflow issues.
+- Add periods to chapter headings
+- Remove 'and and', 'the the', ...
+- Spell check
+- Fix equation grammar and overlapped equation/eq-no's
+- Add periods to section, paragraph, figure, problem captions.
