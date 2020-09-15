@@ -1,11 +1,22 @@
-- Convert to 6x9 format
-- Remove blank lines surrounding equations
-- Update email address.
-- Spell checking rules.
-- Don't use dmath+aligned.
-- Fix gutter overflow issues.
-- Add periods to chapter headings
-- Remove 'and and', 'the the', ...
-- Spell check
-- Fix equation grammar and overlapped equation/eq-no's
-- Add periods to section, paragraph, figure, problem captions.
+
+ece1228.V0.1.16.pdf
+- React only the officially assigned problem set answers, and don't include any of the silly redaction markers.
+- Add missing chapter heading (shows up as back to back 5.1 Problems, 5.2 Problems as there should have been a chapter in between.)
+
+ece1228.V0.1.15.pdf
+- Minor tweaks to the preface.
+
+ece1228.V0.1.14-8.pdf, Sep 10 2020 (commit 316788f55abd30d63d58b671af75df9ac227a0da)
+- First KDP version (full text, not redacted.) -- to be removed.
+   - Convert to 6x9 format
+   - Remove blank lines surrounding equations
+   - Update email address.
+   - Spell checking rules.
+   - Don't use dmath+aligned.
+   - Fix gutter overflow issues.
+   - Add periods to chapter headings
+   - Remove 'and and', 'the the', ...
+   - Spell check
+   - Fix equation grammar and overlapped equation/eq-no's
+   - Add periods to section, paragraph, figure, problem captions.
+

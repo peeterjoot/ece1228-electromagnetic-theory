@@ -92,12 +92,22 @@ END-REDACTION%
 {#1}%
 }
 
+% print out a message that only appears if redaction is active.
 \newcommand{\withproblemsetsMessage}[1]{%
 \ifthenelse{\boolean{redacted}}%
 {%
 #1%
 }%
 {\relax}%
+}
+
+% completely omit content if redaction is active.
+\newcommand{\skipIfRedacted}[1]{%
+\ifthenelse{\boolean{redacted}}%
+{\relax}%
+{%
+#1%
+}%
 }
 
 % ****************************************************************************************************
