@@ -1,7 +1,9 @@
+ece1228.V0.1.17.pdf (in progress.)
 
-ece1228.V0.1.16.pdf
+ece1228.V0.1.16-1.pdf, Sept 15 2020 (commit a0dcf6949d054d1aa5fecd75f3747a52b2bc0980)
 - React only the officially assigned problem set answers, and don't include any of the silly redaction markers.
 - Add missing chapter heading (shows up as back to back 5.1 Problems, 5.2 Problems as there should have been a chapter in between.)
+- Suppress the page number in the Bib (kdp gutter hack.)
 
 ece1228.V0.1.15.pdf
 - Minor tweaks to the preface.
