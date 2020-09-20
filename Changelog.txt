@@ -6,6 +6,7 @@ ece1228.V0.1.17.pdf (in progress.)
 - Fix typos in sphericalLaplacian.tex
 - Split chapter 4 into one for magnetic moments and one for boundary values.
 - Spell check
+- convert some \paragraph to \section
 
 ece1228.V0.1.16-1.pdf, Sept 15 2020 (commit a0dcf6949d054d1aa5fecd75f3747a52b2bc0980)
 - React only the officially assigned problem set answers, and don't include any of the silly redaction markers.
