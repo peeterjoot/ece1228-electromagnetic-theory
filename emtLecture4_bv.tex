@@ -1,0 +1,177 @@
+%
+% Copyright © 2016 Peeter Joot.  All Rights Reserved.
+% Licenced as described in the file LICENSE under the root directory of this GIT repository.
+%
+\section{Boundary conditions.}
+\index{boundary conditions}
+%
+The boundary conditions are
+%
+\begin{itemize}
+\item \( \ncap \cross \lr{ \BE_2 - \BE_1 } = - \BM_s \).
+This means that the tangential components of \( \BE \) is continuous across the boundary (those components of \(\BE_1,\BE_2\) are equal on the boundary), when \( \BM_s \) is zero.
+%
+Here \( \BM_s \) is the (fictitious) magnetic current density in [\si{V/m}].
+%
+\item \( \ncap \cross \lr{ \BH_2 - \BH_1 } = \BJ_s \).
+%
+\index{tangential field component}
+This means that the tangential components of the magnetic fields \( \BH \) are discontinuous when the electric surface current density \( \BJ_s \) [\si{A/m}] is non-zero, but continuous otherwise.  The latter is sketched in \cref{fig:emtLecture4:emtLecture4Fig5}.
+%
+\imageFigure{../figures/ece1228-electromagnetic-theory/emtLecture4Fig5}{Equal tangential fields.}{fig:emtLecture4:emtLecture4Fig5}{0.2}
+%
+Here \( \BJ_s \) is the movement of the free current on the surface.  The bound charges are incorporated into \( \BD \).
+%
+\item \( \ncap \cdot \lr{ \BD_2 - \BD_1 } = \rho_{es} \).
+%
+\index{normal field component}
+Here \( \rho_{es} \) is the electric surface charge density [\si{C/m^2}].
+%
+This means that the normal component of the electric displacement field \( \BD \) is discontinuous across the boundary in the presence of electric surface charge densities, but continuous when that is zero.
+%
+\item \( \ncap \cdot \lr{ \BB_2 - \BB_1 } = \rho_{ms} \).
+%
+\index{magnetic surface charge density}
+Here \( \rho_{ms} \) is the (fictional) magnetic surface charge density [\si{Weber/m^2}].
+%
+This means that the magnetic fields \( \BB \) are continuous in the absence of (fictional) magnetic surface charge densities.
+%
+\end{itemize}
+%
+In the absence of any free charges or currents, these relationships are considerably simplified
+%
+\begin{subequations}
+\label{eqn:emtLecture4:220}
+\begin{dmath}\label{eqn:emtLecture4:240}
+\ncap \cross \lr{ \BE_2 - \BE_1 } = 0,
+\end{dmath}
+\begin{dmath}\label{eqn:emtLecture4:260}
+\ncap \cross \lr{ \BH_2 - \BH_1 } = 0,
+\end{dmath}
+\begin{dmath}\label{eqn:emtLecture4:280}
+\ncap \cdot \lr{ \BD_2 - \BD_1 } = 0,
+\end{dmath}
+\begin{dmath}\label{eqn:emtLecture4:420}
+\ncap \cdot \lr{ \BB_2 - \BB_1 } = 0.
+\end{dmath}
+\end{subequations}
+%
+To get an idea where these come from, consider the derivation of \cref{eqn:emtLecture4:260}, relating the tangential components of \( \BH \), as sketched in \cref{fig:emtLecture4:emtLecture4Fig4}.
+%
+\imageFigure{../figures/ece1228-electromagnetic-theory/emtLecture4Fig4}{Boundary geometry.}{fig:emtLecture4:emtLecture4Fig4}{0.3}
+%
+Integrating over such a loop, the integral version of the Ampere-Maxwell equation \cref{eqn:emtLecture1:40}, with \( \BJ = \sigma \BE \) is
+%
+\begin{dmath}\label{eqn:emtLecture4:300}
+\oint_C \BH \cdot d\Bl = \int_S \sigma \BE \cdot d\Bs + \PD{t}{} \int_S \BD \cdot d\Bs.
+\end{dmath}
+%
+In the limit, with the height \( \Delta y \rightarrow 0 \), this is
+%
+\begin{dmath}\label{eqn:emtLecture4:320}
+\oint_C \BH \cdot d\Bl
+\approx
+H_1 \cdot (\Delta x \xcap)
+-H_2 \cdot (\Delta x \xcap).
+\end{dmath}
+%
+Similarly
+\begin{dmath}\label{eqn:emtLecture4:340}
+\int_S \BD \cdot d\Bs
+\approx
+\BD \cdot \zcap \Delta x \Delta y,
+\end{dmath}
+%
+and
+\begin{equation}\label{eqn:emtLecture4:360}
+\int_S \BJ \cdot d\Bs
+=
+\int_S \sigma \BE \cdot d\Bs
+\approx
+\sigma \BE \cdot \zcap \Delta x \Delta y.
+\end{equation}
+%
+However, if \( \Delta y \) approaches zero, both of these terms are killed.
+%
+This gives
+%
+\begin{dmath}\label{eqn:emtLecture4:380}
+\xcap \cdot \lr{ \BH_2 - \BH_1 } = 0.
+\end{dmath}
+%
+If you were to perform the same calculation using a loop in the y-z plane you'd find
+%
+\begin{dmath}\label{eqn:emtLecture4:460}
+\zcap \cdot \lr{ \BH_2 - \BH_1 } = 0.
+\end{dmath}
+%
+Either way, the tangential component of \( \BH \) is continuous on the boundary.
+%
+This derivation, using explicit components, follows \citep{balanis1989advanced}.  Non coordinate derivations are also possible (reference?).
+%
+The idea is that
+%
+\begin{dmath}\label{eqn:emtLecture4:440}
+\ncap \cross \lr{ (\BH_2 - \BH_{2n}) -(\BH_1 - \BH_{1n}) }
+=
+\ncap \cross \lr{ \BH_2 - \BH_1 }
+= 0.
+\end{dmath}
+%
+What if there is a surface current?
+%
+\begin{dmath}\label{eqn:emtLecture4:400}
+\lim_{\Delta y \rightarrow 0} \BJ_{ic} \Delta y = \BJ_s.
+\end{dmath}
+%
+When this is the case the \( \BJ = \sigma \BE \) needs to be fixed up a bit, and showing how is left to a problem.
+%.  In a problem \( \BJ_s \) is the current that is going through the elemental surface considered.
+%
+In the notes the other boundary relations are derived.  The normal ones follow by integrating over a pillbox volume.
+%
+Variations include the cases when one of the surfaces is made a perfect conductor.  Such a case can be treated by noting that the \( \BE \) field must be zero.
+%
+\section{Conducting media.}
+%
+It will be left to homework to show, using the continuity equation and Gauss's law that
+inside a conductor, that free charges distribute themselves exclusively on the surface on the medium.  Because of this there is no electric field inside the medium (Gauss's law).  What does this imply about the magnetic field in the same medium.  We must have
+%
+\begin{dmath}\label{eqn:emtLecture5:20}
+\spacegrad \cross \BE = - \PD{t}{\BB},
+\end{dmath}
+%
+so if \( \BE \) is zero in the medium the magnetic field must be either constant with respect to time, or zero.  In a general electrodynamic configuration, both the magnetic and electric fields vary with time, which seems to imply that \( \BB \) must be zero if \( \BE \) is zero in that space.
+%
+However, this is not consistent with what we see with an iron core inductor.  In such an inductor, the iron is used to
+concentrate the magnetic field.  Clearly we have magnetic fields in the iron bar, since that is the purpose of it being there.  It turns out that if the frequencies are low enough (and even some smaller GHz frequencies are), then we can consider the system to be quasi-electrostatic, with zero electric fields inside a conductor, yet with finite approximately time independent magnetic fields.  As the frequencies are increased, the magnetic fields are forced out of the conductor into the surrounding space.
+%
+The transition point that defines the boundary between electrostatic and quasi-electrostatic will depend on the precision desired.
+%
+\section{Boundary conditions with zero magnetic fields in a conductor.}
+%
+For many calculations, we can proceed with the assumption that there are no appreciable electric nor magnetic fields inside of a conductor.  When that is the case, outside of a conducting medium, we have
+%
+\begin{dmath}\label{eqn:emtLecture5:40}
+\ncap \cross \BE_2 = 0,
+\end{dmath}
+%
+so there is no tangential component to an electric field of a conductor.  We also have
+%
+\begin{dmath}\label{eqn:emtLecture5:60}
+\ncap \cdot \BD_2 = \rho_{es}.
+\end{dmath}
+%
+Assuming there is also no magnetic field either in the conductor, we also have
+%
+\begin{dmath}\label{eqn:emtLecture5:80}
+\ncap \cross \BH_2 = \BJ_s,
+\end{dmath}
+%
+and
+\begin{dmath}\label{eqn:emtLecture5:100}
+\ncap \cdot \BB_2 = 0.
+\end{dmath}
+%
+There is no normal component to the magnetic field at the surface of a conductor, and the tangential component is determined by the surface current density.
+%
+%\EndArticle
