@@ -1,4 +1,7 @@
-ece1228.V0.1.17.pdf (in progress.)
+ece1228.V0.1.18.pdf (in progress.)
+
+>>> KDP review in progress:
+ece1228.V0.1.17-1.pdf, Sept 20, 2020 (commit df2214e1227ba2f9ffff08c31bc2dcdafc25e61f)
 - Shorten some appendix chapter headings.
 - Move some problems around.
 - Split chapter 'Poynting vector, and time harmonic (phasor) fields.'
