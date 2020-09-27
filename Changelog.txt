@@ -1,6 +1,9 @@
-ece1228.V0.1.18.pdf (in progress.)
+ece1228.V0.1.20.pdf (in progress.)
 
->>> KDP review in progress:
+ece1228.V0.1.19.pdf, Sept 27, 2020 (commit 59a8acee91d3e72d040e667ccb298c9fde006171)
+(uploaded to kdp as ece1228.V0.1.18-redacted.pdf)
+- Various simple edits (matching markup of my print copy) 
+
 ece1228.V0.1.17-1.pdf, Sept 20, 2020 (commit df2214e1227ba2f9ffff08c31bc2dcdafc25e61f)
 - Shorten some appendix chapter headings.
 - Move some problems around.
