@@ -44,12 +44,12 @@ We also have to be really careful about which convention of the time domain solu
 %
 For example
 \begin{dmath}\label{eqn:emtLecture5:840}
-\Real( e^{i k z} e^{-i\omega t} ) = \cos( k z - \omega t ),
+\Real \lr{ e^{i k z} e^{-i\omega t} } = \cos( k z - \omega t ),
 \end{dmath}
 %
 is identical with
 \begin{dmath}\label{eqn:emtLecture5:860}
-\Real( e^{-j k z} e^{j\omega t} ) = \cos( \omega t -k z),
+\Real \lr{ e^{-j k z} e^{j\omega t} } = \cos( \omega t -k z),
 \end{dmath}
 %
 showing that a solution or its complex conjugate is equally valid.
@@ -184,7 +184,7 @@ We want to find the instantaneous Poynting vector in terms of the phasor fields.
 \BH \cross \BE e^{-2 j\omega t}
 }
 =
-\inv{2} \Real(\BE \cross \BH^\conj) + \inv{2} \Real( \BE \cross \BH  e^{2 j\omega t} ).
+\inv{2} \Real \lr{\BE \cross \BH^\conj} + \inv{2} \Real \lr{ \BE \cross \BH  e^{2 j\omega t} }.
 \end{dmath}
 %
 Should we time average over a period \( \expectation{.} = (1/T) \int_0^T (.) \) the second term is killed, so that
@@ -192,7 +192,7 @@ Should we time average over a period \( \expectation{.} = (1/T) \int_0^T (.) \) 
 \begin{dmath}\label{eqn:emtLecture5:940}
 \expectation{ \bcS }
 =
-\inv{2} \Real(\BE \cross \BH^\conj) + \inv{2} \Real( \BE \cross \BH  e^{2 j\omega t} ).
+\inv{2} \Real \lr{\BE \cross \BH^\conj} + \inv{2} \Real \lr{ \BE \cross \BH  e^{2 j\omega t} }.
 \end{dmath}
 %
 The instantaneous Poynting vector is thus

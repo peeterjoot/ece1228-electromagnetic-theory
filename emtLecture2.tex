@@ -88,7 +88,7 @@ Similarly
 \index{constitutive relations}
 \section{Constitutive relations.}
 %
-With 12 unknowns in \( \BE, \BB, \BD, \BH \) and 8 equations in Maxwell's equations (or 6 if the divergence equations are considered redundant), things don't look too good for solutions.  In simple media, in the frequency domain, relations of the form
+With 12 unknowns in \( \BE, \BB, \BD, \BH \) and 8 equations in Maxwell's equations (or 6 if the divergence equations are considered redundant), things don't look too good for solutions.  In simple media, the fields may be have frequency mode relations of the form
 %
 \begin{equation}\label{eqn:emtLecture2:120}
 \begin{aligned}
@@ -113,10 +113,10 @@ The permeabilities can also depend on the strength of the fields.  An example, a
 \epsilon = \epsilon( \Br, \Abs{\BE}, \BE/\Abs{\BE}, T, P, \Abs{\Beta}, \omega, k ).
 \end{dmath}
 %
-Further complicating things is that \( \epsilon \) is a complex number (for fields specified in the frequency domain).
+The complex nature of \( \epsilon \) further complicates things
 %
 \index{anisotropic}
-We can also have anisotropic situations where the electric and displacement fields are no longer colinear as sketched in \cref{fig:constituativeRelationsL2:constituativeRelationsL2Fig4}.
+We can also have anisotropic situations where the electric and displacement fields are not (positive) scalar multiples of each other, as sketched in \cref{fig:constituativeRelationsL2:constituativeRelationsL2Fig4}.
 %
 \imageFigure{../figures/ece1228-electromagnetic-theory/constituativeRelationsL2Fig4}{Anisotropic field relations.}{fig:constituativeRelationsL2:constituativeRelationsL2Fig4}{0.2}
 %
@@ -209,14 +209,14 @@ where \( \hbar = 6.522 \times 10^{-16} \si{ev.s} \).
 %
 Photons are also governed by
 %
-\begin{dmath}\label{eqn:emtLecture2:360}
+\begin{equation}\label{eqn:emtLecture2:360}
 E = \Hbar \omega = h \nu.
-\end{dmath}
+\end{equation}
 %
 \index{De-Broglie relation}
 (De-Broglie's relations).
-%
-ASIDE: optical fibre at 1550 has the lowest amount of optical attenuation.
+
+\paragraph{ASIDE:} optical fibre at 1550 has the lowest amount of optical attenuation.
 %
 Since photons have linear momentum, we can move things around using light.  With photons having both linear momentum and energy relationships, and there is a relation between torque and linear momentum, it seems that there must be the possibility of light having angular momentum.
 %
@@ -231,7 +231,7 @@ force equation
 %
 This was not thought to be a productive approach due to the complexity.
 %
-FIXME: It appeared that this animated talk (probably not captured well) about momentum in light was linked to the idea of the Helmholtz theorem.  Exactly how was not clear to me.
+%FIXME: It appeared that this animated talk (probably not captured well) about momentum in light was linked to the idea of the Helmholtz theorem.  Exactly how was not clear to me.
 %
 \index{Helmholtz's theorem}
 \section{Helmholtz's theorem.}
