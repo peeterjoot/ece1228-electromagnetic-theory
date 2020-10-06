@@ -1,4 +1,7 @@
-ece1228.V0.1.20.pdf (in progress.)
+ece1228.V0.1.20.pdf (current)
+- 
+
+ece1228.V0.1.20.pdf (uploaded for Amirhossein unredacted.), commit b458d27ba68f0cd09edb7a0f00efbab27f472778
 - Fix orientation in Stokes/Divergence and adjust the application to Maxwell's equations.
 
 ece1228.V0.1.19.pdf, Sept 27, 2020 (commit 59a8acee91d3e72d040e667ccb298c9fde006171)
