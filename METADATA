@@ -7,7 +7,7 @@ my @ece1228 =
    TITLE => qq(Jackson's electrostatic self energy analysis),
    DATE => 'October 10, 2016',
    REF => 'electrostaticJacksonSelfEnergy',
-   URL => 'http://peeterjoot.com/archives/math2016/electrostaticJacksonSelfEnergy.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/electrostaticJacksonSelfEnergy.pdf',
    WHAT => qq()
 }
 ,{
@@ -15,7 +15,7 @@ my @ece1228 =
    TITLE => qq(Magnetic moment for a localized magnetostatic current),
    DATE => 'October 13, 2016',
    REF => 'magneticMomentJackson',
-   URL => 'http://peeterjoot.com/archives/math2016/magneticMomentJackson.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/magneticMomentJackson.pdf',
    WHAT => qq()
 }
 ,{
@@ -23,7 +23,7 @@ my @ece1228 =
    TITLE => qq(Vector Area),
    DATE => 'October 13, 2016',
    REF => 'vectorAreaGriffiths',
-   URL => 'http://peeterjoot.com/archives/math2016/vectorAreaGriffiths.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/vectorAreaGriffiths.pdf',
    WHAT => qq()
 }
 ,{
@@ -31,7 +31,7 @@ my @ece1228 =
    TITLE => qq(Magnetostatic force and torque),
    DATE => 'October 18, 2016',
    REF => 'magnetostaticsJacksonNotesForceAndTorque',
-   URL => 'http://peeterjoot.com/archives/math2016/magnetostaticsJacksonNotesForceAndTorque.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/magnetostaticsJacksonNotesForceAndTorque.pdf',
    WHAT => qq()
 }
 ,{
@@ -39,7 +39,7 @@ my @ece1228 =
    TITLE => qq(Line charge field and potential),
    DATE => 'October 26, 2016',
    REF => 'lineCharge',
-   URL => 'http://peeterjoot.com/archives/math2016/lineCharge.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/lineCharge.pdf',
    WHAT => qq()
 }
 ,{
@@ -47,7 +47,7 @@ my @ece1228 =
    TITLE => qq(Dipole and Quadropole electrostatic potential moments and coefficents),
    DATE => 'November 05, 2016',
    REF => 'momentCoeffiecients',
-   URL => 'http://peeterjoot.com/archives/math2016/momentCoeffiecients.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/momentCoeffiecients.pdf',
    WHAT => qq()
 }
 ,{
@@ -55,7 +55,7 @@ my @ece1228 =
    TITLE => qq(Laplacian in cylindrical coordinates),
    DATE => 'November 06, 2016',
    REF => 'laplacianCylindrical',
-   URL => 'http://peeterjoot.com/archives/math2016/laplacianCylindrical.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/laplacianCylindrical.pdf',
    WHAT => qq()
 }
 ,{
@@ -63,7 +63,7 @@ my @ece1228 =
    TITLE => qq(Poynting relationship),
    DATE => 'November 06, 2016',
    REF => 'poynting',
-   URL => 'http://peeterjoot.com/archives/math2016/poynting.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/poynting.pdf',
    WHAT => qq()
 }
 ,{
@@ -71,7 +71,7 @@ my @ece1228 =
    TITLE => qq(Frequency domain time averaged Poynting theorem),
    DATE => 'November 07, 2016',
    REF => 'poyntingTimeHarmonic',
-   URL => 'http://peeterjoot.com/archives/math2016/poyntingTimeHarmonic.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/poyntingTimeHarmonic.pdf',
    WHAT => qq()
 }
 ,{
@@ -79,7 +79,7 @@ my @ece1228 =
    TITLE => qq(Spherical gradient, divergence and Laplacian),
    DATE => 'November 08, 2016',
    REF => 'sphericalLaplacian',
-   URL => 'http://peeterjoot.com/archives/math2016/sphericalLaplacian.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/sphericalLaplacian.pdf',
    WHAT => qq()
 }
 ,{
@@ -87,7 +87,7 @@ my @ece1228 =
    TITLE => qq(vector wave equation in spherical coordinates),
    DATE => 'November 09, 2016',
    REF => 'vectorWaveEquationSpherical',
-   URL => 'http://peeterjoot.com/archives/math2016/vectorWaveEquationSpherical.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/vectorWaveEquationSpherical.pdf',
    WHAT => qq()
 }
 ,{
@@ -95,7 +95,7 @@ my @ece1228 =
    TITLE => qq(Dipole field from multipole moment sum),
    DATE => 'November 12, 2016',
    REF => 'dipoleFromSphericalMoments',
-   URL => 'http://peeterjoot.com/archives/math2016/dipoleFromSphericalMoments.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/dipoleFromSphericalMoments.pdf',
    WHAT => qq()
 }
 ,{
@@ -103,7 +103,7 @@ my @ece1228 =
    TITLE => qq(Calculating the magnetostatic field from the moment),
    DATE => 'November 13, 2016',
    REF => 'magneticFieldFromMoment',
-   URL => 'http://peeterjoot.com/archives/math2016/magneticFieldFromMoment.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/magneticFieldFromMoment.pdf',
    WHAT => qq()
 }
 ,{
@@ -111,7 +111,7 @@ my @ece1228 =
    TITLE => qq(Continuity equation and Ampere's law),
    DATE => 'November 14, 2016',
    REF => 'continuityDisplacement',
-   URL => 'http://peeterjoot.com/archives/math2016/continuityDisplacement.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/continuityDisplacement.pdf',
    WHAT => qq()
 }
 ,{
@@ -119,7 +119,7 @@ my @ece1228 =
    TITLE => qq(Transverse gauge),
    DATE => 'November 15, 2016',
    REF => 'transverseGauge',
-   URL => 'http://peeterjoot.com/archives/math2016/transverseGauge.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/transverseGauge.pdf',
    WHAT => qq()
 }
 ,{
@@ -127,7 +127,7 @@ my @ece1228 =
    TITLE => qq(Normal transmission and reflection through two interfaces),
    DATE => 'November 19, 2016',
    REF => 'twoInterfaceNormal',
-   URL => 'http://peeterjoot.com/archives/math2016/twoInterfaceNormal.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/twoInterfaceNormal.pdf',
    WHAT => qq()
 }
 ,{
@@ -135,7 +135,7 @@ my @ece1228 =
    TITLE => qq(Fresnel angular sum and difference formulas),
    DATE => 'November 21, 2016',
    REF => 'fresnelSumAndDifferenceAngleFormulas',
-   URL => 'http://peeterjoot.com/archives/math2016/fresnelSumAndDifferenceAngleFormulas.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/fresnelSumAndDifferenceAngleFormulas.pdf',
    WHAT => qq()
 }
 ,{
@@ -143,7 +143,7 @@ my @ece1228 =
    TITLE => qq(Total internal reflection and Brewster's angles),
    DATE => 'December 14, 2016',
    REF => 'brewsters',
-   URL => 'http://peeterjoot.com/archives/math2016/brewsters.pdf',
+   URL => 'https://peeterjoot.com/archives/math2016/brewsters.pdf',
    WHAT => qq()
 }
 ) ; # @ece1228
