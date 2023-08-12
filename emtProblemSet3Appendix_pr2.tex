@@ -8,58 +8,65 @@ Initially I was curious what the current loop magnetic field integral would look
 %
 I found it natural to do that computation using geometric algebra to express vector rotation in a plane and the other geometrical constructs of this problem.  The basic rules in that Algebra are that unit vectors square to unity (\(\Be_k^2 = 1 \)), and that orthogonal vectors anticommute (\( \Be_1 \Be_2 = -\Be_2 \Be_1 \)).  For example, letting \( i = \Be_1 \Be_2 \) the radial unit vector can be expressed as
 %
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:160}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:160}
+\begin{aligned}
 \rhocap(\theta)
-=
+&=
 \Be_1 e^{i \theta}
-= \Be_1 \lr{ \cos\theta + \Be_1 \Be_2 \sin\theta }
-= \Be_1 \cos\theta + (\Be_1^2) \Be_2 \sin\theta
-= \Be_1 \cos\theta + \Be_2 \sin\theta,
-\end{dmath}
+\\ &= \Be_1 \lr{ \cos\theta + \Be_1 \Be_2 \sin\theta }
+\\ &= \Be_1 \cos\theta + (\Be_1^2) \Be_2 \sin\theta
+\\ &= \Be_1 \cos\theta + \Be_2 \sin\theta,
+\end{aligned}
+\end{equation}
 %
 and the \( \thetacap \) direction vector is
-\begin{dmath}\label{eqn:emtProblemSet3Appendix:240}
+\begin{equation}\label{eqn:emtProblemSet3Appendix:240}
+\begin{aligned}
 \thetacap(\theta)
-=
+&=
 \Be_2 e^{i \theta}
-= \Be_2 \lr{ \cos\theta + \Be_1 \Be_2 \sin\theta }
-= \Be_2 \cos\theta + \Be_2 \Be_1 \Be_2 \sin\theta
-= \Be_2 \cos\theta + \Be_2 (-\Be_2 \Be_1) \sin\theta
-= \Be_2 \cos\theta - \Be_1 \sin\theta.
-\end{dmath}
+\\ &= \Be_2 \lr{ \cos\theta + \Be_1 \Be_2 \sin\theta }
+\\ &= \Be_2 \cos\theta + \Be_2 \Be_1 \Be_2 \sin\theta
+\\ &= \Be_2 \cos\theta + \Be_2 (-\Be_2 \Be_1) \sin\theta
+\\ &= \Be_2 \cos\theta - \Be_1 \sin\theta.
+\end{aligned}
+\end{equation}
 %
 This allows for a compact expression of an off-axis observation point
 %
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:60}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:60}
 \Br = z \Be_3 + \rho \Be_1 e^{i\theta}.
-\end{dmath}
+\end{equation}
 %
 Similarly, the charge point is
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:80}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:80}
 \Br' = R_l \Be_1 e^{i \theta'},
-\end{dmath}
+\end{equation}
 %
 and the element of the loop path is
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:100}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:100}
 d\Bl' = R_l \Be_2 e^{i\theta'} d\theta'.
-\end{dmath}
+\end{equation}
 %
 The difference vector from the charge position to the observation point is
 %
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:120}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:120}
+\begin{aligned}
 \BR
-= \Br - \Br'
-=
+&= \Br - \Br'
+\\ &=
 z \Be_3 + \rho \Be_1 e^{i\theta}
 -
 R_l \Be_1 e^{i \theta'},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 with squared length
 %
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:140}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:140}
+\begin{aligned}
 \BR^2
-=
+&=
 z^2 +
 \lr{ \rho \Be_1 e^{i\theta}
 -
@@ -70,15 +77,17 @@ R_l \Be_1 e^{i \theta'}
 -
 R_l \Be_1 e^{i \theta'}
 }
-=
+\\ &=
 z^2 + \rho^2 + R_l^2 - 2 \rho R_l \cos\lr{ \theta - \theta' }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 For the cross product, using a bivector duality transformation \( \Ba \cross \Bb = -\Be_1 \Be_2 \Be_3 (\Ba \wedge \Bb) \), and expressing the wedge product as a grade two selection, we have
 %
-\begin{dmath}\label{eqn:emtProblemSet3Problem2:180}
+\begin{equation}\label{eqn:emtProblemSet3Problem2:180}
+\begin{aligned}
 d\Bl' \cross \BR
-=
+&=
 -\Be_1 \Be_2 \Be_3 R_l d\theta' \gpgradetwo{
 \Be_2 e^{i \theta'}
 \lr{
@@ -87,24 +96,25 @@ z \Be_3 + \rho \Be_1 e^{i\theta}
 R_l \Be_1 e^{i \theta'}
 }
 }
-=
+\\ &=
 R_l d\theta' \lr{
 z \Be_1 e^{i\theta'}
 -
 \Be_3 \rho \cos\lr{ \theta - \theta' }
 + \Be_3 R_l
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The final integral can now be assembled
 %
 \boxedEquation{eqn:emtProblemSet3Appendix:220}{
-%\begin{dmath}\label{eqn:emtProblemSet3Problem2:200}
+%\begin{equation}\label{eqn:emtProblemSet3Problem2:200}
 \BB = \frac{I \mu_0 R_l}{4\pi} \int_0^{2\pi} d\theta'
 \frac
 { z \Be_1 e^{i\theta'} - \Be_3 \rho \cos\lr{ \theta - \theta' } + \Be_3 R_l }
 { \lr{z^2 + \rho^2 + R_l^2 - 2 \rho R_l \cos\lr{ \theta - \theta' }}^{3/2} }.
-%\end{dmath}
+%\end{equation}
 }
 %
 This is consistent with the traditional vector algebra derivation that led to \cref{eqn:emtProblemSet3Problem2:201} where \( \rho = 0 \) was assumed.

@@ -39,44 +39,48 @@ We will model the medium using a frequency representation of the permittivity
 %
 The real part is the phase, whereas the imaginary part is the loss.
 %
-\begin{dmath}\label{eqn:emtLecture6:40}
-n = \frac{c}{v}
-= \frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}}
-= \sqrt{\epsilon_r \mu_r}.
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture6:40}
+\begin{aligned}
+n &= \frac{c}{v}
+\\ &= \frac{\sqrt{\epsilon \mu}}{\sqrt{\epsilon_0 \mu_0}}
+\\ &= \sqrt{\epsilon_r \mu_r}.
+\end{aligned}
+\end{equation}
 %
 We can also write
 %
-\begin{dmath}\label{eqn:emtLecture6:60}
+\begin{equation}\label{eqn:emtLecture6:60}
 n(\omega) = n'(\omega) - j n''(\omega).
-\end{dmath}
+\end{equation}
 %
 If we are considering an electric dipole
 %
-\begin{dmath}\label{eqn:emtLecture6:80}
+\begin{equation}\label{eqn:emtLecture6:80}
 \BP_i = Q_i \Bx_i.
-\end{dmath}
+\end{equation}
 %
 With
 %
-\begin{dmath}\label{eqn:emtLecture6:100}
+\begin{equation}\label{eqn:emtLecture6:100}
 \BP = \epsilon_0 \chi_e \BE,
-\end{dmath}
+\end{equation}
 %
 and a time harmonic representation for the electric field
 %
-\begin{dmath}\label{eqn:emtLecture6:120}
+\begin{equation}\label{eqn:emtLecture6:120}
 \BE = \BE_0 e^{j \omega t},
-\end{dmath}
+\end{equation}
 %
 the dipole moment is assumed to be
 %
-\begin{dmath}\label{eqn:emtLecture6:140}
-\BP = \lim_{\Delta v \rightarrow 0} \frac{ \sum_{i = 1}^{N \Delta v} \BP_i }{\Delta v}
-= \frac{ N \Delta v \Bp}{\Delta v}
-= N \Bp
-= N Q \Bx.
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture6:140}
+\begin{aligned}
+\BP &= \lim_{\Delta v \rightarrow 0} \frac{ \sum_{i = 1}^{N \Delta v} \BP_i }{\Delta v}
+\\ &= \frac{ N \Delta v \Bp}{\Delta v}
+\\ &= N \Bp
+\\ &= N Q \Bx.
+\end{aligned}
+\end{equation}
 %
 %F1:
 %
@@ -107,9 +111,9 @@ F = m \frac{d^2 x}{dt^2}
 \end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtLecture6:200}
+\begin{equation}\label{eqn:emtLecture6:200}
 \frac{d^2 x}{dt^2} + \frac{D}{m} \ddt{x} + \frac{S}{m} x = \frac{Q E_0}{m} e^{j \omega t}.
-\end{dmath}
+\end{equation}
 %
 Let's define
 %
@@ -122,17 +126,17 @@ Let's define
 %
 so that
 %
-\begin{dmath}\label{eqn:emtLecture6:240}
+\begin{equation}\label{eqn:emtLecture6:240}
 \frac{d^2 x}{dt^2} + \gamma \ddt{x} + \omega_0^2 x = \frac{Q E_0}{m} e^{j \omega t}.
-\end{dmath}
+\end{equation}
 %
 \section{Calculating the permittivity and susceptibility.}
 %
 With \( x = x_0 e^{j \omega t} \) we have
 %
-\begin{dmath}\label{eqn:emtLecture6:260}
+\begin{equation}\label{eqn:emtLecture6:260}
 x_0 \lr{ -\omega^2 + j\gamma \omega + \omega_0^2 } = \frac{Q E_0}{m},
-\end{dmath}
+\end{equation}
 %
 or (with \( E = E_0 e^{j \omega t} \)), just
 %
@@ -149,41 +153,41 @@ x = x_0 e^{j\omega t}
 %
 The polarization \( P(t) \) is given by
 %
-\begin{dmath}\label{eqn:emtLecture6:300}
+\begin{equation}\label{eqn:emtLecture6:300}
 P(t) = N Q x,
-\end{dmath}
+\end{equation}
 %
 where \( Q \) is the charge associate with the unit dipole.  This has dimensions of [\si{\frac{1}{m^3} \times C \times m}], or [\si{C/m^2}].  This polarization is
 %
-\begin{dmath}\label{eqn:emtLecture6:440}
+\begin{equation}\label{eqn:emtLecture6:440}
 P(t)
 = \frac{Q^2 N E/m}{\omega_0^2 -\omega^2 + j\gamma \omega }.
-\end{dmath}
+\end{equation}
 %
 In particular, the ratio of the polarization to the electric field magnitude is
 %
-\begin{dmath}\label{eqn:emtLecture6:320}
+\begin{equation}\label{eqn:emtLecture6:320}
 \frac{P}{E}
 = \frac{Q^2 N/ m}{\omega_0^2 -\omega^2 + j\gamma \omega }.
-\end{dmath}
+\end{equation}
 %
 With \( P = \epsilon_0 \chi_e E \), we have
 %
-\begin{dmath}\label{eqn:emtLecture6:340}
+\begin{equation}\label{eqn:emtLecture6:340}
 \chi_e = \frac{Q^2 N/ m \epsilon_0}{\omega_0^2 -\omega^2 + j\gamma \omega }.
-\end{dmath}
+\end{equation}
 %
 Define
 %
-\begin{dmath}\label{eqn:emtLecture6:360}
+\begin{equation}\label{eqn:emtLecture6:360}
 \omega_p^2 = \frac{ Q^2 N}{m \epsilon_0},
-\end{dmath}
+\end{equation}
 %
 which has dimensions [\si{1/s^2}].  Then
 %
-\begin{dmath}\label{eqn:emtLecture6:380}
+\begin{equation}\label{eqn:emtLecture6:380}
 \chi_e = \frac{\omega_p^2}{\omega_0^2 -\omega^2 + j\gamma \omega }.
-\end{dmath}
+\end{equation}
 %
 With \( \epsilon_r = 1 + \chi_e \) we have
 %
@@ -194,19 +198,19 @@ With \( \epsilon_r = 1 + \chi_e \) we have
 \end{equation}
 %
 %or
-%\begin{dmath}\label{eqn:emtLecture6:420}
+%\begin{equation}\label{eqn:emtLecture6:420}
 %\epsilon_r
 %= \frac{ \omega_0^2 -\omega^2 + j\gamma \omega + \omega_p^2}{\omega_0^2 -\omega^2 + j\gamma \omega }
-%\end{dmath}
+%\end{equation}
 %
 It is simple to show that the real and imaginary split of \( \epsilon_r = \epsilon_r' -j \epsilon_r'' \) is given by
 %
-\begin{dmath}\label{eqn:emtLecture6:460}
+\begin{equation}\label{eqn:emtLecture6:460}
 \epsilon_r' = \frac{\omega_p^2 \lr{ \omega_0^2 - \omega^2 } }{ (\omega_0^2 - \omega^2)^2 + (\omega \gamma)^2 } + 1,
-\end{dmath}
-\begin{dmath}\label{eqn:emtLecture6:480}
+\end{equation}
+\begin{equation}\label{eqn:emtLecture6:480}
 \epsilon_r'' = \frac{\omega_p^2 \omega \gamma}{ (\omega_0^2 - \omega^2)^2 + (\omega \gamma)^2 }.
-\end{dmath}
+\end{equation}
 %
 %FIXME: calculate this.
 %
@@ -214,9 +218,9 @@ It is simple to show that the real and imaginary split of \( \epsilon_r = \epsil
 %
 With \( D = 0 \), or \( \gamma = 0 \) then \( \epsilon_r'' = 0 \),
 %
-\begin{dmath}\label{eqn:emtLecture6:500}
+\begin{equation}\label{eqn:emtLecture6:500}
 x = \frac{Q E_0/m}{\omega^2 - \omega^2} e^{j \omega t},
-\end{dmath}
+\end{equation}
 %
 and
 \begin{equation}\label{eqn:emtLecture6:520}
@@ -240,9 +244,11 @@ As \( \omega \rightarrow \omega_0 \), then the displacement \( x \rightarrow \in
 %
 If the resonance frequency is zero (free charges), then
 %
-\begin{dmath}\label{eqn:emtLecture6:540}
-\epsilon_r = \epsilon_r' = 1 - \frac{\omega_p^2}{\omega^2},
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture6:540}
+\begin{aligned}
+\epsilon_r &= \epsilon_r' \\ &= 1 - \frac{\omega_p^2}{\omega^2},
+\end{aligned}
+\end{equation}
 %
 which is negative for \( \omega_p > \omega \).
 %
@@ -253,9 +259,9 @@ When damping is present, the resonance frequency is the root of the characterist
 When there are \( N \) molecules per unit volume, and each molecule has
 Z electrons per molecule that have a binding frequency \( \omega_i \) and damping constant \( \gamma_i \), then it can be shown that
 %
-\begin{dmath}\label{eqn:emtLecture6:560}
+\begin{equation}\label{eqn:emtLecture6:560}
 \epsilon_r = 1 + \frac{Q N^2}{m \epsilon_0} \sum \frac{ f_i }{\omega_0^2 - \omega^2 + j \gamma \omega }
-\end{dmath}
+\end{equation}
 %
 A quantum mechanical derivation of the transition frequencies is used to derive this multiple resonance result.
 %

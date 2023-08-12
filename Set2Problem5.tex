@@ -37,23 +37,26 @@ Let's assume that the ``point'' charge in question is uniformly and symmetricall
 \int \spacegrad' \cdot \BE(\Br') dV' = \inv{\epsilon} \int \rho(\Br') dV' = \frac{q}{\epsilon}.
 \end{equation}
 The divergence integral can be evaluated with the divergence theorem, giving
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:60}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:60}
+\begin{aligned}
 \frac{q}{\epsilon}
-= \oint_{\Abs{\Br'} = R} \ncap \cdot \BE(\Br') dV'
-= E_n(R) 4 \pi R^2,
-\end{dmath}
+&=
+\oint_{\Abs{\Br'}= R} \ncap \cdot \BE(\Br') dV'
+\\ &= E_n(R) 4 \pi R^2,
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:80}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:80}
 E_n(R) = \inv{4 \pi \epsilon} \frac{q}{R^2}.
-\end{dmath}
+\end{equation}
 Here \( E_n \) is the normal component of the electric field, so the total electric field at any point \( \Br \) away from
 the region where the charge is located is
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:100}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:100}
 \BE(\Br)
 = \inv{4 \pi \epsilon} \frac{\rcap q}{\Abs{\Br}^2}
 + \phicap E_\phi(\Br)
 + \thetacap E_\theta(\Br).
-\end{dmath}
+\end{equation}
 
 Consider integration of the electric field on curve that is restricted to the surface fixed at \( \Abs{\Br} = R \).  Integrating on a closed curve we have
 \begin{equation}\label{eqn:emtProblemSet2Problem5:120}
@@ -65,48 +68,54 @@ This means that any field lines on the surface must close on themselves.  A coup
 \imageFigure{../figures/ece1228-electromagnetic-theory/closedCurvesOnSphereFig1}{Closed curves on sphere.}{fig:closedCurvesOnSphere:closedCurvesOnSphereFig1}{0.2}
 
 There are no such closed curves that are rotationally invariant, whereas it was assumed that the ``charge distribution'' of the point charge was uniform and spherically symmetric (i.e. rotationally invariant).  In order to resolve this contradiction it must be assumed that all the tangential components of the electric field on the surface of the sphere containing the charge are zero.  This means that the field is strictly radial
-%\begin{dmath}\label{eqn:emtProblemSet2Problem5:260}
+%\begin{equation}\label{eqn:emtProblemSet2Problem5:260}
 \boxedEquation{eqn:emtProblemSet2Problem5:280}{
 \BE(\Br)
 = \frac{q}{4 \pi \epsilon} \frac{\rcap}{\Abs{\Br}^2}.
 }
-%\end{dmath}
+%\end{equation}
 That said, if one assumes that the point charges of interest are protons, nuclei, or electrons, the assumptions made in this problem are not entirely physically reasonable.
 From a quantum mechanical perspective, modeling an electron, or any similarly localized charged particle as a point particle at a fixed point in space is incompatible with the Heisenberg uncertainty principle, since a fixed point charge location imbues infinite momentum.  Also, we
 know that electrons have an orientation (i.e. spin), observable (indirectly, using ions) using a Stern-Gerlach apparatus.  That spin is not modeled by Maxwell's equations, and invalidates the idea of modeling the electron as a uniform symmetric entity.
 Interestingly, experimental apparatus for measuring free electron spin, a more difficult experiment than measuring ionic spin, is still being discussed \citep{garraway1999observing}.
 \makeSubAnswer{}{emt:problemSet2:5b}
 The force on a charge is given by that charge times the electric field at that point, so the force on a test charge \( q' \) situated at \( \Br \), with the point charge \( q \) at the origin is just
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:240}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:240}
+\begin{aligned}
 \BF(\Br)
-= q' \BE(\Br)
-= \inv{4 \pi \epsilon} \frac{q q' \rcap}{\Abs{\Br}^2}.
-\end{dmath}
+&= q' \BE(\Br)
+\\ &= \inv{4 \pi \epsilon} \frac{q q' \rcap}{\Abs{\Br}^2}.
+\end{aligned}
+\end{equation}
 \makeSubAnswer{}{emt:problemSet2:5c}
 The potential implicitly defined by \( \BE = - \spacegrad V \) can be recovered by integrating over a curve connected by endpoints \( \Ba, \Bb \)
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:140}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:140}
+\begin{aligned}
 \int_\Ba^\Bb \BE \cdot d\Bl
-=
+&=
 -\int_\Ba^\Bb \spacegrad V \cdot d\Bl
-=
+\\ &=
 -\lr{ V(\Bb) - V(\Ba) },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:160}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:160}
 V(\Br) = V(\Br_0) - \int_{\Br_0}^\Br \BE \cdot d\Bl,
-\end{dmath}
+\end{equation}
 where \( V(\Br_0) \) is the value of the potential at a reference point \( \Br_0 \).  For the electrostatic field, this integral can be performed over a radial path \( \Bl \propto \rcap \) from infinity to \( r\rcap \), which is
-\begin{dmath}\label{eqn:emtProblemSet2Problem5:180}
+\begin{equation}\label{eqn:emtProblemSet2Problem5:180}
+\begin{aligned}
 V(\Br)
-= V(\infty) - \int_{\infty}^r E_n dr
-= -\int_{\infty}^r \frac{q}{4 \pi \epsilon r^2} dr
-= \frac{q}{4 \pi\epsilon} \evalrange{\lr{\inv{r}}}{\infty}{r},
-\end{dmath}
+&= V(\infty) - \int_{\infty}^r E_n dr
+\\ &= -\int_{\infty}^r \frac{q}{4 \pi \epsilon r^2} dr
+\\ &= \frac{q}{4 \pi\epsilon} \evalrange{\lr{\inv{r}}}{\infty}{r},
+\end{aligned}
+\end{equation}
 or
-%\begin{dmath}\label{eqn:emtProblemSet2Problem5:200}
+%\begin{equation}\label{eqn:emtProblemSet2Problem5:200}
 \boxedEquation{eqn:emtProblemSet2Problem5:220}{
 V(\Br)
 = \frac{q}{4 \pi\epsilon r}.
 }
-%\end{dmath}
+%\end{equation}
 }}

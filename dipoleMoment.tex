@@ -51,19 +51,20 @@ or
 \end{equation}
 %
 The electric field for this superposition is
-\begin{dmath}\label{eqn:dipoleMoment:60}
+\begin{equation}\label{eqn:dipoleMoment:60}
+\begin{aligned}
 \BE
-=
+&=
 \inv{4 \pi \epsilon_0} \lr{
 \frac{q \BR_{+}}{\Abs{\BR_{+}}^3} -
 \frac{q \BR_{-}}{\Abs{\BR_{-}}^3}
 }
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \lr{
 \frac{\Br - \Bd/2}{\Abs{\BR_{+}}^3} -
 \frac{\Br + \Bd/2}{\Abs{\BR_{-}}^3}
 }
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \lr{
 \Br \lr{
 \inv{\Abs{\BR_{+}}^3}
@@ -77,30 +78,32 @@ The electric field for this superposition is
 \inv{\Abs{\BR_{-}}^3}
 }
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The magnitudes can be expanded in Taylor series
 %
-\begin{dmath}\label{eqn:dipoleMoment:80}
+\begin{equation}\label{eqn:dipoleMoment:80}
+\begin{aligned}
 \Abs{\BR_{\pm}}^{3}
-=
+&=
 \lr{
 \lr{ \Br \mp \Bd/2 } \cdot \lr{ \Br \mp \Bd/2 }
 }^{-3/2}
-=
+\\ &=
 \lr{
 \lr{ \Br^2 + (\Bd/2)^2 \mp 2 \Br \cdot \Bd/2 }
 }^{-3/2}
-=
+\\ &=
 \lr{
 \lr{ \Br^2 + (\Bd/2)^2 \mp \Br \cdot \Bd }
 }^{-3/2}
-=
+\\ &=
 (\Br^2)^{-3/2}
 \lr{
 \lr{ 1 + \lr{\frac{\Bd}{2 r}}^2 \mp \rcap \cdot \frac{\Bd}{r} }
 }^{-1/2}
-=
+\\ &=
 r^{-3}
 \lr{
 1
@@ -111,11 +114,12 @@ r^{-3}
 \lr{ \lr{\frac{\Bd}{2 r}}^2 \mp \rcap \cdot \frac{\Bd}{r} }^2
 + \cdots
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Here \( r = \Abs{\Br} \), and the Taylor series was taken in the \( \Bd/r \ll 1 \) limit.  The sums and differences of these magnitudes, are to first order
 %
-\begin{dmath}\label{eqn:dipoleMoment:100}
+\begin{equation}\label{eqn:dipoleMoment:100}
 \inv{\Abs{\BR_{+}}^3}
 -
 \inv{\Abs{\BR_{-}}^3}
@@ -123,21 +127,21 @@ Here \( r = \Abs{\Br} \), and the Taylor series was taken in the \( \Bd/r \ll 1 
 2 \frac{1}{r^3} \lr{\frac{-3}{2}} \lr{-\rcap \cdot \frac{\Bd}{r}}
 \approx
 \frac{3}{r^4} \rcap \cdot \Bd,
-\end{dmath}
+\end{equation}
 %
 and
 %
-\begin{dmath}\label{eqn:dipoleMoment:120}
+\begin{equation}\label{eqn:dipoleMoment:120}
 \inv{\Abs{\BR_{+}}^3}
 +
 \inv{\Abs{\BR_{-}}^3}
 \approx
 \frac{2}{r^3}.
-\end{dmath}
+\end{equation}
 %
 The \( \Br \gg \Bd \) limiting expression for the electric field is
 %
-\begin{dmath}\label{eqn:dipoleMoment:140}
+\begin{equation}\label{eqn:dipoleMoment:140}
 \BE
 \approx
 \frac{q}{4 \pi \epsilon_0 r^3} \lr{
@@ -145,11 +149,11 @@ The \( \Br \gg \Bd \) limiting expression for the electric field is
 -
 2 \frac{\Bd}{2}
 },
-\end{dmath}
+\end{equation}
 %
 or, with \( \Bp = q \Bd \)
 %
-%\begin{dmath}\label{eqn:dipoleMoment:180}
+%\begin{equation}\label{eqn:dipoleMoment:180}
 \boxedEquation{eqn:dipoleMoment:180}{
 \BE =
 \frac{1}{4 \pi \epsilon_0 r^3} \lr{
@@ -157,7 +161,7 @@ or, with \( \Bp = q \Bd \)
 -\Bp
 }.
 }
-%\end{dmath}
+%\end{equation}
 %}
 } % answer
 %

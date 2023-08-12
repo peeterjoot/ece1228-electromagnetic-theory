@@ -27,60 +27,62 @@ Free electrons are responsible for high reflectivity and good thermal conductivi
 %
 With such a model the Lorentz model equation
 %
-\begin{dmath}\label{eqn:druid:20}
+\begin{equation}\label{eqn:druid:20}
 \frac{d^2 x}{dt^2} + \gamma \ddt{x} + \omega_0^2 x = \frac{Q E_0}{m} e^{j \omega t},
-\end{dmath}
+\end{equation}
 %
 is reduced to
 %
-\begin{dmath}\label{eqn:druid:40}
+\begin{equation}\label{eqn:druid:40}
 \frac{d^2 x}{dt^2} + \gamma \ddt{x} = \frac{Q E_0}{m} e^{j \omega t},
-\end{dmath}
+\end{equation}
 %
 Again, assuming a solution of the form \( x_p = x_0 e^{j \omega t} \) for the particular solution and substituting in \cref{eqn:druid:40}, we have
 %
-\begin{dmath}\label{eqn:druid:80}
+\begin{equation}\label{eqn:druid:80}
 x_0 \lr{ (j\omega)^2 + \gamma (j \omega)} = \frac{Q E_0}{m},
-\end{dmath}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:druid:60}
+\begin{equation}\label{eqn:druid:60}
 x
 =
 \frac{Q E/m}{-\omega^2 + j \gamma \omega },
-\end{dmath}
+\end{equation}
 %
 Once more assuming identical particles that are not coupled and a linear isotropic medium and using the fact that \( \BP = N \Bp = N Q \Bx \), and
 %
-\begin{dmath}\label{eqn:druid:100}
+\begin{equation}\label{eqn:druid:100}
 \chi_e = \frac{\Abs{\BP}}{\epsilon_0 \Abs{\BE} },
-\end{dmath}
+\end{equation}
 %
 we have
 %
-\begin{dmath}\label{eqn:druid:120}
+\begin{equation}\label{eqn:druid:120}
 \chi_e
 =
 \frac{Q^2 N/m \epsilon_0}{-\omega^2 + j \gamma \omega },
-\end{dmath}
+\end{equation}
 %
 or with \( \omega_p^2 = Q^2 N/m\epsilon_0\),
 %
-\begin{dmath}\label{eqn:druid:140}
+\begin{equation}\label{eqn:druid:140}
+\begin{aligned}
 \epsilon_r
-= 1 + \chi_e
-=
+&= 1 + \chi_e
+\\ &=
 1+
 \frac{\omega_p^2}{-\omega^2 + j \gamma \omega }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Plasma frequency, \( \omega_p \), can be understood as the natural resonance frequency by which the free electron gas (plasma) collectively (not individual electrons ) oscillates.
 %
 Note that if we neglect the last term, i.e., let \( \gamma = 0 \) then
 %
-\begin{dmath}\label{eqn:druid:160}
+\begin{equation}\label{eqn:druid:160}
 \epsilon_r = 1 - \frac{\omega_p^2}{\omega^2}.
-\end{dmath}
+\end{equation}
 %
 From this it is clear that when \( \omega < \omega_p \), we have \( \epsilon_r < 1 \) and \( n = \sqrt{\epsilon_r} \) is purely imaginary, and the wave attenuates inside the electron plasma.
 %
@@ -99,15 +101,15 @@ This means that for \( \omega < \omega_p \) electromagnetic waves do not propaga
 %
 Using \cref{eqn:druid:160} one can calculate
 %
-\begin{dmath}\label{eqn:druid:220}
+\begin{equation}\label{eqn:druid:220}
 \tilde{n} = \sqrt{\epsilon_r},
-\end{dmath}
+\end{equation}
 %
 and plot the reflectivity \( R \) at normal incidence
 %
-\begin{dmath}\label{eqn:druid:240}
+\begin{equation}\label{eqn:druid:240}
 R = \Abs{ \frac{\tilde{n} - 1 }{\tilde{n} + 1} },
-\end{dmath}
+\end{equation}
 %
 which will have a shape similar to that of \cref{fig:druidReflectivity:druidReflectivityFig1}.
 %
@@ -121,23 +123,25 @@ The fact that plasma reflects EM waves below a \( \omega_p \) frequency can be u
 %
 %\ddt{} \lr{ m \ddt{x} } + \gamma \ddt{x} = Q E_0 e^{i \omega t}
 %
-\begin{dmath}\label{eqn:druid:260}
+\begin{equation}\label{eqn:druid:260}
+\begin{aligned}
 \spacegrad \cross \BH(\Br, \omega)
-= \sigma \BE(\Br, \omega) + j \omega \epsilon_0 \BE(\Br, \omega)
-= j \omega \epsilon_0 \lr{ 1 + \frac{\sigma}{j \omega \epsilon_0} } \BE(\Br, \omega)
-= j \omega \epsilon_0 \lr{ 1 - \frac{j \sigma}{\omega \epsilon_0} } \BE(\Br, \omega)
-\end{dmath}
+&= \sigma \BE(\Br, \omega) + j \omega \epsilon_0 \BE(\Br, \omega)
+\\ &= j \omega \epsilon_0 \lr{ 1 + \frac{\sigma}{j \omega \epsilon_0} } \BE(\Br, \omega)
+\\ &= j \omega \epsilon_0 \lr{ 1 - \frac{j \sigma}{\omega \epsilon_0} } \BE(\Br, \omega)
+\end{aligned}
+\end{equation}
 %
 This complex factor is the relative permittivity
 %
-\begin{dmath}\label{eqn:druid:280}
+\begin{equation}\label{eqn:druid:280}
 \epsilon_r
 = 1 - \frac{j \sigma}{\omega \epsilon_0},
-\end{dmath}
+\end{equation}
 %
 and is why we write
 %
-\begin{dmath}\label{eqn:druid:300}
+\begin{equation}\label{eqn:druid:300}
 \epsilon(\omega) = \epsilon'(\omega) - j \epsilon''(\omega).
-\end{dmath}
+\end{equation}
 %

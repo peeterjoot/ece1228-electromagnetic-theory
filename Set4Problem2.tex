@@ -6,9 +6,9 @@
 \index{phasor}
 Prove that if
 %
-\begin{dmath}\label{eqn:emtProblemSet4Problem2:20}
+\begin{equation}\label{eqn:emtProblemSet4Problem2:20}
 \Real\lr{ \BA(\Br) e^{j \omega t}} = \Real\lr{ \BB(\Br) e^{j \omega t}},
-\end{dmath}
+\end{equation}
 %
 then
 \( \BA(\Br) = \BB(\Br) \).
@@ -27,36 +27,38 @@ Let
 \end{equation}
 %
 Expanding \cref{eqn:emtProblemSet4Problem2:20}, for two equal time domain representation of the phasors we have
-\begin{dmath}\label{eqn:emtProblemSet4Problem2:60}
+\begin{equation}\label{eqn:emtProblemSet4Problem2:60}
 \BA_r \cos(\omega t) - \BA_i \sin(\omega t)
 =
 \BB_r \cos(\omega t) - \BB_i \sin(\omega t).
-\end{dmath}
+\end{equation}
 %
 This is required to be true for all times.  If that is the case, then at \( t = 0 \) we have
-\begin{dmath}\label{eqn:emtProblemSet4Problem2:80}
+\begin{equation}\label{eqn:emtProblemSet4Problem2:80}
 \BA_r
 =
 \BB_r,
-\end{dmath}
+\end{equation}
 and at time \( t = -\pi/(2\omega) \),
-\begin{dmath}\label{eqn:emtProblemSet4Problem2:100}
+\begin{equation}\label{eqn:emtProblemSet4Problem2:100}
 \BA_i
 =
 \BB_i.
-\end{dmath}
+\end{equation}
 %
 Equality of \( \BA_r = \BB_r \), and \( \BA_i = \BB_r \) also implies that the imaginary parts are equal, since
-\begin{dmath}\label{eqn:emtProblemSet4Problem2:120}
+\begin{equation}\label{eqn:emtProblemSet4Problem2:120}
+\begin{aligned}
 \Imag\lr{ \BA e^{j\omega t} } - \Imag\lr{ \BB e^{j\omega t} }
-=
+&=
 \BA_r \sin(\omega t) + \BA_i \cos(\omega t)
 -\lr{ \BB_r \sin(\omega t) + \BB_i \cos(\omega t) }
-=
+\\ &=
 \lr{ \BA_r - \BB_r } \sin(\omega t)
 +
 \lr{ \BA_i - \BB_i } \cos(\omega t)
-=
+\\ &=
 0.
-\end{dmath}
+\end{aligned}
+\end{equation}
 }}

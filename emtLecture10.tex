@@ -35,20 +35,20 @@ The Fresnel reflection geometry for an electric field \( \BE \) parallel to the 
 %
 \imageFigure{../figures/ece1228-electromagnetic-theory/fresnelTEFig1}{Electric field TE mode Fresnel geometry.}{fig:fresnelTE:fresnelTEFig1}{0.3}
 %
-\begin{dmath}\label{eqn:emtLecture10:20}
-   \bcE_i = \Be_2 E_i e^{j \omega t - j \Bk_{i} \cdot \Bx },
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:20}
+\bcE_i = \Be_2 E_i e^{j \omega t - j \Bk_{i} \cdot \Bx },
+\end{equation}
 %
 with an assumption that this field maintains it's polarization in both its reflected and transmitted components, so that
 %
-\begin{dmath}\label{eqn:emtLecture10:40}
-   \bcE_r = \Be_2 r E_i e^{j \omega t - j \Bk_{r} \cdot \Bx },
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:40}
+\bcE_r = \Be_2 r E_i e^{j \omega t - j \Bk_{r} \cdot \Bx },
+\end{equation}
 %
 and
-\begin{dmath}\label{eqn:emtLecture10:60}
-   \bcE_t = \Be_2 t E_i e^{j \omega t - j \Bk_{t} \cdot \Bx },
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:60}
+\bcE_t = \Be_2 t E_i e^{j \omega t - j \Bk_{t} \cdot \Bx },
+\end{equation}
 %
 Measuring the angles \( \theta_i, \theta_r, \theta_t \) from the normal, with \( i = \Be_3 \Be_1 \) the wave vectors are
 %
@@ -72,14 +72,16 @@ So the time harmonic electric fields are
 %
 The magnetic fields follow from Faraday's law
 %
-\begin{dmath}\label{eqn:emtLecture10:900}
+\begin{equation}\label{eqn:emtLecture10:900}
+\begin{aligned}
 \BH
-= \inv{-j \omega \mu } \spacegrad \cross \BE
-= \inv{-j \omega \mu } \spacegrad \cross \Be_2 e^{-j \Bk \cdot \Bx}
-= \inv{j \omega \mu } \Be_2 \cross \spacegrad e^{-j \Bk \cdot \Bx}
-= -\inv{\omega \mu } \Be_2 \cross \Bk e^{-j \Bk \cdot \Bx}
-= \inv{\omega \mu } \Bk \cross \BE.
-\end{dmath}
+&= \inv{-j \omega \mu } \spacegrad \cross \BE
+\\ &= \inv{-j \omega \mu } \spacegrad \cross \Be_2 e^{-j \Bk \cdot \Bx}
+\\ &= \inv{j \omega \mu } \Be_2 \cross \spacegrad e^{-j \Bk \cdot \Bx}
+\\ &= -\inv{\omega \mu } \Be_2 \cross \Bk e^{-j \Bk \cdot \Bx}
+\\ &= \inv{\omega \mu } \Bk \cross \BE.
+\end{aligned}
+\end{equation}
 %
 We have
 %
@@ -92,19 +94,21 @@ We have
 \end{equation}
 %
 Note that
-\begin{dmath}\label{eqn:emtLecture10:1500}
+\begin{equation}\label{eqn:emtLecture10:1500}
+\begin{aligned}
 \frac{k}{\omega \mu}
-=
+&=
 \frac{k}{k v \mu}
-=
+\\ &=
 \frac{\sqrt{\mu\epsilon}}{\mu}
-=\sqrt
+\\ &=\sqrt
 {
 \frac{\epsilon}{\mu}
 }
-=
+\\ &=
 \inv{\eta},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so
 \begin{equation}\label{eqn:emtLecture10:940}
@@ -130,27 +134,27 @@ The boundary conditions at \( z = 0 \) with \( \ncap = \Be_3 \) are
 %
 %\begin{subequations}
 %\label{eqn:emtLecture10:980}
-%\begin{dmath}\label{eqn:emtLecture10:1000}
+%\begin{equation}\label{eqn:emtLecture10:1000}
 %-\frac{k_1 }{\mu_1} \cos\theta_i \exp\lr{ - j k_1 x \sin\theta_i }
 %+
 %\frac{k_1 r }{\mu_1} \cos\theta_r \exp\lr{ - j k_1 x \sin\theta_r }
 %=
 %-\frac{k_2 t }{\mu_2} \cos\theta_t \exp\lr{ - j k_2 x \sin\theta_t },
-%\end{dmath}
-%\begin{dmath}\label{eqn:emtLecture10:1020}
+%\end{equation}
+%\begin{equation}\label{eqn:emtLecture10:1020}
 %k_1 \sin\theta_i \exp\lr{ - j k_1 x \sin\theta_i }
 %+
 %k_1 r \sin\theta_r \exp\lr{ + j k_1 x \sin\theta_r }
 %=
 %k_2 t \sin\theta_t \exp\lr{ - j k_2 x \sin\theta_t }
-%\end{dmath}
-%\begin{dmath}\label{eqn:emtLecture10:1040}
+%\end{equation}
+%\begin{equation}\label{eqn:emtLecture10:1040}
 %\exp\lr{ - j k_1 \lr{ x \sin\theta_i} }
 %+
 %r \exp\lr{ - j k_1 \lr{ x \sin\theta_r}}
 %=
 %t \exp\lr{ - j k_2 \lr{ x \sin\theta_t}}.
-%\end{dmath}
+%\end{equation}
 %\end{subequations}
 %
 At \( x = 0 \), this is
@@ -165,38 +169,40 @@ k_1 \sin\theta_i + k_1 r \sin\theta_r &= k_2 t \sin\theta_t  \\
 %
 When \( t = 0 \) the latter two equations give Shell's first law
 %
-%\begin{dmath}\label{eqn:emtLecture10:1080}
+%\begin{equation}\label{eqn:emtLecture10:1080}
 \boxedEquation{eqn:emtLecture10:1080}{
 \sin\theta_i = \sin\theta_r.
 }
-%\end{dmath}
+%\end{equation}
 %
 Assuming this holds for all \( r, t \) we have
 %
-\begin{dmath}\label{eqn:emtLecture10:1120}
+\begin{equation}\label{eqn:emtLecture10:1120}
 k_1 \sin\theta_i (1 + r ) = k_2 t \sin\theta_t,
-\end{dmath}
+\end{equation}
 %
 which is Snell's second law in disguise
-\begin{dmath}\label{eqn:emtLecture10:1140}
+\begin{equation}\label{eqn:emtLecture10:1140}
 k_1 \sin\theta_i = k_2 \sin\theta_t.
-\end{dmath}
+\end{equation}
 %
 With
-\begin{dmath}\label{eqn:emtLecture10:1540}
+\begin{equation}\label{eqn:emtLecture10:1540}
+\begin{aligned}
 k
-= \frac{\omega}{v}
-= \frac{\omega}{c} \frac{c}{v}
-= \frac{\omega}{c} n,
-\end{dmath}
+&= \frac{\omega}{v}
+\\ &= \frac{\omega}{c} \frac{c}{v}
+\\ &= \frac{\omega}{c} n,
+\end{aligned}
+\end{equation}
 %
 so \cref{eqn:emtLecture10:1140} takes the form
 %
-%\begin{dmath}\label{eqn:emtLecture10:1560}
+%\begin{equation}\label{eqn:emtLecture10:1560}
 \boxedEquation{eqn:emtLecture10:1560}{
 n_1 \sin\theta_i = n_2 \sin\theta_t.
 }
-%\end{dmath}
+%\end{equation}
 %
 With
 \begin{equation}\label{eqn:emtLecture10:1200}
@@ -208,7 +214,7 @@ k_{2z} &= k_2 \cos\theta_t,
 %
 we can solve for \( r, t \) by inverting
 %
-\begin{dmath}\label{eqn:emtLecture10:1180}
+\begin{equation}\label{eqn:emtLecture10:1180}
 \begin{bmatrix}
 \mu_2 k_{1z} & \mu_1 k_{2z} \\
 -1 & 1 \\
@@ -222,11 +228,11 @@ t
 \mu_2 k_{1z} \\
 1
 \end{bmatrix},
-\end{dmath}
+\end{equation}
 %
 which gives
 %
-\begin{dmath}\label{eqn:emtLecture10:1220}
+\begin{equation}\label{eqn:emtLecture10:1220}
 \begin{bmatrix}
 r \\
 t
@@ -240,18 +246,15 @@ t
 \mu_2 k_{1z} \\
 1
 \end{bmatrix},
-\end{dmath}
+\end{equation}
 %
 or
-%\begin{dmath}\label{eqn:emtLecture10:1240}
 \boxedEquation{eqn:emtLecture10:1260}{
 \begin{aligned}
 r &= \frac{\mu_2 k_{1z} - \mu_1 k_{2z}}{\mu_2 k_{1z} + \mu_1 k_{2z}}, \\
 t &= \frac{2 \mu_2 k_{1z}}{\mu_2 k_{1z} + \mu_1 k_{2z}}.
 \end{aligned}
 }
-%\end{dmath}
-%
 There are many ways that this can be written.  Dividing both the numerator and denominator by \( \mu_1 \mu_2 \omega/c \), and noting that \( k = \omega n/c \), we have
 %
 \begin{equation}\label{eqn:emtLecture10:1680}
@@ -273,19 +276,21 @@ For completeness, now consider the TM mode.
 %
 Faraday's law also can provide the electric field from the magnetic
 %
-\begin{dmath}\label{eqn:emtLecture10:1280}
+\begin{equation}\label{eqn:emtLecture10:1280}
+\begin{aligned}
 \kcap \cross \BH
-= \eta \kcap \cross \lr{ \kcap \cross \BE }
-= -\eta \kcap \cdot \lr{ \kcap \wedge \BE }
-= -\eta \lr{ \BE - \kcap \lr{ \kcap \cdot \BE } }
-= -\eta \BE,
-\end{dmath}
+&= \eta \kcap \cross \lr{ \kcap \cross \BE }
+\\ &= -\eta \kcap \cdot \lr{ \kcap \wedge \BE }
+\\ &= -\eta \lr{ \BE - \kcap \lr{ \kcap \cdot \BE } }
+\\ &= -\eta \BE,
+\end{aligned}
+\end{equation}
 %
 so
 %
-\begin{dmath}\label{eqn:emtLecture10:1300}
+\begin{equation}\label{eqn:emtLecture10:1300}
 \BE = \eta \BH \cross \kcap.
-\end{dmath}
+\end{equation}
 %
 So the magnetic field components are
 %
@@ -328,27 +333,29 @@ At \( t = 0 \), the first and third of these give \( \theta_i = \theta_r \).  As
 \end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtLecture10:1600}
+\begin{equation}\label{eqn:emtLecture10:1600}
 \epsilon_1 \eta_1 \sin\theta_i = \epsilon_2 \eta_2 \sin\theta_t.
-\end{dmath}
+\end{equation}
 %
 This is also Snell's second law \cref{eqn:emtLecture10:1560} in disguise, which can be seen by
 %
-\begin{dmath}\label{eqn:emtLecture10:1620}
+\begin{equation}\label{eqn:emtLecture10:1620}
+\begin{aligned}
 \epsilon_1 \eta_1
-=
+&=
 \epsilon_1 \sqrt{\frac{\mu_1}{\epsilon_1}}
-=
+\\ &=
 \sqrt{\epsilon_1 \mu_1}
-=
+\\ &=
 \inv{v}
-=
+\\ &=
 \frac{n}{c}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The remaining equations in matrix form are
 %
-\begin{dmath}\label{eqn:emtLecture10:1460}
+\begin{equation}\label{eqn:emtLecture10:1460}
 \begin{bmatrix}
 \cos\theta_i & \cos\theta_t \\
 -1 & \frac{\eta_1}{\eta_2}
@@ -362,15 +369,16 @@ t
 \cos\theta_i \\
 1
 \end{bmatrix},
-\end{dmath}
+\end{equation}
 %
 the inverse of which is
-\begin{dmath}\label{eqn:emtLecture10:1480}
+\begin{equation}\label{eqn:emtLecture10:1480}
+\begin{aligned}
 \begin{bmatrix}
 r \\
 t
 \end{bmatrix}
-=
+&=
 \inv{ \frac{\eta_1}{\eta_2} \cos\theta_i + \cos\theta_t }
 \begin{bmatrix}
 \frac{\eta_1}{\eta_2} & - \cos\theta_t \\
@@ -380,16 +388,16 @@ t
 \cos\theta_i \\
 1
 \end{bmatrix}
-=
+\\ &=
 \inv{ \frac{\eta_1}{\eta_2} \cos\theta_i + \cos\theta_t }
 \begin{bmatrix}
 \frac{\eta_1}{\eta_2} \cos\theta_i - \cos\theta_t \\
 2 \cos\theta_i
 \end{bmatrix},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
-%\begin{dmath}\label{eqn:emtLecture10:1640}
 \boxedEquation{eqn:emtLecture10:1660}{
 \begin{aligned}
 r
@@ -399,7 +407,6 @@ t &=
 \frac{2 \eta_2 \cos\theta_i}{ \eta_1 \cos\theta_i + \eta_2 \cos\theta_t }.
 \end{aligned}
 }
-%\end{dmath}
 %
 Multiplication of the numerator and denominator by \( c/\eta_1 \eta_2 \), noting that \( c/\eta = n/\mu \) gives
 %

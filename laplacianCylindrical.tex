@@ -32,26 +32,26 @@
 %
 In class it was suggested that the identity
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:20}
+\begin{equation}\label{eqn:laplacianCylindrical:20}
 \spacegrad^2 \BA =
 \spacegrad \lr{ \spacegrad \cdot \BA }
 -\spacegrad \cross \lr{ \spacegrad \cross \BA },
-\end{dmath}
+\end{equation}
 %
 can be used to compute the Laplacian in non-rectangular coordinates.  Is that the easiest way to do this?
 %  One alternative that shouldn't be any different in difficulty is to use the geometric algebra equivalent
 %
-%\begin{dmath}\label{eqn:laplacianCylindrical:40}
+%\begin{equation}\label{eqn:laplacianCylindrical:40}
 %\spacegrad^2 \BA = \spacegrad \lr{ \spacegrad \cdot \BA } +\spacegrad \cdot \lr{ \spacegrad \wedge \BA }.
-%\end{dmath}
+%\end{equation}
 %
 How about just sequential applications of the gradient on the vector?  Let's start with the vector product of the gradient and the vector.
 %We used cylindrical coordinates to derive Bessel function solutions of the wave equation, so let's derive that cylindrical Laplacian.
 First recall that the cylindrical representation of the gradient is
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:80}
+\begin{equation}\label{eqn:laplacianCylindrical:80}
 \spacegrad = \rhocap \partial_\rho + \frac{\phicap}{\rho} \partial_\phi + \zcap \partial_z,
-\end{dmath}
+\end{equation}
 where
 \begin{equation}\label{eqn:laplacianCylindrical:100}
 \begin{aligned}
@@ -119,11 +119,11 @@ As expected, we see that the gradient splits nicely into a dot and curl
 %
 where the cylindrical representation of the divergence is seen to be
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:140}
+\begin{equation}\label{eqn:laplacianCylindrical:140}
 \spacegrad \cdot \BA
 =
 \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z,
-\end{dmath}
+\end{equation}
 %
 and the cylindrical representation of the curl is
 %
@@ -156,9 +156,10 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 %
 \begin{subequations}
 \label{eqn:laplacianCylindrical:200}
-\begin{dmath}\label{eqn:laplacianCylindrical:220}
+\begin{equation}\label{eqn:laplacianCylindrical:220}
+\begin{aligned}
 \rhocap \cdot \lr{ \spacegrad^2 \BA }
-=
+&=
 \partial_\rho
 \lr{
    \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
@@ -174,7 +175,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
       \partial_z A_\rho -\partial_\rho A_z
    }
 }
-=
+\\ &=
 \partial_\rho \lr{ \inv{\rho} \partial_\rho (\rho A_\rho)}
 + \partial_\rho \lr{ \frac{1}{\rho} \partial_\phi A_\phi}
 + \partial_{\rho z} A_z
@@ -182,7 +183,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho^2}\partial_{\phi\phi} A_\rho
 + \partial_{zz} A_\rho
 - \partial_{z\rho} A_z
-=
+\\ &=
 \partial_\rho \lr{ \inv{\rho} \partial_\rho (\rho A_\rho)}
 + \inv{\rho^2}\partial_{\phi\phi} A_\rho
 + \partial_{zz} A_\rho
@@ -190,22 +191,24 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \frac{1}{\rho} \partial_{\rho\phi} A_\phi
 - \inv{\rho^2}\partial_{\phi} A_\phi
 - \inv{\rho}\partial_{\phi\rho} A_\phi
-=
+\\ &=
 \partial_\rho \lr{ \inv{\rho} \partial_\rho (\rho A_\rho)}
 + \inv{\rho^2}\partial_{\phi\phi} A_\rho
 + \partial_{zz} A_\rho
 - \frac{2}{\rho^2} \partial_\phi A_\phi
-=
+\\ &=
 \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\rho}
 + \inv{\rho^2}\partial_{\phi\phi} A_\rho
 + \partial_{zz} A_\rho
 - \frac{A_\rho}{\rho^2}
 - \frac{2}{\rho^2} \partial_\phi A_\phi,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:240}
+\begin{equation}\label{eqn:laplacianCylindrical:240}
+\begin{aligned}
 \phicap \cdot \lr{ \spacegrad^2 \BA }
-=
+&=
 \inv{\rho} \partial_\phi
 \lr{
    \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
@@ -221,7 +224,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
       }
    }
 }
-=
+\\ &=
 \inv{\rho^2} \partial_{\phi\rho} (\rho A_\rho)
 + \frac{1}{\rho^2} \partial_{\phi\phi} A_\phi
 + \inv{\rho}\partial_{\phi z} A_z
@@ -229,7 +232,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \partial_{z z} A_\phi
 +\partial_\rho \lr{ \inv{\rho} \partial_\rho ( \rho A_\phi ) }
 - \partial_\rho \lr{ \inv{\rho} \partial_\phi A_\rho}
-=
+\\ &=
   \partial_\rho \lr{ \inv{\rho} \partial_\rho ( \rho A_\phi ) }
 + \frac{1}{\rho^2} \partial_{\phi\phi} A_\phi
 + \partial_{z z} A_\phi
@@ -238,7 +241,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho}\partial_{\phi z} A_z
 - \inv{\rho} \partial_{z\phi} A_z
 - \partial_\rho \lr{ \inv{\rho} \partial_\phi A_\rho}
-=
+\\ &=
   \partial_\rho \lr{ \inv{\rho} \partial_\rho ( \rho A_\phi ) }
 + \frac{1}{\rho^2} \partial_{\phi\phi} A_\phi
 + \partial_{z z} A_\phi
@@ -247,24 +250,26 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho} \partial_{\phi\rho} A_\rho
 + \inv{\rho^2} \partial_\phi A_\rho
 - \inv{\rho} \partial_{\rho\phi} A_\rho
-=
+\\ &=
   \partial_\rho \lr{ \inv{\rho} \partial_\rho ( \rho A_\phi ) }
 + \frac{1}{\rho^2} \partial_{\phi\phi} A_\phi
 + \partial_{z z} A_\phi
 %
 + \frac{2}{\rho^2} \partial_{\phi} A_\rho
-=
+\\ &=
   \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\phi }
 + \frac{1}{\rho^2} \partial_{\phi\phi} A_\phi
 + \partial_{z z} A_\phi
 %
 + \frac{2}{\rho^2} \partial_{\phi} A_\rho
 - \frac{A_\phi}{\rho^2},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:260}
+\begin{equation}\label{eqn:laplacianCylindrical:260}
+\begin{aligned}
 \zcap \cdot \lr{ \spacegrad^2 \BA }
-=
+&=
 \partial_z
 \lr{
    \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
@@ -279,7 +284,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
       \inv{\rho} \partial_\phi A_z - \partial_z A_\phi
    }
 }
-=
+\\ &=
 \inv{\rho} \partial_{z\rho} (\rho A_\rho)
 + \frac{1}{\rho} \partial_{z\phi} A_\phi
 + \partial_{zz} A_z
@@ -287,7 +292,7 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho}\partial_\rho \lr{ \rho \partial_\rho A_z }
 + \inv{\rho^2} \partial_{\phi\phi} A_z
 - \inv{\rho} \partial_{\phi z} A_\phi
-=
+\\ &=
 \inv{\rho}\partial_\rho \lr{ \rho \partial_\rho A_z }
 + \inv{\rho^2} \partial_{\phi\phi} A_z
 + \partial_{zz} A_z
@@ -298,11 +303,12 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 - \inv{\rho}\partial_z A_\rho
 - \partial_{\rho z} A_\rho
 - \inv{\rho} \partial_{\phi z} A_\phi
-=
+\\ &=
 \inv{\rho}\partial_\rho \lr{ \rho \partial_\rho A_z }
 + \inv{\rho^2} \partial_{\phi\phi} A_z
 + \partial_{zz} A_z.
-\end{dmath}
+\end{aligned}
+\end{equation}
 \end{subequations}
 %
 Evaluating these was a fairly tedious and mechanical job, and would have been better suited to a computer algebra system than by hand as done here.
@@ -311,36 +317,37 @@ Evaluating these was a fairly tedious and mechanical job, and would have been be
 %
 Let's try this a different way.  The most obvious potential strategy is to just apply the Laplacian to the vector itself, but we need to include the unit vectors in such an operation
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:280}
+\begin{equation}\label{eqn:laplacianCylindrical:280}
 \spacegrad^2 \BA =
 \spacegrad^2 \lr{ \rhocap A_\rho + \phicap A_\phi + \zcap A_z }.
-\end{dmath}
+\end{equation}
 %
 First we need to know the explicit form of the cylindrical Laplacian.  From the painful expansion, we can guess that it is
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:300}
+\begin{equation}\label{eqn:laplacianCylindrical:300}
 \spacegrad^2 \psi
 =
 \inv{\rho}\partial_\rho \lr{ \rho \partial_\rho \psi }
 + \inv{\rho^2} \partial_{\phi\phi} \psi
 + \partial_{zz} \psi.
-\end{dmath}
+\end{equation}
 %
 Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 = \phicap^2 = \zcap^2 = 1 \), and these vectors anticommute when different
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:320}
+\begin{equation}\label{eqn:laplacianCylindrical:320}
+\begin{aligned}
 \spacegrad^2 \psi
-=
+&=
 \lr{ \rhocap \partial_\rho + \frac{\phicap}{\rho} \partial_\phi + \zcap \partial_z }
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
-=
+\\ &=
 \rhocap \partial_\rho
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
 + \frac{\phicap}{\rho} \partial_\phi
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
 + \zcap \partial_z
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
-=
+\\ &=
   \partial_{\rho\rho} \psi
 + \rhocap \phicap \partial_\rho \lr{ \frac{1}{\rho} \partial_\phi \psi}
 + \rhocap \zcap \partial_{\rho z} \psi
@@ -350,7 +357,7 @@ Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 =
 + \zcap \rhocap \partial_{z\rho} \psi
 + \frac{\zcap \phicap}{\rho} \partial_{z\phi} \psi
 + \partial_{zz} \psi
-=
+\\ &=
   \partial_{\rho\rho} \psi
 + \inv{\rho} \partial_\rho \psi
 + \frac{1}{\rho^2} \partial_{\phi \phi} \psi
@@ -371,12 +378,13 @@ Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 =
    \inv{\rho} \partial_{\phi z} \psi
 - \inv{\rho} \partial_{z\phi} \psi
 }
-=
+\\ &=
   \partial_{\rho\rho} \psi
 + \inv{\rho} \partial_\rho \psi
 + \frac{1}{\rho^2} \partial_{\phi \phi} \psi
 + \partial_{zz} \psi,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so the Laplacian operator is
 %
@@ -396,33 +404,36 @@ Unlike such a scalar expansion, this derivation is seen to be valid for any grad
 Now that we trust that the typical scalar form of the Laplacian applies equally well to multivectors as it does to scalars, that cylindrical coordinate operator can now be applied to a
 vector.  Consider the projections onto each of the directions in turn
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:360}
+\begin{equation}\label{eqn:laplacianCylindrical:360}
 \spacegrad^2 \lr{ \rhocap A_\rho }
 =
 \rhocap \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\rho }
 + \frac{1}{\rho^2} \partial_{\phi\phi} \lr{\rhocap A_\rho}
 + \rhocap \partial_{zz} A_\rho
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:380}
+\begin{equation}\label{eqn:laplacianCylindrical:380}
+\begin{aligned}
 \partial_{\phi\phi} \lr{\rhocap A_\rho}
-=
+&=
 \partial_\phi \lr{ \phicap A_\rho + \rhocap \partial_\phi A_\rho }
-=
+\\ &=
 -\rhocap A_\rho
 +\phicap \partial_\phi A_\rho
 + \phicap \partial_\phi A_\rho
 + \rhocap \partial_{\phi\phi} A_\rho
-=
+\\ &=
 \rhocap \lr{ \partial_{\phi\phi} A_\rho -A_\rho }
 + 2 \phicap \partial_\phi A_\rho
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so this component of the vector Laplacian is
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:400}
+\begin{equation}\label{eqn:laplacianCylindrical:400}
+\begin{aligned}
 \spacegrad^2 \lr{ \rhocap A_\rho }
-=
+&=
 \rhocap
 \lr{
   \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\rho }
@@ -435,7 +446,7 @@ so this component of the vector Laplacian is
 \lr{
 2 \inv{\rho^2} \partial_\phi A_\rho
 }
-=
+\\ &=
 \rhocap \lr{
 \spacegrad^2 A_\rho
 - \inv{\rho^2} A_\rho
@@ -444,30 +455,32 @@ so this component of the vector Laplacian is
 \phicap
 \frac{2}{\rho^2} \partial_\phi A_\rho
 .
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The Laplacian for the projection of the vector onto the \( \phicap \) direction is
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:420}
+\begin{equation}\label{eqn:laplacianCylindrical:420}
 \spacegrad^2 \lr{ \phicap A_\phi }
 =
 \phicap \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\phi }
 + \frac{1}{\rho^2} \partial_{\phi\phi} \lr{\phicap A_\phi}
 + \phicap \partial_{zz} A_\phi,
-\end{dmath}
+\end{equation}
 %
 Again, since the unit vectors are \( \phi \) dependent, the \( \phi \) derivatives have to be treated carefully
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:440}
+\begin{equation}\label{eqn:laplacianCylindrical:440}
+\begin{aligned}
 \partial_{\phi\phi} \lr{\phicap A_\phi}
-=
+&=
 \partial_{\phi} \lr{-\rhocap A_\phi + \phicap \partial_\phi A_\phi}
-=
+\\ &=
 -\phicap A_\phi
 -\rhocap \partial_\phi A_\phi
 - \rhocap \partial_\phi A_\phi
 + \phicap \partial_{\phi \phi} A_\phi
-=
+\\ &=
 - 2 \rhocap \partial_\phi A_\phi
 +
 \phicap
@@ -475,12 +488,14 @@ Again, since the unit vectors are \( \phi \) dependent, the \( \phi \) derivativ
 \partial_{\phi \phi} A_\phi
 - A_\phi
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so the Laplacian of this projection is
-\begin{dmath}\label{eqn:laplacianCylindrical:460}
+\begin{equation}\label{eqn:laplacianCylindrical:460}
+\begin{aligned}
 \spacegrad^2 \lr{ \phicap A_\phi }
-=
+&=
 \phicap
 \lr{
 \inv{\rho} \partial_\rho \lr{ \rho \partial_\rho A_\phi }
@@ -489,21 +504,22 @@ so the Laplacian of this projection is
 - \frac{A_\phi }{\rho^2}
 }
 - \rhocap \frac{2}{\rho^2} \partial_\phi A_\phi
-=
+\\ &=
 \phicap \lr{
    \spacegrad^2 A_\phi
    - \frac{A_\phi}{\rho^2}
 }
 - \rhocap \frac{2}{\rho^2} \partial_\phi A_\phi.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Since \( \zcap \) is fixed we have
 %
-\begin{dmath}\label{eqn:laplacianCylindrical:480}
+\begin{equation}\label{eqn:laplacianCylindrical:480}
 \spacegrad^2 \zcap A_z
 =
 \zcap \spacegrad^2 A_z.
-\end{dmath}
+\end{equation}
 %
 Putting all the pieces together we have
 \boxedEquation{eqn:laplacianCylindrical:500}{

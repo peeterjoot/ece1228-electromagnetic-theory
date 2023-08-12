@@ -6,14 +6,14 @@
 \index{Helmholtz's theorem}
 Prove the first Helmholtz's theorem, i.e. if vector \(\BM\) is defined by its divergence
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:20}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:20}
 \spacegrad \cdot \BM = s
-\end{dmath}
+\end{equation}
 %
 and its curl
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:40}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:40}
 \spacegrad \cross \BM = \BC.
-\end{dmath}
+\end{equation}
 %
 within a region and its normal component \( \BM_{\txtn} \) over the boundary, then \( \BM \) is
 uniquely specified.
@@ -31,77 +31,79 @@ uniquely specified.
 %
 %The answer obtained in that first attempt at this problem, when \( \Norm{\BM}/r^2 \), and \( \Norm{\BC}/r \) both vanish on an infinite sphere, is that the field has a unique value determined by \( s \) and \( \BC \), namely
 %
-%\begin{dmath}\label{eqn:emtProblemSet1Problem5:60}
+%\begin{equation}\label{eqn:emtProblemSet1Problem5:60}
 %\BM =
 %-\spacegrad \int_V dV' \frac{ s(\Bx')}{ 4 \pi \Norm{\Bx - \Bx'} }
 %+\spacegrad \cross \int_V dV' \frac{ \BC(\Bx') }{ 4 \pi \Norm{\Bx - \Bx'} }.
-%\end{dmath}
+%\end{equation}
 %
 %It's possible to work backwards from this result to obtain second order gradient terms applied to \( \BM(\Bx')/\Norm{\Bx - \Bx'} \) .  This suggests that a Laplacian (i.e. scalar) representation of the delta function may be a superior way to tackle this problem, perhaps also yielding a simpler result for the boundary term.  This is in fact the case, and the logical starting point
 %
 We can compute the relationship between the vector \( \BM \) using a convolution representation of the vector function \( \BM \) and a Laplacian representations of the delta function
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:80}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:80}
 \BM(\Bx) = \int_V dV' \delta(\Bx - \Bx') \BM(\Bx').
-\end{dmath}
+\end{equation}
 %
 \index{Laplacian}
 \index{delta function!Laplacian}
 The Laplacian representation of the delta function in \R{3} is
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:100}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:100}
 \delta(\Bx - \Bx') = -\inv{4\pi} \spacegrad^2 \inv{\Norm{\Bx - \Bx'}},
-\end{dmath}
+\end{equation}
 %
 \index{convolution}
 so \( \BM \) can be represented as the following convolution
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:120}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:120}
 \BM(\Bx) = -\inv{4\pi} \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx').
-\end{dmath}
+\end{equation}
 %
 As noted in \cref{eqn:usefulFormulas:700}
 %\cref{eqn:emtProblemSet1Appendix:460}
 the Laplacian of a vector can be factored as
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:140}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:140}
 \spacegrad^2 \Ba
 =
 \spacegrad (\spacegrad \cdot \Ba)
 -
 \spacegrad \cross (\spacegrad \cross \Ba).
-\end{dmath}
+\end{equation}
 %
 %Note that the last term can be written in cross product notation using \( \Bc \cdot (\Ba \wedge \Bb) = -\Bc \cross (\Ba \cross \Bb) \) if desired.
 %
 Using this relation and proceeding with a few applications of the chain rule, plus the fact that \(
 \spacegrad 1/\Norm{\Bx - \Bx'} = -\spacegrad' 1/\Norm{\Bx - \Bx'} \), we find
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:160}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:160}
+\begin{aligned}
 -4 \pi \BM(\Bx)
-= \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')
-=
+&= \int_V dV' \spacegrad^2 \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')
+\\ &=
 \spacegrad \int_V dV' \spacegrad \cdot \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')
 - \spacegrad \cross \int_V dV' \spacegrad \cross \inv{\Norm{\Bx - \Bx'}} \BM(\Bx')
-=
+\\ &=
 -\spacegrad \int_V dV' \lr{ \spacegrad' \cdot \inv{\Norm{\Bx - \Bx'}}} \BM(\Bx')
 +\spacegrad \cross \int_V dV' \lr{ \spacegrad' \inv{\Norm{\Bx - \Bx'}} } \cross \BM(\Bx')
-=
+\\ &=
 -\spacegrad \int_V dV' \spacegrad' \cdot \frac{ \BM(\Bx') }{\Norm{\Bx - \Bx'}}
 +\spacegrad \int_V dV' \frac{ \spacegrad' \cdot \BM(\Bx')}{\Norm{\Bx - \Bx'}}
 +\spacegrad \cross \int_V dV' \spacegrad' \cross \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
 -\spacegrad \cross \int_V dV' \frac{ \spacegrad' \cross \BM(\Bx')}{\Norm{\Bx - \Bx'}}
-%=
+%\\ &=
 %-\spacegrad \int_{\partial V} dA' \ncap \cdot \frac{ \BM(\Bx') }{\Norm{\Bx - \Bx'}}
 %+\spacegrad \int_V dV' \frac{ s(\Bx')}{\Norm{\Bx - \Bx'}}
 %-\spacegrad \cdot \int_{\partial V} dV' \ncap \wedge \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
 %+\spacegrad \cdot \int_V dV' \frac{ I \BC(\Bx')}{\Norm{\Bx - \Bx'}}
 ,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
 %
-%\begin{dmath}\label{eqn:emtProblemSet1Problem5:180}
+%\begin{equation}\label{eqn:emtProblemSet1Problem5:180}
 \boxedEquation{eqn:emtProblemSet1Problem5:200}{
 \begin{aligned}
 \BM(\Bx)
@@ -112,18 +114,18 @@ or
 -\spacegrad \cross \int_{\partial V} dV' \ncap \cross \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
 .
 \end{aligned}
-%\end{dmath}
+%\end{equation}
 }
 %
 If the surface in question is taken to be an infinite sphere over all space, then we require that \( \Norm{\BM(\Bx')}/\Norm{\Bx - \Bx'} \) vanishes, killing the surface integral.  Such a solution is uniquely specified by the divergence and the curl
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem5:220}
+\begin{equation}\label{eqn:emtProblemSet1Problem5:220}
 \BM_\infty(\Bx)
 =
 -\spacegrad \int_V dV' \frac{ s(\Bx')}{\Norm{\Bx - \Bx'}}
 +\spacegrad \cross \int_V dV' \frac{ \BC(\Bx')}{\Norm{\Bx - \Bx'}}
 .
-\end{dmath}
+\end{equation}
 %
 For a finite integration surface, the divergence and curl no longer specify a unique solution.  To that solution a particular solution involving the normal and tangential components of the to-be-determined vector \( \BM \) must be added.  That is
 %

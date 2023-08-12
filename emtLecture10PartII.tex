@@ -29,26 +29,26 @@ It turns out that light passing through two interfaces ends up with reflected an
 %%%Consider a geometry with interfaces at \( z = 0, d \).
 %%%
 %%%The incident, and reflected wave components in the first medium are
-%%%\begin{dmath}\label{eqn:emtLecture10:140}
+%%%\begin{equation}\label{eqn:emtLecture10:140}
 %%%   A e^{-j k_{1z} z},
-%%%\end{dmath}
-%%%\begin{dmath}\label{eqn:emtLecture10:160}
+%%%\end{equation}
+%%%\begin{equation}\label{eqn:emtLecture10:160}
 %%%   r A e^{j k_{1z} z},
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%in the second medium
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:180}
+%%%\begin{equation}\label{eqn:emtLecture10:180}
 %%%   C e^{-j k_{1z} z},
-%%%\end{dmath}
-%%%\begin{dmath}\label{eqn:emtLecture10:200}
+%%%\end{equation}
+%%%\begin{equation}\label{eqn:emtLecture10:200}
 %%%   D e^{j k_{1z} z},
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%and in the final medium
-%%%\begin{dmath}\label{eqn:emtLecture10:220}
+%%%\begin{equation}\label{eqn:emtLecture10:220}
 %%%   A t e^{-j k_{1z} (z-d)},
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%\begin{itemize}
 %%%   \item \( z = 0 \).
@@ -63,9 +63,9 @@ It turns out that light passing through two interfaces ends up with reflected an
 %%%
 %%%Something important to consider is that the index of refraction can be complex valued
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:240}
+%%%\begin{equation}\label{eqn:emtLecture10:240}
 %%%n(\omega) = n'(\omega) + j n''(\omega),
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%but all of these derivations are independent of this.
 %%%
@@ -73,64 +73,78 @@ It turns out that light passing through two interfaces ends up with reflected an
 %%%
 %%%If medium 1 and 3 are identical then
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:260}
-%%%r_{21} = r_{23} = -r_{12},
-%%%\end{dmath}
+%%%\begin{equation}\label{eqn:emtLecture10:260}
+%%%\begin{aligned}
+%%%r_{21} &= r_{23} \\ &= -r_{12},
+%%%
+%%%\end{aligned}
+%%%\end{equation}
 %%%
 %%%which gives
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:280}
+%%%\begin{equation}\label{eqn:emtLecture10:280}
 %%%   t^{\textrm{TE}} = \frac{t_{12} t_{21} e^{j \phi}}{1 - r_{21}^2 e^{2 j \phi}}
-%%%\end{dmath}
-%%%\begin{dmath}\label{eqn:emtLecture10:300}
+%%%\end{equation}
+%%%\begin{equation}\label{eqn:emtLecture10:300}
 %%%   r^{\textrm{TE}} = r_{12} + \frac{t_{12} t_{21} r_{21} e^{2 j \phi}}{1 - r_{21}^2 e^{2 j \phi}}
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%where
-%%%\begin{dmath}\label{eqn:emtLecture10:320}
-%%%   \phi = -k_{2z} d = - \frac{\omega}{c} n_2 \cos\theta_2 d
+%%%\begin{equation}\label{eqn:emtLecture10:320}
+%%%\begin{aligned}
+%%%   \phi &= -k_{2z} d \\ &= - \frac{\omega}{c} n_2 \cos\theta_2 d
 %%%   % \cos(\theta_2 d)?
-%%%\end{dmath}
+%%%
+%%%\end{aligned}
+%%%\end{equation}
 %%%
 %%%It's possible to design the material so that there is no reflection from the slab, called the matched condition.
 %%%
 %%%This requires
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:340}
-%%%r_{21} = \frac{-\mu_2 k_{1z} + \mu_1 k_{2z}}{\mu_2 k_{1z} + \mu_1 k_{2z}} = -r_{12}.
-%%%\end{dmath}
+%%%\begin{equation}\label{eqn:emtLecture10:340}
+%%%\begin{aligned}
+%%%r_{21} &= \frac{-\mu_2 k_{1z} + \mu_1 k_{2z}}{\mu_2 k_{1z} + \mu_1 k_{2z}} \\ &= -r_{12}.
+%%%
+%%%\end{aligned}
+%%%\end{equation}
 %%%
 %%%To force this to be zero, one can set
-%%%\begin{dmath}\label{eqn:emtLecture10:360}
+%%%\begin{equation}\label{eqn:emtLecture10:360}
 %%%\mu_2 k_{1z} = \mu_1 k_{2z},
-%%%\end{dmath}
+%%%\end{equation}
 %%%
 %%%or
-%%%\begin{dmath}\label{eqn:emtLecture10:380}
+%%%\begin{equation}\label{eqn:emtLecture10:380}
 %%%   \mu_2 \frac{\omega}{c} n_1 \cos \theta_1 =
 %%%   \mu_1 \frac{\omega}{c} n_2 \cos \theta_2
-%%%\end{dmath}
+%%%
+%%%\end{equation}
 %%%
 %%%or
-%%%\begin{dmath}\label{eqn:emtLecture10:400}
+%%%\begin{equation}\label{eqn:emtLecture10:400}
 %%%   \mu_2 \sqrt{\epsilon_1 \mu_1} \cos \theta_1 = \mu_1 \sqrt{\epsilon_2 \mu_2} \cos \theta_2,
-%%%\end{dmath}
+%%%
+%%%\end{equation}
 %%%
 %%%which is
-%%%\begin{dmath}\label{eqn:emtLecture10:420}
+%%%\begin{equation}\label{eqn:emtLecture10:420}
 %%%   \sqrt{\epsilon_1/\mu_1} \cos \theta_1 = \sqrt{\epsilon_2/\mu_2} \cos \theta_2,
-%%%\end{dmath}
+%%%
+%%%\end{equation}
 %%%
 %%%or
-%%%\begin{dmath}\label{eqn:emtLecture10:440}
+%%%\begin{equation}\label{eqn:emtLecture10:440}
 %%%   \eta_1 \cos \theta_1 = \eta_2 \cos \theta_2.
-%%%\end{dmath}
+%%%
+%%%\end{equation}
 %%%
 %%%At normal incidence, this reduces to
 %%%
-%%%\begin{dmath}\label{eqn:emtLecture10:460}
+%%%\begin{equation}\label{eqn:emtLecture10:460}
 %%%   \eta_1 = \eta_2.
-%%%\end{dmath}
+%%%
+%%%\end{equation}
 %%%
 %%%What happens to the transmission coefficient for such a slab.
 %%%
@@ -153,19 +167,21 @@ It turns out that light passing through two interfaces ends up with reflected an
 %
 Under matched conditions where \( t^{\textrm{TE}} = e^{j \phi} = e^{j k_{2z} d} \), we can write
 %
-\begin{dmath}\label{eqn:emtLecture10:520}
+\begin{equation}\label{eqn:emtLecture10:520}
+\begin{aligned}
 - \PD{\phi}{\omega}
-= \PD{\omega}{} \lr{ k_{2z} d }
-= d \PD{\omega}{k_{2z}}
-= d /\PD{k_{2z}}{\omega}
-= d / v_g,
-\end{dmath}
+&= \PD{\omega}{} \lr{ k_{2z} d }
+\\ &= d \PD{\omega}{k_{2z}}
+\\ &= d /\PD{k_{2z}}{\omega}
+\\ &= d / v_g,
+\end{aligned}
+\end{equation}
 %
 so
 %
-\begin{dmath}\label{eqn:emtLecture10:540}
+\begin{equation}\label{eqn:emtLecture10:540}
 v_g = -\frac{d}{\PD{\phi}{\omega}}.
-\end{dmath}
+\end{equation}
 %FIXME: last relation?
 %
 This is called the \textAndIndex{group delay}, and is essentially the velocity of the peak of the wave form, as sketched in
@@ -178,23 +194,25 @@ F2
 %
 If (FIXME: why?)
 %
-\begin{dmath}\label{eqn:emtLecture10:660}
+\begin{equation}\label{eqn:emtLecture10:660}
+\begin{aligned}
 v_g
-= \PD{k}{\omega}
-= 1/\PD{\omega}{k},
-\end{dmath}
+&= \PD{k}{\omega}
+\\ &= 1/\PD{\omega}{k},
+\end{aligned}
+\end{equation}
 %
 and in an unbounded medium
-\begin{dmath}\label{eqn:emtLecture10:560}
-   k = \frac{\omega}{c} n(\omega),
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:560}
+k = \frac{\omega}{c} n(\omega),
+\end{equation}
 %
 so
-\begin{dmath}\label{eqn:emtLecture10:580}
+\begin{equation}\label{eqn:emtLecture10:580}
 \PD{\omega}{k}
 =
 \inv{c} \lr{ n(\omega) + \omega \PD{\omega}{n} },
-\end{dmath}
+\end{equation}
 %
 so
 \begin{equation}\label{eqn:emtLecture10:600}
@@ -205,17 +223,17 @@ v_g
 %
 Since the phase is
 %
-\begin{dmath}\label{eqn:emtLecture10:680}
+\begin{equation}\label{eqn:emtLecture10:680}
 \phi = -\frac{\omega}{c} n(\omega) d
-\end{dmath}
+\end{equation}
 %
 we can show that
-\begin{dmath}\label{eqn:emtLecture10:700}
+\begin{equation}\label{eqn:emtLecture10:700}
 v_g
 = \frac{d}{-\PD{\omega}{\phi}}
 \equiv
 \frac{d}{\tau_g}.
-\end{dmath}
+\end{equation}
 %
 By bounded medium, it is meant that the medium is not matched.
 %
@@ -248,55 +266,55 @@ where, despite the critical angle, the time for the photon to ``tunnel'' through
 \section{Vector and electrostatic (scalar) potentials.}
 %
 In electrostatics where
-\begin{dmath}\label{eqn:emtLecture10:720}
+\begin{equation}\label{eqn:emtLecture10:720}
 \spacegrad \cross \BE  = 0,
-\end{dmath}
+\end{equation}
 %
 the electric field must be the gradient of some function
-\begin{dmath}\label{eqn:emtLecture10:740}
+\begin{equation}\label{eqn:emtLecture10:740}
 \BE = \pm \spacegrad V,
-\end{dmath}
+\end{equation}
 %
 We pick negative to have things consistent with the notion of force.
 %
 In electrodynamics we have
-\begin{dmath}\label{eqn:emtLecture10:760}
+\begin{equation}\label{eqn:emtLecture10:760}
 \spacegrad \cross \BE = - \PD{t}{\BB},
-\end{dmath}
+\end{equation}
 %
 however, we also have
 %
-\begin{dmath}\label{eqn:emtLecture10:780}
+\begin{equation}\label{eqn:emtLecture10:780}
 \spacegrad \cdot \BB = 0,
-\end{dmath}
+\end{equation}
 %
 so
-\begin{dmath}\label{eqn:emtLecture10:800}
-   \BB = \spacegrad \cross \BA.
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:800}
+\BB = \spacegrad \cross \BA.
+\end{equation}
 %
 This gives
-\begin{dmath}\label{eqn:emtLecture10:820}
-   \spacegrad \cross \BE = - \PD{t}{} \lr{ \spacegrad \cross \BA },
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture10:820}
+\spacegrad \cross \BE = - \PD{t}{} \lr{ \spacegrad \cross \BA },
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtLecture10:840}
+\begin{equation}\label{eqn:emtLecture10:840}
 0 =
 \spacegrad \cross \lr{ \BE + \PD{t}{\BA} },
-\end{dmath}
+\end{equation}
 %
 so this curled quantity can be the gradient of something
 %
-\begin{dmath}\label{eqn:emtLecture10:860}
+\begin{equation}\label{eqn:emtLecture10:860}
 \BE + \PD{t}{\BA} = \pm \spacegrad V.
-\end{dmath}
+\end{equation}
 %
 We pick negative again, so
 %
-\begin{dmath}\label{eqn:emtLecture10:880}
+\begin{equation}\label{eqn:emtLecture10:880}
 \BE = -\spacegrad V -\PD{t}{\BA}.
-\end{dmath}
+\end{equation}
 %
 Observe that when the fields are electrostatic with no time dependence, we would have \( \BE = -\spacegrad V \).
 %

@@ -32,27 +32,31 @@ different from
 Instead of considering a moving source, we can flip the problem and consider a stationary source and moving target as sketched in \cref{fig:transmitRecieveMovingTarget:transmitRecieveMovingTargetFig1}.
 \imageFigure{../figures/ece1228-electromagnetic-theory/transmitRecieveMovingTargetFig1}{Moving target.}{fig:transmitRecieveMovingTarget:transmitRecieveMovingTargetFig1}{0.2}
 If the source is emitting a spherical wave
-\begin{dmath}\label{eqn:emtProblemSet4Problem1:20}
+\begin{equation}\label{eqn:emtProblemSet4Problem1:20}
 \psi = \frac{e^{j(\omega t - k r)}}{r},
-\end{dmath}
+\end{equation}
 this wave will reach the target when
-\begin{dmath}\label{eqn:emtProblemSet4Problem1:40}
+\begin{equation}\label{eqn:emtProblemSet4Problem1:40}
+\begin{aligned}
 r
-= \Abs{\BR'}
-= \Abs{\Br_0 - \BU \Delta t}
-= \sqrt{ \Br_0^2 + \BU^2 (\Delta t)^2 - 2 \Br_0 \cdot \BU \Delta t}
-= r_0 \sqrt{ 1 + \frac{\BU^2 (\Delta t)^2}{r_0^2} - \frac{2 r_0 U \cos\theta \Delta t}{r_0^2} }
+&= \Abs{\BR'}
+\\ &= \Abs{\Br_0 - \BU \Delta t}
+\\ &= \sqrt{ \Br_0^2 + \BU^2 (\Delta t)^2 - 2 \Br_0 \cdot \BU \Delta t}
+\\ &= r_0 \sqrt{ 1 + \frac{\BU^2 (\Delta t)^2}{r_0^2} - \frac{2 r_0 U \cos\theta \Delta t}{r_0^2} }
 \approx r_0 \sqrt{ 1 - \frac{U \cos\theta \Delta t}{r_0} }
 \approx r_0 - U \cos\theta \Delta t.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Here a small time approximation has been used to discard the term quadratic in \( \Delta t\).  After that a first order Taylor expansion assuming \( \Br_0^2 \gg \Abs{2 \Br_0 \cdot \BU \Delta t} \).  That is, an assumption that the target isn't moving that far relative to the initial separation in the time it takes for the wave to reach the target.  Setting the initial time to zero, so that \( \Delta t = t \), the wave at the target point is approximately
 %
-\begin{dmath}\label{eqn:emtProblemSet4Problem1:60}
+\begin{equation}\label{eqn:emtProblemSet4Problem1:60}
+\begin{aligned}
 \psi
-= \frac{\exp\lr{j \lr{\omega t - k \lr{ r_0 - U \cos\theta \Delta t } } } }{\Abs{\BR'}}
-= \frac{\exp\lr{j \lr{ \omega + k U \cos\theta} t - k r_0 } }{\Abs{\BR'}}.
-\end{dmath}
+&= \frac{\exp\lr{j \lr{\omega t - k \lr{ r_0 - U \cos\theta \Delta t } } } }{\Abs{\BR'}}
+\\ &= \frac{\exp\lr{j \lr{ \omega + k U \cos\theta} t - k r_0 } }{\Abs{\BR'}}.
+\end{aligned}
+\end{equation}
 %
 In order to interpret this as a frequency shift, we need the relations between \( k \) and \( \omega \).  When I wrote \( \psi \) above, I really meant one of the components of the electric or magnetic fields, subject to the wave equations
 \begin{equation}\label{eqn:emtProblemSet4Problem1:80}
@@ -68,9 +72,11 @@ With a time harmonic representation, say \( \bcE = \Real\lr{ \BE e^{j \omega t} 
 \spacegrad^2 \BE = -\mu \epsilon \omega^2 \BE = -k^2 \BE,
 \end{equation}
 so
-\begin{dmath}\label{eqn:emtProblemSet4Problem1:120}
-k = \frac{\omega}{v} = \frac{\omega}{c} \frac{c}{v} = \frac{n}{c} \omega.
-\end{dmath}
+\begin{equation}\label{eqn:emtProblemSet4Problem1:120}
+\begin{aligned}
+k &= \frac{\omega}{v} \\ &= \frac{\omega}{c} \frac{c}{v} \\ &= \frac{n}{c} \omega.
+\end{aligned}
+\end{equation}
 
 The frequency shift observed at the target is therefore
 \boxedEquation{eqn:emtProblemSet4Problem1:140}{
@@ -78,9 +84,9 @@ The frequency shift observed at the target is therefore
 }
 %
 As a sign check, consider \( \theta = 0, n = 1 \), where the target and the source are moving directly towards each other, with the light travelling in vacuum.  In this case, we recover the desired blue shift approximation, with a higher frequency observed at the target
-\begin{dmath}\label{eqn:emtProblemSet4Problem1:160}
+\begin{equation}\label{eqn:emtProblemSet4Problem1:160}
 \nu' = \nu \lr{ 1 + \frac{U}{c} }.
-\end{dmath}
+\end{equation}
 \makeSubAnswer{}{emt:problemSet4:1b}
 Nothing in the analysis above depended on the sign of the index of refraction.  Should that sign be negative, \cref{eqn:emtProblemSet4Problem1:140} is still valid.  However, in such a case, the frequency is decreased, instead of increased.
 \makeSubAnswer{}{emt:problemSet4:1c}

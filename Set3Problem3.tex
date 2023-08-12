@@ -25,36 +25,42 @@ Assuming that there are no sources, the relationships between the fields on each
 %
 %Since \( \epsilon_{r2} = 1 \),
 After cancelling common factors of \( \epsilon_0 \) the first relationship can be written
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:40}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:40}
 \ncap \cdot \BE_2 = \frac{\epsilon_{r1}}{\epsilon_{r2}} \ncap \cdot \BE_1.
-\end{dmath}
+\end{equation}
 Adding the normal and the tangential components of \( \BE_2 \), we have
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:60}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:60}
+\begin{aligned}
 \BE_2
-=
+&=
 \ncap \lr{ \ncap \cdot \BE_2 } -
 \ncap \cross \lr{ \ncap \cross \BE_2 }
-=
+\\ &=
 \frac{\epsilon_{r1}}{\epsilon_{r2}} \ncap \lr{ \ncap \cdot \BE_1 }
 - \ncap \cross \lr{ \ncap \cross \BE_1 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 By expanding the tangential projection (normal rejection) of a vector as
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:160}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:160}
+\begin{aligned}
 \BA_t
-=
+&=
 - \ncap \cross \lr{ \ncap \cross \BA }
-=
+\\ &=
 \BA - \ncap (\ncap \cdot \BA),
-\end{dmath}
+\end{aligned}
+\end{equation}
 we find
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:180}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:180}
+\begin{aligned}
 \BE_2
-=
+&=
 \frac{\epsilon_{r1}}{\epsilon_{r2}} \ncap \lr{ \ncap \cdot \BE_1 }
 + \lr{ \BE_1 - \ncap (\ncap \cdot \BE_1) }
-=
+\\ &=
 \BE_1 + \lr{\frac{\epsilon_{r1}}{\epsilon_{r2}} -1} \ncap \lr{ \ncap \cdot \BE_1 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:emtProblemSet3Problem3:320}{
 \BE_2
@@ -64,26 +70,32 @@ or
 The rest of the problem is routine algebra.
 \begin{subequations}
 \label{eqn:emtProblemSet3Problem3:220}
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:240}
-\Bn^2 = (3,2,1) \cdot (3,2,1) = 9 + 4 + 1 = 14,
-\end{dmath}
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:260}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:240}
+\begin{aligned}
+\Bn^2 &= (3,2,1) \cdot (3,2,1) \\ &= 9 + 4 + 1 \\ &= 14,
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:260}
+\begin{aligned}
 \Bn \cdot \BE_1
-=
+&=
 (3,2,1) \cdot (2,0,5)
-=
+\\ &=
 6+5
-=11,
-\end{dmath}
+\\ &=11,
+\end{aligned}
+\end{equation}
 \end{subequations}
 so
-\begin{dmath}\label{eqn:emtProblemSet3Problem3:280}
+\begin{equation}\label{eqn:emtProblemSet3Problem3:280}
+\begin{aligned}
 \BE_2
-=
+&=
 (2,0,5) + \frac{2 \times 11}{14} (3,2,1)
-=
+\\ &=
 \inv{7}( (14,0,35) + (33,22,11) ),
-\end{dmath}
+\end{aligned}
+\end{equation}
 which is
 \boxedEquation{eqn:emtProblemSet3Problem3:300}{
 \BE_2

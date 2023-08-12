@@ -30,58 +30,60 @@
 %
 Seek a function
 %
-\begin{dmath}\label{eqn:emtLecture8:20}
+\begin{equation}\label{eqn:emtLecture8:20}
 \BE = E_\rho \rhocap + E_\phi \phicap + E_z \zcap,
-\end{dmath}
+\end{equation}
 %
 solving
 %
-\begin{dmath}\label{eqn:emtLecture8:40}
+\begin{equation}\label{eqn:emtLecture8:40}
 \spacegrad^2 \BE = -\beta^2 \BE.
-\end{dmath}
+\end{equation}
 %
 One way to find the Laplacian in cylindrical coordinates is to use
 %
-\begin{dmath}\label{eqn:emtLecture8:60}
+\begin{equation}\label{eqn:emtLecture8:60}
 \spacegrad^2 \BE =
 \spacegrad \lr{ \spacegrad \cdot \BE }
 -\spacegrad \cross \lr{ \spacegrad \cross \BE },
-\end{dmath}
+\end{equation}
 %
 where
 %
-\begin{dmath}\label{eqn:emtLecture8:80}
+\begin{equation}\label{eqn:emtLecture8:80}
 \spacegrad = \rhocap \PD{\rho}{} + \frac{\phicap}{\rho} \PD{\phi}{} + \zcap \PD{z}{}.
-\end{dmath}
+\end{equation}
 %
 It can be shown that:
-\begin{dmath}\label{eqn:emtLecture8:100}
+\begin{equation}\label{eqn:emtLecture8:100}
 \spacegrad \cdot \BE = \inv{\rho} \PD{\rho}{} \lr{ \rho E_\rho } + \inv{\rho}\PD{\phi}{E_\phi} + \PD{z}{E_z},
-\end{dmath}
+\end{equation}
 %
 and
-\begin{dmath}\label{eqn:emtLecture8:120}
+\begin{equation}\label{eqn:emtLecture8:120}
+\begin{aligned}
 \spacegrad \cross \BE
-%=
+%&=
 %\begin{vmatrix}
 %\rhocap & \phicap & \zcap \\
 %\partial_\rho & \inv{\rho}\partial_\phi & \partial_z \\
 %E_\rho & \rho E_\phi & E_z
 %\end{vmatrix}
-=
+\\ &=
 \rhocap  \lr{ \inv{\rho} \partial_\phi E_z - \partial_z E_\phi }
 +\phicap \lr{ \partial_z E_\rho - \partial_\rho E_z }
 +\zcap   \lr{ \inv{\rho} \partial_\rho (\rho E_\phi) - \inv{\rho} \partial_\phi E_\rho }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This gives
-\begin{dmath}\label{eqn:emtLecture8:200}
+\begin{equation}\label{eqn:emtLecture8:200}
 \spacegrad^2 \psi =
 \PDSq{\rho}{\psi}
 +\inv{\rho} \PD{\rho}{\psi}
 +\inv{\rho^2} \PDSq{\phi}{\psi}
 +\PDSq{z}{\psi},
-\end{dmath}
+\end{equation}
 and
 \begin{equation}\label{eqn:emtLecture8:220}
 \begin{aligned}
@@ -95,9 +97,9 @@ This is explored in \cref{chap:laplacianCylindrical}.
 %
 %Note that with \( i = \Be_1 \Be_2 \),
 %
-%\begin{dmath}\label{eqn:emtLecture8:140}
+%\begin{equation}\label{eqn:emtLecture8:140}
 %\rhocap = \Be_1 e^{i \phi}
-%\end{dmath}
+%\end{equation}
 %
 %so
 %\begin{equation}\label{eqn:emtLecture8:160}
@@ -106,76 +108,76 @@ This is explored in \cref{chap:laplacianCylindrical}.
 %
 %... the end result is
 %
-%\begin{dmath}\label{eqn:emtLecture8:180}
-%\end{dmath}
+%\begin{equation}\label{eqn:emtLecture8:180}
+%\end{equation}
 %
 \paragraph{TEM:} If we want to have a TEM mode it can be shown that we need an axial distribution mechanism, such as the core of a co-axial cable.
 %
 These are messy to solve in general, but we can solve the z-component without too much pain
 %
-\begin{dmath}\label{eqn:emtLecture8:240}
+\begin{equation}\label{eqn:emtLecture8:240}
 \PDSq{\rho}{E_z}
 +\inv{\rho} \PD{\rho}{E_z}
 +\inv{\rho^2} \PDSq{\phi}{E_z}
 +\PDSq{z}{E_z}
 =
 -\beta^2 E_z.
-\end{dmath}
+\end{equation}
 %
 Solving this using separation of variables with
 %
-\begin{dmath}\label{eqn:emtLecture8:260}
+\begin{equation}\label{eqn:emtLecture8:260}
 E_z = R(\rho) P(\phi) Z(z),
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:emtLecture8:280}
+\begin{equation}\label{eqn:emtLecture8:280}
 \inv{R}\lr{R'' + \inv{\rho} R'} + \inv{\rho^2 P} P'' + \frac{Z''}{Z} = -\beta^2.
-\end{dmath}
+\end{equation}
 %
 Assuming for some constant \( \beta_z \) that we have
-\begin{dmath}\label{eqn:emtLecture8:300}
+\begin{equation}\label{eqn:emtLecture8:300}
 \frac{Z''}{Z} = -\beta_z^2,
-\end{dmath}
+\end{equation}
 %
 then
 %
-\begin{dmath}\label{eqn:emtLecture8:320}
+\begin{equation}\label{eqn:emtLecture8:320}
 \inv{R}\lr{\rho^2 R'' + \rho R'} + \inv{P} P'' + \rho^2 \lr{\beta^2 - \beta_z^2} = 0.
-\end{dmath}
+\end{equation}
 %
 Now assume that
-\begin{dmath}\label{eqn:emtLecture8:340}
+\begin{equation}\label{eqn:emtLecture8:340}
 \inv{P} P'' = -m^2,
-\end{dmath}
+\end{equation}
 %
 and let \( \beta^2 - \beta_z^2 = \beta_\rho^2 \), which leaves
 %
-\begin{dmath}\label{eqn:emtLecture8:360}
+\begin{equation}\label{eqn:emtLecture8:360}
 \rho^2 R'' + \rho R' + \lr{ \rho^2 \beta_\rho^2 -m^2 } R = 0.
-\end{dmath}
+\end{equation}
 %
 This is the Bessel differential equation, with travelling wave solution
 %
-\begin{dmath}\label{eqn:emtLecture8:380}
+\begin{equation}\label{eqn:emtLecture8:380}
 R(\rho) =
 A H_m^{(1)}(\beta_\rho \rho)
 +B H_m^{(2)}(\beta_\rho \rho),
-\end{dmath}
+\end{equation}
 %
 and standing wave solutions
-\begin{dmath}\label{eqn:emtLecture8:400}
+\begin{equation}\label{eqn:emtLecture8:400}
 R(\rho) =
 A J_m(\beta_\rho \rho)
 +B Y_m(\beta_\rho \rho).
-\end{dmath}
+\end{equation}
 %
 Here \( H_m^{(1)}, H_m^{(2)} \) are Hankel functions of the first and second kinds, and
 \( J_m, Y_m \) are the Bessel functions of the first and second kinds.
 %
 For \( P(\phi) \)
-\begin{dmath}\label{eqn:emtLecture8:460}
+\begin{equation}\label{eqn:emtLecture8:460}
 P'' = -m^2 P.
-\end{dmath}
+\end{equation}
 %
 %
 \section{Waves.}

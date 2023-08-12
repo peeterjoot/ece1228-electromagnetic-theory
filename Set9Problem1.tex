@@ -34,7 +34,7 @@ are also defined in the same problem.
 In problem set 8, it was
 found that the one period fields were related by
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:20}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:20}
 \begin{bmatrix}
 E_{l,i}' \\
 E_{r,i}'
@@ -45,11 +45,11 @@ E_{r,i}'
 E_{l,i+1}' \\
 E_{r,i+1}'
 \end{bmatrix},
-\end{dmath}
+\end{equation}
 %
 where \( \rho_{i,j} \) was the Fresnel coefficient for the \((i,j)\) interface, and
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:40}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:40}
 \BM
 =
 \inv{1 - \rho_{i,j}^2}
@@ -60,16 +60,17 @@ e^{ j\phi_i }
 \rho_{ij}( e^{j\phi_j} - e^{- j \phi_j} ) e^{j\phi_i} &
 (e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2) e^{-j \phi_i} \\
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 %
 Before using this and potentially accumulating errors, let's check this against the slab reflection and transmission amplitudes calculated in class.  If the wave amplitude exiting the slab is \( E \), then \( E_{r,i+1}' = E e^{-j \beta_i d_i} = E e^{j \phi_i} \), so we have
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:60}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:60}
+\begin{aligned}
 \begin{bmatrix}
 E_{l,i}' \\
 E_{r,i}'
 \end{bmatrix}
-=
+&=
 \inv{1 - \rho_{i,j}^2}
 \begin{bmatrix}
 (e^{j \phi_j} - e^{-j \phi_j} \rho_{ij}^2)
@@ -82,69 +83,76 @@ e^{ j\phi_i }
 0 \\
 E e^{j \phi_i}
 \end{bmatrix}
-=
+\\ &=
 \frac{E}{1 - \rho_{i,j}^2}
 \begin{bmatrix}
 - \rho_{ij}( e^{j \phi_j} - e^{- j\phi_j} ) \\
 e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2 \\
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The transmission coefficient is
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:80}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:80}
+\begin{aligned}
 t
-= \frac{E}{E_{r,i}'}
-= \frac{ 1 - \rho_{i,j}^2 }{ e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2 }
-= \frac{ (1 - \rho_{i,j}^2) e^{j \phi_j} }{ 1 - e^{2 j \phi_j} \rho_{ij}^2 }
-= \frac{ \tau_{ij} \tau_{ji} e^{j \phi_j} }{ 1 - e^{2 j \phi_j} \rho_{ij}^2 }.
-\end{dmath}
+&= \frac{E}{E_{r,i}'}
+\\ &= \frac{ 1 - \rho_{i,j}^2 }{ e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2 }
+\\ &= \frac{ (1 - \rho_{i,j}^2) e^{j \phi_j} }{ 1 - e^{2 j \phi_j} \rho_{ij}^2 }
+\\ &= \frac{ \tau_{ij} \tau_{ji} e^{j \phi_j} }{ 1 - e^{2 j \phi_j} \rho_{ij}^2 }.
+\end{aligned}
+\end{equation}
 %
 This matches what we found in class.  For the reflection amplitude we have
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:100}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:100}
+\begin{aligned}
 r
-= \frac{E_{l,i}'}{E_{r,i}'}
-=
+&= \frac{E_{l,i}'}{E_{r,i}'}
+\\ &=
 \frac{
 - \rho_{ij}( e^{j \phi_j} - e^{- j\phi_j} )
 }
 {
 e^{-j \phi_j} - e^{j \phi_j} \rho_{ij}^2
 }
-=
+\\ &=
 \frac{
 \rho_{ij}( 1 - e^{2 j \phi_j}  )
 }
 {
 1 - e^{2 j \phi_j} \rho_{ij}^2
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Compare this to the value found in class
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:120}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:120}
+\begin{aligned}
 r
-=
+&=
 \rho_{ij} + \frac{\tau_{ij} \tau_{ji} \rho_{ji} e^{ 2 j \phi_j} }{1 - \rho_{ij}^2 e^{2 j \phi_j}}
-=
+\\ &=
 \rho_{ij} - \frac{ (1 - \rho_{ij}^2) \rho_{ij} e^{ 2 j \phi_j} }{1 - \rho_{ij}^2 e^{2 j \phi_j}}
-=
+\\ &=
 \rho_{ij}
 \lr{
    1 -
       \frac{ (1 - \rho_{ij}^2) e^{ 2 j \phi_j} }{1 - \rho_{ij}^2 e^{2 j \phi_j} }
 }
-=
+\\ &=
 \rho_{ij}
    \frac{ 1 - \rho_{ij}^2 e^{2 j \phi_j} - (1 - \rho_{ij}^2) e^{ 2 j \phi_j} }{1 - \rho_{ij}^2 e^{2 j \phi_j}}
-=
+\\ &=
 \rho_{ij}
    \frac{ 1 - e^{ 2 j \phi_j} }{1 - \rho_{ij}^2 e^{2 j \phi_j}},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 which matches \cref{eqn:emtproblemSet9Problem1:100} as desired, and provides at least partial confidence before continuing.  We can now state the relation between the inputs and outputs for the entire system
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:140}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:140}
 \begin{bmatrix}
 E_{l,i}' \\
 E_{r,i}'
@@ -155,7 +163,7 @@ E_{r,i}'
 0 \\
 E e^{j \phi_i}
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 %
 If \( \BM \) satisfies the eigenvalue relations
 %
@@ -167,16 +175,17 @@ If \( \BM \) satisfies the eigenvalue relations
 \end{equation}
 %
 then we can form
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:180}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:180}
+\begin{aligned}
 \BM
 \begin{bmatrix}
 \Be_1 & \Be_2
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 \Be_1 \lambda_1 & \Be_2 \lambda_2
 \end{bmatrix}
-=
+\\ &=
 \begin{bmatrix}
 \Be_1 & \Be_2
 \end{bmatrix}
@@ -184,7 +193,8 @@ then we can form
 \lambda_1 & 0 \\
 0 & \lambda_2
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Let
 \begin{equation}\label{eqn:emtproblemSet9Problem1:200}
@@ -204,19 +214,20 @@ Let
 %
 so that
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:220}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:220}
 \BM = \BE \BD \BE^{-1}.
-\end{dmath}
+\end{equation}
 %
 Integer powers of \( \BM \) can now be computed easily
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:240}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:240}
+\begin{aligned}
 \BM^N
-=
+&=
 (\BE \BD \BE^{-1}) (\BE \BD \BE^{-1}) \cdots (\BE \BD \BE^{-1})
-=
+\\ &=
 \BE \BD^N \BE^{-1}
-=
+\\ &=
 \BE
 \begin{bmatrix}
 \lambda_1^N & 0 \\
@@ -224,11 +235,12 @@ Integer powers of \( \BM \) can now be computed easily
 \end{bmatrix}
 \BE^{-1}
 .
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 This gives
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem1:260}
+\begin{equation}\label{eqn:emtproblemSet9Problem1:260}
 \begin{bmatrix}
 E_{l,i}' \\
 E_{r,i}'
@@ -241,7 +253,7 @@ E
 e^{j \phi_i}
 \end{bmatrix}
 .
-\end{dmath}
+\end{equation}
 The symbolic expansion of the eigenvalues and eigenvectors for this problem are not particularly illuminating
 \begin{equation}\label{eqn:emtproblemSet9Problem1:n}
 \begin{aligned}

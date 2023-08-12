@@ -23,9 +23,9 @@ The first set of field lines has the appearance of non-solenoidal.  To demonstra
 %
 For each field line \( \BE_i \), passing through this square integration volume, the length of the projection onto the \( x \) axis is shorter on the right side of the box than the left.  Suppose the left hand projections of \( \BE \) onto \( \xcap \) are \( 0.9 \), and \( 0.8 \) vs. \( 0.7\), and \(0.6\) on the right for the bottom and top red field lines respectively.  The flux of those field lines is proportional to
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:20}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:20}
 \sum_i \ncap \cdot \BE \approx (0.7 - 0.9) + (0.6 - 0.8) = -0.4,
-\end{dmath}
+\end{equation}
 %
 so this field appears to be non-solenoidal.  As for the charges generating the field, this field has the look of a small portion of a dipole field as sketched in \cref{fig:dipole:dipoleFig1}, with the lines in the supplied figure flowing out of a positive charge to a negative.
 %
@@ -34,52 +34,56 @@ so this field appears to be non-solenoidal.  As for the charges generating the f
 \item
 This next figure has the appearance of the electric field lines coming out of a single positive charge
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:40}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:40}
 \BE = \frac{q}{4 \pi \epsilon_0} \frac{\rcap}{r^2}.
-\end{dmath}
+\end{equation}
 %
 Such a field is divergence free everywhere but the origin.  For \( \Br \ne 0 \)
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:60}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:60}
+\begin{aligned}
 \spacegrad \cdot \BE
-=
+&=
 \frac{q}{4 \pi \epsilon_0} \spacegrad \cdot \frac{\Br}{r^3}
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \lr{ \frac{\spacegrad \cdot \Br }{r^3} + \lr{ \spacegrad \inv{r^3} } \cdot \Br }
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \lr{ \frac{ 3 }{r^3} + \lr{ -\frac{3}{2} 2 \frac{\Br}{r^5} } \cdot \Br }
-=
+\\ &=
 0.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Because of the singularity at the origin, this is still a solenoidal field, as shown by the divergence integral
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:80}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:80}
+\begin{aligned}
 \int_V \spacegrad \cdot \BE dV
-=
+&=
 \oint_{\partial V} \ncap \cdot \BE dA
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \iint \rcap \cdot \ncap r^2 \sin\theta d\theta d\phi
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \iint \ncap \cdot \frac{\rcap}{r^2} r^2 \sin\theta d\theta d\phi
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} 4 \pi
-=
+\\ &=
 \frac{q}{\epsilon_0}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \item
 This last field is solenoidal, since the field lines are all of equal magnitude and direction.  Suppose that field was
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:100}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:100}
 \BE = \xcap E,
-\end{dmath}
+\end{equation}
 %
 where \( E \) is constant.  The divergence is then
 %
-\begin{dmath}\label{eqn:emtProblemSet1Problem1:120}
+\begin{equation}\label{eqn:emtProblemSet1Problem1:120}
 \spacegrad \cdot \BE = \PD{x}{E} = 0.
-\end{dmath}
+\end{equation}
 %
 \end{enumerate}
 %}

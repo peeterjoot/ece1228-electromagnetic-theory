@@ -24,7 +24,7 @@
 \end{equation}
 %
 \index{curl}
-\begin{dmath}\label{eqn:emtLecture1:60}
+\begin{equation}\label{eqn:emtLecture1:60}
 \spacegrad \cross \Bf
 =
 \begin{vmatrix}
@@ -34,7 +34,7 @@
 \PDi{z}{} \\
 f_x & f_y & f_z
 \end{vmatrix}
-\end{dmath}
+\end{equation}
 %
 \index{Laplacian!decomposition}
 \begin{equation}\label{eqn:usefulFormulas:700}
@@ -46,20 +46,22 @@ f_x & f_y & f_z
 This result was used in ps1 problem 3,5, and 6.
 %
 \index{curl of curl}
-\begin{dmath}\label{eqn:emtProblemSet1Appendix:460}
+\begin{equation}\label{eqn:emtProblemSet1Appendix:460}
+\begin{aligned}
 \spacegrad \cross \lr{ \spacegrad \cross \BA }
-=
+&=
 \epsilon_{a b c} \Be_a \partial_b \lr{ \epsilon_{r s t} \Be_r \partial_s A_t }_c
-=
+\\ &=
 \epsilon_{a b c} \Be_a \partial_b \epsilon_{c s t} \partial_s A_t
-=
+\\ &=
 \delta_{ab}^{[st]}
 \Be_a \partial_b \partial_s A_t
-=
+\\ &=
 \Be_a \partial_b \lr{ \partial_a A_b - \partial_b A_a }
-=
+\\ &=
 \spacegrad \lr{ \spacegrad \cdot \BA } - \spacegrad^2 \BA
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \paragraph{Cylindrical coordinates.}
 %
@@ -78,17 +80,17 @@ This result was used in ps1 problem 3,5, and 6.
 \end{aligned}
 \end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:760}
+\begin{equation}\label{eqn:usefulFormulas:760}
 \spacegrad = \rhocap \partial_\rho + \frac{\phicap}{\rho} \partial_\phi + \zcap \partial_z
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:780}
+\begin{equation}\label{eqn:usefulFormulas:780}
 \spacegrad \cdot \BA
 =
 \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:800}
+\begin{equation}\label{eqn:usefulFormulas:800}
 \spacegrad \cross \BA
 =
 \rhocap
@@ -107,15 +109,15 @@ This result was used in ps1 problem 3,5, and 6.
    \partial_\rho ( \rho A_\phi )
    - \partial_\phi A_\rho
 }
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:820}
+\begin{equation}\label{eqn:usefulFormulas:820}
 \spacegrad^2
 =
 \inv{\rho} \PD{\rho}{} \lr{ \rho \PD{\rho}{} }
 + \frac{1}{\rho^2} \PDSq{\phi}{}
 + \PDSq{z}{}
-\end{dmath}
+\end{equation}
 %
 \paragraph{Spherical coordinates.}
 %
@@ -138,23 +140,23 @@ This result was used in ps1 problem 3,5, and 6.
 \end{aligned}
 \end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:880}
+\begin{equation}\label{eqn:usefulFormulas:880}
 \spacegrad
 =
 \rcap \PD{r}{} +
 \frac{\thetacap}{r} \PD{\theta}{} +
 \frac{\phicap}{r\sin\theta} \PD{\phi}{}
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:900}
+\begin{equation}\label{eqn:usefulFormulas:900}
 \spacegrad \cdot \BA
 =
 \inv{r^2} \partial_r (r^2 A_r)
 + \inv{r S_\theta} \partial_\theta (S_\theta A_\theta)
 + \frac{1}{r S_\theta} \partial_\phi A_\phi
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:920}
+\begin{equation}\label{eqn:usefulFormulas:920}
 \spacegrad \cross \BA
 =
    \rcap \lr{
@@ -169,15 +171,15 @@ This result was used in ps1 problem 3,5, and 6.
         \inv{r} \partial_r (r A_\theta)
       - \inv{r} \partial_\theta A_r
    }
-\end{dmath}
+\end{equation}
 %
-\begin{dmath}\label{eqn:usefulFormulas:940}
+\begin{equation}\label{eqn:usefulFormulas:940}
 \spacegrad^2 \psi
 =
     \inv{r^2} \PD{r}{} \lr{ r^2 \PD{r}{ \psi} }
    + \frac{1}{r^2 \sin\theta} \PD{\theta}{} \lr{ \sin\theta \PD{\theta}{ \psi } }
    + \frac{1}{r^2 \sin^2\theta} \PDSq{\phi}{ \psi}
-\end{dmath}
+\end{equation}
 %
 \paragraph{Vector calculus.}
 %

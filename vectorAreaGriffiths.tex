@@ -30,9 +30,9 @@
 %
 The integral
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:20}
+\begin{equation}\label{eqn:vectorAreaGriffiths:20}
 \Ba = \int_S d\Ba,
-\end{dmath}
+\end{equation}
 %
 is sometimes called the vector area of the surface \( S \).
 %
@@ -66,42 +66,44 @@ Show that
 %\withproblemsetsParagraph{
 \makeSubAnswer{}{problem:vectorAreaGriffiths:1:a}
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:80}
+\begin{equation}\label{eqn:vectorAreaGriffiths:80}
+\begin{aligned}
 \Ba
-=
+&=
 \int_{0}^{\pi/2} R^2 \sin\theta d\theta \int_0^{2\pi} d\phi
 \lr{ \sin\theta \cos\phi, \sin\theta \sin\phi, \cos\theta }
-=
+\\ &=
 R^2 \int_{0}^{\pi/2} d\theta \int_0^{2\pi} d\phi
 \lr{ \sin^2\theta \cos\phi, \sin^2\theta \sin\phi, \sin\theta\cos\theta }
-=
+\\ &=
 2 \pi R^2 \int_{0}^{\pi/2} d\theta \Be_3
 \sin\theta\cos\theta
-=
+\\ &=
 \pi R^2
 \Be_3
 \int_{0}^{\pi/2} d\theta
 \sin(2 \theta)
-=
+\\ &=
 \pi R^2
 \Be_3
 \evalrange{\lr{\frac{-\cos(2 \theta)}{2}}}{0}{\pi/2}
-=
+\\ &=
 \pi R^2
 \Be_3
 \lr{ 1 - (-1) }/2
-=
+\\ &=
 \pi R^2
 \Be_3.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \makeSubAnswer{}{problem:vectorAreaGriffiths:1:b}
 %
 As hinted in the original problem description, this follows from
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:100}
+\begin{equation}\label{eqn:vectorAreaGriffiths:100}
 \int dV \spacegrad T = \oint T d\Ba,
-\end{dmath}
+\end{equation}
 %
 simply by setting \( T = 1 \).
 %
@@ -109,11 +111,12 @@ simply by setting \( T = 1 \).
 %
 Suppose that two surfaces sharing a boundary are parameterized by vectors \( \Bx(u, v), \Bx(a,b) \) respectively.  The area integral with the first parameterization is
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:120}
+\begin{equation}\label{eqn:vectorAreaGriffiths:120}
+\begin{aligned}
 \Ba
-= \int \PD{u}{\Bx} \cross \PD{v}{\Bx} du dv
-= \epsilon_{ijk} \Be_i \int \PD{u}{x_j} \PD{v}{x_k} du dv
-=
+&= \int \PD{u}{\Bx} \cross \PD{v}{\Bx} du dv
+\\ &= \epsilon_{ijk} \Be_i \int \PD{u}{x_j} \PD{v}{x_k} du dv
+\\ &=
 \epsilon_{ijk} \Be_i \int
 \lr{
 \PD{a}{x_j}
@@ -130,7 +133,7 @@ Suppose that two surfaces sharing a boundary are parameterized by vectors \( \Bx
 \PD{v}{b}
 }
 du dv
-=
+\\ &=
 \epsilon_{ijk} \Be_i \int
 du dv
 \lr{
@@ -154,7 +157,7 @@ du dv
 \PD{b}{x_k}
 \PD{v}{b}
 }
-=
+\\ &=
 \epsilon_{ijk} \Be_i \int
 du dv
 \lr{
@@ -182,12 +185,14 @@ du dv
 \PD{u}{a}
 \PD{v}{b}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 In the last step a \( j,k \) index swap was performed for the last term of the second integral.  The first integral is zero, since the integrand is symmetric in \( j,k \).  This leaves
-\begin{dmath}\label{eqn:vectorAreaGriffiths:140}
+\begin{equation}\label{eqn:vectorAreaGriffiths:140}
+\begin{aligned}
 \Ba
-=
+&=
 \epsilon_{ijk} \Be_i \int
 du dv
 \lr{
@@ -201,7 +206,7 @@ du dv
 \PD{u}{a}
 \PD{v}{b}
 }
-=
+\\ &=
 \epsilon_{ijk} \Be_i \int
 \PD{b}{x_j}
 \PD{a}{x_k}
@@ -213,18 +218,19 @@ du dv
 \PD{v}{b}
 }
 du dv
-=
+\\ &=
 \epsilon_{ijk} \Be_i \int
 \PD{b}{x_j}
 \PD{a}{x_k}
 \frac{\partial(b,a)}{\partial(u,v)} du dv
-=
+\\ &=
 -\int
 \PD{b}{\Bx} \cross \PD{a}{\Bx} da db
-=
+\\ &=
 \int
 \PD{a}{\Bx} \cross \PD{b}{\Bx} da db.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 However, this is the area integral with the second parameterization, proving that the area-integral for any given boundary is independent of the surface.
 %
@@ -236,9 +242,9 @@ Having proven that the area-integral for a given boundary is independent of the 
 %
 The area of each of these triangular slices is
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:160}
+\begin{equation}\label{eqn:vectorAreaGriffiths:160}
 \inv{2} \Bx' \cross d\Bl'.
-\end{dmath}
+\end{equation}
 %
 Summing those triangles proves the result.
 %
@@ -246,42 +252,46 @@ Summing those triangles proves the result.
 %
 As hinted in the problem, this follows from
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:180}
+\begin{equation}\label{eqn:vectorAreaGriffiths:180}
 \int \spacegrad T \cross d\Ba = -\ointctrclockwise T d\Bl.
-\end{dmath}
+\end{equation}
 %
 Set \( T = \Bc \cdot \Br \), for which
 %
-\begin{dmath}\label{eqn:vectorAreaGriffiths:240}
+\begin{equation}\label{eqn:vectorAreaGriffiths:240}
+\begin{aligned}
 \spacegrad T
-= \Be_k \partial_k c_m x_m
-= \Be_k c_m \delta_{km}
-= \Be_k c_k
-= \Bc,
-\end{dmath}
+&= \Be_k \partial_k c_m x_m
+\\ &= \Be_k c_m \delta_{km}
+\\ &= \Be_k c_k
+\\ &= \Bc,
+\end{aligned}
+\end{equation}
 %
 so
-\begin{dmath}\label{eqn:vectorAreaGriffiths:200}
+\begin{equation}\label{eqn:vectorAreaGriffiths:200}
+\begin{aligned}
 (\spacegrad T) \cross d\Ba
-=
+&=
 \int \Bc \cross d\Ba
-=
+\\ &=
 \Bc \cross \int d\Ba
-=
+\\ &=
 \Bc \cross \Ba.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so
-\begin{dmath}\label{eqn:vectorAreaGriffiths:220}
+\begin{equation}\label{eqn:vectorAreaGriffiths:220}
 \Bc \cross \Ba = -\ointctrclockwise (\Bc \cdot \Br) d\Bl,
-\end{dmath}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:vectorAreaGriffiths:260}
+\begin{equation}\label{eqn:vectorAreaGriffiths:260}
 \ointctrclockwise (\Bc \cdot \Br) d\Bl
 =
 \Ba \cross \Bc. \qedmarker
-\end{dmath}
+\end{equation}
 %}
 } % answer
 %

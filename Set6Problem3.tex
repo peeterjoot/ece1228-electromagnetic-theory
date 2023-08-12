@@ -5,10 +5,10 @@
 \makeproblem{Uniform plane wave.}{emt:problemSet6:3}{
 \paragraph{Note:} This seemed like a separate problem, and has been split out from the problem 2 as specified in the original problem set handout.
 The uniform plane wave
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:60}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:60}
 \bcE(\Br, t) = E_0
 \lr{ \xcap \cos\theta - \zcap \sin\theta } \cos\lr{ \omega t -k \sin\theta x - k \cos\theta z },
-\end{dmath}
+\end{equation}
 is propagating in the \(x-z\) plane as sketched in \cref{fig:emtProblemSet6:emtProblemSet6Fig1}
 in a simple medium with \( \sigma = 0\).
 \imageFigure{../figures/ece1228-electromagnetic-theory/emtProblemSet6Fig1}{Linear wave front.}{fig:emtProblemSet6:emtProblemSet6Fig1}{0.3}
@@ -27,9 +27,9 @@ Determine the components of phase velocity vector \( \Bv_p \) along x and z.
 \skipIfRedacted{
 \makeanswer{emt:problemSet6:3}{
 The wave equation for \( \bcE \) is
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:80}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:80}
 \spacegrad^2 \bcE  = \mu \epsilon \PDSq{t}{\bcE} + \mu \sigma \PD{t}{\bcE}.
-\end{dmath}
+\end{equation}
 With \( \sigma = 0 \) and \( E_0 \) real, the permittivity \( \epsilon \) must also be real.  In the frequency domain, this means that the waves are governed by the equations
 \begin{equation}\label{eqn:emtproblemSet6Problem3:100}
 \begin{aligned}
@@ -49,19 +49,20 @@ where
 \end{aligned}
 \end{equation}
 We also require that
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:140}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:140}
 (-j \Bk)^2 = -\omega^2 \mu \epsilon,
-\end{dmath}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:160}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:160}
 \frac{\omega}{k} = \inv{\sqrt{\mu \epsilon}}.
-\end{dmath}
+\end{equation}
 \makeSubAnswer{}{emt:problemSet6:3a}
 In the frequency domain, the magnetic field can be obtained directly from the electric field
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:180}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:180}
+\begin{aligned}
 \BH
-= \inv{-j \omega \mu} \spacegrad \cross \BE
-=
+&= \inv{-j \omega \mu} \spacegrad \cross \BE
+\\ &=
 \frac{E_0}{-j \omega \mu}
 \begin{vmatrix}
 \xcap & \ycap & \zcap \\
@@ -71,73 +72,78 @@ e^{-j \Bk \cdot \Br} & 0 &
 - \sin\theta
 e^{-j \Bk \cdot \Br}
 \end{vmatrix}
-=
+\\ &=
 -\frac{E_0 \ycap}{-j \omega \mu}
 \lr{
 -\sin\theta \partial_x
 -\cos\theta \partial_z
 }
 e^{-j \Bk \cdot \Br}
-=
+\\ &=
 -\frac{-j k E_0 \ycap}{j \omega \mu}
 \lr{
 \sin\theta \sin\theta +
 \cos\theta \cos\theta
 }
 e^{-j \Bk \cdot \Br}
-=
+\\ &=
 \frac{k E_0 \ycap}{\omega \mu}
 e^{-j \Bk \cdot \Br}
-=
+\\ &=
 \frac{\sqrt{\mu \epsilon}E_0 \ycap}{\mu}
 e^{-j \Bk \cdot \Br},
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:emtproblemSet6Problem3:200}{
 \bcH(\Br, t) = \sqrt{\frac{\epsilon}{\mu}} E_0 \ycap \cos\lr{ \omega t - \Bk \cdot \Br }.
 }
 \makeSubAnswer{}{emt:problemSet6:3b}
 The instantaneous Poynting vector is
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:220}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:220}
+\begin{aligned}
 \bcS
-= \bcE \cross \bcH
-= \inv{4}
+&= \bcE \cross \bcH
+\\ &= \inv{4}
 \lr{ \BE e^{j \omega t} + \BE^\conj e^{-j\omega t} }
 \cross
 \lr{ \BH e^{j \omega t} + \BH^\conj e^{-j\omega t} }
-=
+\\ &=
 \inv{4}
 \lr{
 \BE \cross \BH^\conj + \BH \cross \BE^\conj + \BE \cross \BH e^{2 j \omega t} + \BE^\conj \cross \BH^\conj e^{-2 j \omega t}
 }
-=
+\\ &=
 \inv{2}
 \Real \lr{
 \BE \cross \BH^\conj + \BE \cross \BH e^{2 j \omega t}
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 The average is
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:240}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:240}
+\begin{aligned}
 \expectation{\bcS}
-=
+&=
 \inv{2}
 \inv{T} \int_0^T
 \Real \lr{
 \BE \cross \BH^\conj + \BE \cross \BH e^{2 j \omega t}
 }
-=
+\\ &=
 \inv{2} \Real \BE \cross \BH^\conj
-=
+\\ &=
 \inv{2} E_0^2 \sqrt{\frac{\epsilon}{\mu}}
 \begin{vmatrix}
 \xcap & \ycap & \zcap \\
 \cos\theta & 0 & -\sin\theta \\
 0 & 1 & 0
 \end{vmatrix}
-=
+\\ &=
 \inv{2} E_0^2 \sqrt{\frac{\epsilon}{\mu}}
 \lr{ \xcap \sin\theta + \zcap \cos\theta },
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \boxedEquation{eqn:emtproblemSet6Problem3:260}{
 \expectation{\bcS}
@@ -146,35 +152,41 @@ or
 }
 \makeSubAnswer{}{emt:problemSet6:3c}
 The stored magnetic energy density is
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:280}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:280}
+\begin{aligned}
 W_m
-= \inv{2} \mu \Abs{\BH}^2
-= \inv{2} \mu \frac{\epsilon}{\mu} E_0^2
-= \inv{2} \epsilon E_0^2.
-\end{dmath}
+&= \inv{2} \mu \Abs{\BH}^2
+\\ &= \inv{2} \mu \frac{\epsilon}{\mu} E_0^2
+\\ &= \inv{2} \epsilon E_0^2.
+\end{aligned}
+\end{equation}
 This equals the stored electric energy density, as expected.
 \makeSubAnswer{}{emt:problemSet6:3d}
 The phase velocity are the velocities that satisfy
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:300}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:300}
+\begin{aligned}
 0
-=
+&=
 \ddt{} \lr{ \omega t - \Bk \cdot \Br }
-=
+\\ &=
 \omega - \Bk \cdot \frac{d\Br}{dt},
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:380}
-\omega =
+\begin{equation}\label{eqn:emtproblemSet6Problem3:380}
+\begin{aligned}
+\omega &=
 \Bk \cdot \Bv_p
-=
+\\ &=
 k_x v_x
 +
 k_z v_z
-=
+\\ &=
 k \sin\theta v_x
 +
 k \cos\theta v_z.
-\end{dmath}
+\end{aligned}
+\end{equation}
 This has many solutions, including superluminal phase velocities such as:
 \begin{equation}\label{eqn:emtproblemSet6Problem3:420}
 \begin{aligned}
@@ -199,8 +211,8 @@ v_z &= c \cos\theta,
 \end{aligned}
 }
 where
-\begin{dmath}\label{eqn:emtproblemSet6Problem3:360}
+\begin{equation}\label{eqn:emtproblemSet6Problem3:360}
 c = \inv{\sqrt{\mu \epsilon}}.
-\end{dmath}
+\end{equation}
 %Both of these phase velocity components are greater than the speed of the wave.
 }}

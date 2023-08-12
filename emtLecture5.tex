@@ -43,9 +43,9 @@ where \(\BM_d\) is called the magnetic displacement current here.  For the magne
 %
 It is left as an exercise to show that
 %
-\begin{dmath}\label{eqn:emtLecture5:160}
+\begin{equation}\label{eqn:emtLecture5:160}
 \spacegrad \cdot \lr{ \BE \cross \BH } + \BH \cdot \lr{ \BM_i + \BM_d }  + \BE \cdot \lr{ \BJ_i + \BJ_c + \BJ_d } = 0,
-\end{dmath}
+\end{equation}
 %
 or
 \begin{equation}\label{eqn:emtLecture5:180}
@@ -70,99 +70,105 @@ or
 \index{supplied power density}
 Define a supplied power density \( \rho_{\textrm{supp}} \)
 %
-\begin{dmath}\label{eqn:emtLecture5:220}
+\begin{equation}\label{eqn:emtLecture5:220}
 -\rho_{\textrm{supp}}
 =
  \int dV \BH \cdot \BM_i
 + \int dV \BE \cdot \BJ_i.
-\end{dmath}
+\end{equation}
 %
 When the medium is not dispersive or lossy, we have
 %
-\begin{dmath}\label{eqn:emtLecture5:240}
+\begin{equation}\label{eqn:emtLecture5:240}
+\begin{aligned}
 \int dV \BH \cdot \PD{t}{\BB}
-=
+&=
 \mu \int dV \BH \cdot \PD{t}{\BH}
-=
+\\ &=
 \PD{t}{} \int dV \mu \Abs{\BH}^2.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \index{magnetic energy density}
 The units of \( [\mu \Abs{\BH}^2] \) are \si{W}, so one can defined a magnetic energy density \( \mu \Abs{\BH}^2 \), and
 %
-\begin{dmath}\label{eqn:emtLecture5:260}
+\begin{equation}\label{eqn:emtLecture5:260}
 W_m =
 \int dV \mu \Abs{\BH}^2,
-\end{dmath}
+\end{equation}
 %
 for
 %
-\begin{dmath}\label{eqn:emtLecture5:280}
+\begin{equation}\label{eqn:emtLecture5:280}
 \int dV \BH \cdot \PD{t}{\BB}
 =
 \PD{t}{W_m}.
-\end{dmath}
+\end{equation}
 %
 \index{stored magnetic energy}
 This is the rate of change of stored magnetic energy [\si{J/s} = \si{W}].
 %
 Similarly
-\begin{dmath}\label{eqn:emtLecture5:300}
+\begin{equation}\label{eqn:emtLecture5:300}
+\begin{aligned}
 \int dV \BE \cdot \PD{t}{\BD}
-=
+&=
 \epsilon
 \int dV \BE \cdot \PD{t}{\BE}
-=
+\\ &=
 \PD{t}{} \int dV \epsilon \Abs{\BE}^2.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \index{electric energy density}
 The electric energy density is \( \epsilon \Abs{\BE}^2 \).  Let
 %
-\begin{dmath}\label{eqn:emtLecture5:320}
+\begin{equation}\label{eqn:emtLecture5:320}
 W_e =
 \int dV \epsilon \Abs{\BE}^2,
-\end{dmath}
+\end{equation}
 %
 and
-\begin{dmath}\label{eqn:emtLecture5:340}
+\begin{equation}\label{eqn:emtLecture5:340}
 \int dV \BE \cdot \PD{t}{\BD}
 =
 \PD{t}{W_e}.
-\end{dmath}
+\end{equation}
 %
 We also have a term
 %
-\begin{dmath}\label{eqn:emtLecture5:360}
+\begin{equation}\label{eqn:emtLecture5:360}
+\begin{aligned}
 \int dV \BE \cdot \BJ_c
-=
+&=
 \int dV \BE \cdot (\sigma \BE)
-=
+\\ &=
 \int dV \sigma \Abs{\BE}^2.
 %\equiv ...
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \index{stored electric energy}
 This is the rate of change of stored electric energy.
 %
 The remaining term is
-\begin{dmath}\label{eqn:emtLecture5:380}
+\begin{equation}\label{eqn:emtLecture5:380}
 \oint d\Ba \cdot \lr{ \BE \cross \BH }.
-\end{dmath}
+\end{equation}
 %
 This is a density of the power that is leaving the volume.  The vector \( \BE \cross \BH \) is special, called the Poynting vector, and coincidentally points in the direction that the energy leaves the bounding surface per unit time.  We write
 %
-\begin{dmath}\label{eqn:emtLecture5:400}
+\begin{equation}\label{eqn:emtLecture5:400}
 \BS = \BE \cross \BH.
-\end{dmath}
+\end{equation}
 %
 In vacuum the phase velocity \( \Bv_p \), group velocity \( \Bv_g \) and packet(?) velocity \( \Bv_p \) all line up.  This isn't the case in the media.
 %
 It turns out that without dissipation
 %
-\begin{dmath}\label{eqn:emtLecture5:420}
+\begin{equation}\label{eqn:emtLecture5:420}
 \int \BH \cdot \PD{t}{\BB} = \int \BE \cdot \PD{t}{\BD}.
-\end{dmath}
+\end{equation}
 %
 \index{LC circuit}
 For example in an LC circuit \cref{fig:lecture4LCCircuit:lecture4LCCircuitFig1}
@@ -172,7 +178,7 @@ half the cycle the energy is stored in the inductor, and in the other half of th
 %
 Summarizing
 %
-\begin{dmath}\label{eqn:emtLecture5:440}
+\begin{equation}\label{eqn:emtLecture5:440}
 \oint \lr{ \BE \cross \BH } \cdot d\Ba = P_{\textrm{exit}}.
-\end{dmath}
+\end{equation}
 %

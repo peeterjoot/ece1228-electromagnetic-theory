@@ -16,39 +16,41 @@ density) placed inside a conductor will decay in an exponential manner.
 \skipIfRedacted{
 \makeanswer{emt:problemSet4:4}{
 If we assume that the induced charge density is related by the conductance to the electric field
-\begin{dmath}\label{eqn:emtProblemSet4Problem4:20}
+\begin{equation}\label{eqn:emtProblemSet4Problem4:20}
 \BJ = \sigma \BE,
-\end{dmath}
+\end{equation}
 then the continuity equation can be written as
 %
-\begin{dmath}\label{eqn:emtProblemSet4Problem4:40}
+\begin{equation}\label{eqn:emtProblemSet4Problem4:40}
+\begin{aligned}
 \PD{t}{\rho}
-=
+&=
 -\spacegrad \cdot \BJ
-=
+\\ &=
 - \sigma \spacegrad \cdot \BE
-=
+\\ &=
 - \frac{\sigma}{\epsilon} \rho.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Now we have an equation for \( \rho \), with solution
-%\begin{dmath}\label{eqn:emtProblemSet4Problem4:60}
+%\begin{equation}\label{eqn:emtProblemSet4Problem4:60}
 \boxedEquation{eqn:emtProblemSet4Problem4:80}{
 \rho = \rho_0 e^{-\sigma t/\epsilon}.
 }
-%\end{dmath}
+%\end{equation}
 %For copper, we have
 %
 % http://maxwells-equations.com/materials/conductivity.php
 %\sigma = 6.3 * 10^7
 Given this dispersion relation for the charge density, we can also find the normal component of the current density using the divergence theorem.  Evaluating the continuity equation in an infinitesimal spherical volume of radius \( R \) surrounding the initial charge \( \rho_0 dV \) that was placed at the center of that sphere, far enough from the boundary of the conductor that we can ignore it, we find
-\begin{dmath}\label{eqn:emtProblemSet4Problem4:100}
+\begin{equation}\label{eqn:emtProblemSet4Problem4:100}
 \oint \ncap \cdot \BJ dA = - \PD{t}{} \int \rho_0 e^{-\sigma t/\epsilon} dV,
-\end{dmath}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtProblemSet4Problem4:120}
+\begin{equation}\label{eqn:emtProblemSet4Problem4:120}
 J_n \Delta A = \frac{\sigma}{\epsilon} \rho_0 e^{-\sigma t/\epsilon} \Delta V.
-\end{dmath}
+\end{equation}
 %
 Assuming that such a current is radial by symmetry, this provides the dispersion relation for the current out of this same volume
 \begin{equation}\label{eqn:emtProblemSet4Problem4:140}

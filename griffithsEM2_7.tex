@@ -26,9 +26,9 @@
 \index{electric field!spherical shell}
 Calculate the field due to a spherical shell.  The field is
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:20}
+\begin{equation}\label{eqn:griffithsEM2_7:20}
 \BE = \frac{\sigma}{4 \pi \epsilon_0} \int \frac{(\Br - \Br')}{\Abs{\Br - \Br'}^3} da',
-\end{dmath}
+\end{equation}
 %
 where \( \Br' \) is the position to the area element on the shell.  For the test position, let \( \Br = z \Be_3 \).
 } % problem
@@ -38,60 +38,69 @@ where \( \Br' \) is the position to the area element on the shell.  For the test
 \index{geometric algebra}
 We need to parameterize the area integral.  A complex-number like geometric algebra representation works nicely.
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:40}
+\begin{equation}\label{eqn:griffithsEM2_7:40}
+\begin{aligned}
 \Br'
-= R \lr{ \sin\theta \cos\phi, \sin\theta \sin\phi, \cos\theta }
-= R \lr{ \Be_1 \sin\theta \lr{ \cos\phi + \Be_1 \Be_2 \sin\phi } + \Be_3 \cos\theta }
-= R \lr{ \Be_1 \sin\theta e^{i\phi} + \Be_3 \cos\theta }.
-\end{dmath}
+&= R \lr{ \sin\theta \cos\phi, \sin\theta \sin\phi, \cos\theta }
+\\ &= R \lr{ \Be_1 \sin\theta \lr{ \cos\phi + \Be_1 \Be_2 \sin\phi } + \Be_3 \cos\theta }
+\\ &= R \lr{ \Be_1 \sin\theta e^{i\phi} + \Be_3 \cos\theta }.
+\end{aligned}
+\end{equation}
 %
 \index{pseudoscalar}
 Here \( i = \Be_1 \Be_2 \) has been used to represent to horizontal rotation plane.
 %
 The difference in position between the test vector and area-element is
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:60}
+\begin{equation}\label{eqn:griffithsEM2_7:60}
 \Br - \Br'
 = \Be_3 \lr{ z - R \cos\theta } - R \Be_1 \sin\theta e^{i \phi},
-\end{dmath}
+\end{equation}
 %
 with an absolute squared length of
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:80}
+\begin{equation}\label{eqn:griffithsEM2_7:80}
+\begin{aligned}
 \Abs{\Br - \Br' }^2
-= \lr{ z - R \cos\theta }^2 + R^2 \sin^2\theta
-= z^2 + R^2 - 2 z R \cos\theta.
-\end{dmath}
+&= \lr{ z - R \cos\theta }^2 + R^2 \sin^2\theta
+\\ &= z^2 + R^2 - 2 z R \cos\theta.
+\end{aligned}
+\end{equation}
 %
 As a side note, this is a kind of fun way to prove the old ``cosine-law'' identity.  With that done, the field integral can now be expressed explicitly
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:100}
+\begin{equation}\label{eqn:griffithsEM2_7:100}
+\begin{aligned}
 \BE
-= \frac{\sigma}{4 \pi \epsilon_0} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi R^2 \sin\theta d\theta d\phi
+&= \frac{\sigma}{4 \pi \epsilon_0} \int_{\phi = 0}^{2\pi} \int_{\theta = 0}^\pi R^2 \sin\theta d\theta d\phi
 \frac{\Be_3 \lr{ z - R \cos\theta } - R \Be_1 \sin\theta e^{i \phi}}
 {
 \lr{z^2 + R^2 - 2 z R \cos\theta}^{3/2}
 }
-= \frac{2 \pi R^2 \sigma \Be_3}{4 \pi \epsilon_0} \int_{\theta = 0}^\pi \sin\theta d\theta
+\\ &= 
+\frac{2 \pi R^2 \sigma \Be_3}{4 \pi \epsilon_0} \int_{\theta= 0}^\pi \sin\theta d\theta
 \frac{z - R \cos\theta}
 {
 \lr{z^2 + R^2 - 2 z R \cos\theta}^{3/2}
 }
-= \frac{2 \pi R^2 \sigma \Be_3}{4 \pi \epsilon_0} \int_{\theta = 0}^\pi \sin\theta d\theta
+\\ &=
+\frac{2 \pi R^2 \sigma \Be_3}{4 \pi \epsilon_0} \int_{\theta= 0}^\pi \sin\theta d\theta
 \frac{ R( z/R - \cos\theta) }
 {
 (R^2)^{3/2} \lr{ (z/R)^2 + 1 - 2 (z/R) \cos\theta}^{3/2}
 }
-= \frac{\sigma \Be_3}{2 \epsilon_0} \int_{u = -1}^{1} du
+\\ &=
+\frac{\sigma \Be_3}{2 \epsilon_0} \int_{u= -1}^{1} du
 \frac{ z/R - u}
 {
 \lr{1 + (z/R)^2 - 2 (z/R) u}^{3/2}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Observe that all the azimuthal contributions get killed.  We expect that due to the symmetry of the problem.  We are left with an integral that submits to Mathematica, but doesn't look fun to attempt manually.  Specifically
 %
-\begin{dmath}\label{eqn:griffithsEM2_7:120}
+\begin{equation}\label{eqn:griffithsEM2_7:120}
 \int_{-1}^1 \frac{a-u}{\lr{1 + a^2 - 2 a u}^{3/2}} du
 =
 \left\{
@@ -100,11 +109,11 @@ Observe that all the azimuthal contributions get killed.  We expect that due to 
 0 & \quad \mbox{if \( a < 1 \),}
 \end{array}
 \right.
-\end{dmath}
+\end{equation}
 %
 so
 %
-%\begin{dmath}\label{eqn:griffithsEM2_7:140}
+%\begin{equation}\label{eqn:griffithsEM2_7:140}
 \boxedEquation{eqn:griffithsEM2_7:160}{
 \BE
 =
@@ -116,7 +125,7 @@ so
 \end{array}
 \right.
 }
-%\end{dmath}
+%\end{equation}
 %
 In the problem, it is pointed out to be careful of the sign when evaluating \( \sqrt{ R^2 + z^2 - 2 R z } \), however, I don't see where that is even useful?
 %}

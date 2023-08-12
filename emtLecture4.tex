@@ -34,9 +34,9 @@ Using a semi-classical model of an electron, assuming that the electron circles 
 %
 Ignoring the details of how the moments really occur physically, we can take it as a given that they exist, and model them as elemental magnetic dipole moments of the form
 %
-\begin{dmath}\label{eqn:emtLecture4:20}
+\begin{equation}\label{eqn:emtLecture4:20}
 d\Bm_i = \ncap_i I_i ds_i \qquad [\si{A m^2}].
-\end{dmath}
+\end{equation}
 %
 Note that \( ds_i \) is an element of surface area, not arc length!
 %
@@ -49,12 +49,16 @@ Such dipole moments are actually what an MRI measures.  The noises that people d
 \index{magnetization}
 The magnetic polarization, or magnetization \( \BM \), in [\si{A/m}]] is given by
 %
-\begin{dmath}\label{eqn:emtLecture4:40}
+\begin{equation}\label{eqn:emtLecture4:40}
+\begin{aligned}
 \BM
-= \lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \Bm_i }
-= \lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \sum_{i = 1}^{N \delta v} d\Bm_i }
-= \lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \sum_{i = 1}^{N \delta v} \ncap_i I_i ds_i } .
-\end{dmath}
+&= \lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \Bm_i }
+\\ &= 
+\lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \sum_{i = 1}^{N \delta v} d\Bm_i }
+\\ &= 
+\lim_{\Delta v \rightarrow 0} \lr{ \inv{\Delta v} \sum_{i = 1}^{N \delta v} \ncap_i I_i ds_i } .
+\end{aligned}
+\end{equation}
 %
 In materials the magnetization within the atoms are usually random, however, application of a magnetic field can force these to line up, as sketched in \cref{fig:emtLecture4:emtLecture4Fig2}.
 %
@@ -82,14 +86,16 @@ There is an energy associated with this torque
 %
 In analogy with the electric dipole moment analysis, it can be assumed that there is a linear relationship between the magnetic polarization and the applied magnetic field
 %
-\begin{dmath}\label{eqn:emtLecture4:100}
-\BB = \mu_0 \BH_a + \mu_0 \BM = \mu_0\lr{ \BH_a + \BM },
-\end{dmath}
+\begin{equation}\label{eqn:emtLecture4:100}
+\begin{aligned}
+\BB &= \mu_0 \BH_a + \mu_0 \BM \\ &= \mu_0\lr{ \BH_a + \BM },
+\end{aligned}
+\end{equation}
 %
 where
-\begin{dmath}\label{eqn:emtLecture4:120}
+\begin{equation}\label{eqn:emtLecture4:120}
 \BM = \chi_m \BH_a,
-\end{dmath}
+\end{equation}
 %
 so
 \begin{equation}\label{eqn:emtLecture4:140}
@@ -127,9 +133,9 @@ We have two constitutive relationships so far
 but these need to be augmented by Ohm's law
 %
 \index{Ohm's law}
-\begin{dmath}\label{eqn:emtLecture4:200}
+\begin{equation}\label{eqn:emtLecture4:200}
 \BJ_c = \epsilon \BE.
-\end{dmath}
+\end{equation}
 %
 There are a couple ways to discuss this.  One is to model \( \epsilon \) as a complex number.  Such a model is not entirely unconstrained.  Like with the Cauchy-Riemann conditions that relate derivatives of the real and imaginary parts of a complex number, there is a relationship (Kramers-Kronig \citep{wiki:kramersKronig}), an integral relationship that relates the real and imaginary parts of the permittivity \( \epsilon \).
 %

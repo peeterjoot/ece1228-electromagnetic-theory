@@ -43,9 +43,10 @@ Derive the equivalent relationship for the time averaged portion of the time-har
 \makeanswer{problem:poyntingTimeHarmonic:1}{
 %\withproblemsetsParagraph{
 The time domain representation of the Poynting vector in terms of the time-harmonic (phasor) vectors is
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:40}
+\begin{equation}\label{eqn:poyntingTimeHarmonic:40}
+\begin{aligned}
 \bcE \cross \bcH
-= \inv{4}
+&= \inv{4}
 \lr{
 \BE e^{j\omega t}
 + \BE^\conj e^{-j\omega t}
@@ -55,13 +56,14 @@ The time domain representation of the Poynting vector in terms of the time-harmo
 \BH e^{j\omega t}
 + \BH^\conj e^{-j\omega t}
 }
-=
+\\ &=
 \inv{2} \Real \lr{ \BE \cross \BH^\conj + \BE \cross \BH e^{2 j \omega t} },
-\end{dmath}
+\end{aligned}
+\end{equation}
 so if we are looking for the relationships that effect only the time averaged Poynting vector, over integral multiples of the period, we are interested in evaluating the divergence of
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:60}
+\begin{equation}\label{eqn:poyntingTimeHarmonic:60}
 \inv{2} \BE \cross \BH^\conj.
-\end{dmath}
+\end{equation}
 The time-harmonic Maxwell's equations are
 \begin{equation}\label{eqn:poyntingTimeHarmonic:80}
 \begin{aligned}
@@ -70,9 +72,9 @@ The time-harmonic Maxwell's equations are
 \end{aligned}
 \end{equation}
 The latter after conjugation is
-\begin{dmath}\label{eqn:poyntingTimeHarmonic:100}
+\begin{equation}\label{eqn:poyntingTimeHarmonic:100}
 \spacegrad \cross \BH^\conj = -j \omega \epsilon^\conj \BE^\conj + \BJ_i^\conj + \sigma^\conj \BE^\conj.
-\end{dmath}
+\end{equation}
 For the divergence we have
 \begin{equation}\label{eqn:poyntingTimeHarmonic:120}
 \begin{aligned}
@@ -97,7 +99,7 @@ or
 \end{aligned}
 \end{equation}
 so
-%\begin{dmath}\label{eqn:poyntingTimeHarmonic:160}
+%\begin{equation}\label{eqn:poyntingTimeHarmonic:160}
 \boxedEquation{eqn:poyntingTimeHarmonic:160}{
 \begin{aligned}
 0
@@ -109,7 +111,7 @@ so
 + \inv{2} \sigma^\conj \Abs{\BE}^2.
 \end{aligned}
 }
-%\end{dmath}
+%\end{equation}
 %}
 } % answer
 %}

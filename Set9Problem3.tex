@@ -48,104 +48,110 @@ The non-existence of magnetic monopoles means that we are working with the stand
 %
 \begin{subequations}
 \label{eqn:emtproblemSet9Problem3:20}
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:40}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:40}
 \spacegrad \cross \BE = -\partial_t \BB
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:60}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:60}
 \spacegrad \cross \BH = \BJ + \partial_t \BD
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:80}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:80}
 \spacegrad \cross \BD = \rho
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:100}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:100}
 \spacegrad \cross \BB = 0.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 Helmholtz's theorem applied to \cref{eqn:emtproblemSet9Problem3:100}, indicates that the magnetic field \( \BB \) must be a curl
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:120}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:120}
 \BB = \spacegrad \cross \BA,
-\end{dmath}
+\end{equation}
 %
 for some \( \BA \).  Plugging this into \cref{eqn:emtproblemSet9Problem3:40} we have
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:140}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:140}
 \spacegrad \cross \BE = -\partial_t \lr{ \spacegrad \cross \BA },
-\end{dmath}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:160}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:160}
 \spacegrad \cross \lr{ \BE + \partial_t \BA } = 0.
-\end{dmath}
+\end{equation}
 %
 This is satisfied by setting
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:180}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:180}
 \BE + \partial_t \BA = \grad \psi,
-\end{dmath}
+\end{equation}
 %
 for some \( \psi \), say \( \psi = -V \), or
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:200}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:200}
 \BE = -\partial_t \BA - \spacegrad V.
-\end{dmath}
+\end{equation}
 %
 Ignoring gauge freedom temporarily, in simple media where \( \BB = \mu \BH \) and \( \BD = \epsilon \BE \), the Ampere-Maxwell equation is
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:220}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:220}
+\begin{aligned}
 0
-= \spacegrad \cross \BH - \BJ - \partial_t \BD
-= \spacegrad \cross \frac{ \spacegrad \cross \BA }{\mu} - \BJ - \epsilon \partial_t \lr{ -\partial_t \BA - \spacegrad V },
-\end{dmath}
+&= \spacegrad \cross \BH - \BJ - \partial_t \BD
+\\ &= \spacegrad \cross \frac{ \spacegrad \cross \BA }{\mu} - \BJ - \epsilon \partial_t \lr{ -\partial_t \BA - \spacegrad V },
+\end{aligned}
+\end{equation}
 %
 or
 %
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:240}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:240}
 \boxedEquation{eqn:emtproblemSet9Problem3:240}{
 -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA + \spacegrad \lr{ \spacegrad \cdot \BA + \epsilon\mu \partial_t V } = \mu \BJ.
 }
-%\end{dmath}
+%\end{equation}
 %
 Gauss's law takes the form
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:300}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:300}
+\begin{aligned}
 \frac{\rho}{\epsilon}
-=
+&=
 \spacegrad \cdot \BE
-=
+\\ &=
 \spacegrad \cdot \lr{
 -\partial_t \BA - \spacegrad V
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:320}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:320}
 \boxedEquation{eqn:emtproblemSet9Problem3:320}{
 -\spacegrad^2 V
 -\partial_t \spacegrad \cdot \BA
 =
 \frac{\rho}{\epsilon}.
 }
-%\end{dmath}
+%\end{equation}
 %
 \makeSubAnswer{}{emt:problemSet9:3b}
 %
 The Lorentz gauge is usually defined in vacuum where
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:260}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:260}
+\begin{aligned}
 0
-= \partial_\mu A^\mu
-= \partial_0 (V/c) + \partial_k A^k
-= \inv{c^2} \partial_t V + \spacegrad \cdot \BA.
-\end{dmath}
+&= \partial_\mu A^\mu
+\\ &= \partial_0 (V/c) + \partial_k A^k
+\\ &= \inv{c^2} \partial_t V + \spacegrad \cdot \BA.
+\end{aligned}
+\end{equation}
 %
 Generalizing this to simple media, we can define the Lorentz gauge condition as
 %
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:280}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:280}
 \boxedEquation{eqn:emtproblemSet9Problem3:280}{
 0 = \spacegrad \cdot \BA + \epsilon\mu \partial_t V,
 }
-%\end{dmath}
+%\end{equation}
 %
 which reduces to \cref{eqn:emtproblemSet9Problem3:260} when \( \epsilon\mu = \epsilon_0 \mu_0 = 1/c^2 \).
 %
@@ -157,70 +163,74 @@ Inserting this into the Ampere-Maxwell equation, we are left with a non-homogene
 %
 Inserting into Gauss's law, we have
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:380}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:380}
+\begin{aligned}
 \frac{\rho}{\epsilon}
-=
+&=
 -\spacegrad^2 V
 -\partial_t \lr{ \spacegrad \cdot \BA }
-=
+\\ &=
 -\spacegrad^2 V
 -\partial_t \lr{ -\epsilon\mu \partial_t V },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 a second non-homogeneous wave equation for the potential \( V \)
 %
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:400}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:400}
 \boxedEquation{eqn:emtproblemSet9Problem3:420}{
 -\spacegrad^2 V + \epsilon\mu \partial_{tt} V
 =
 \frac{\rho}{\epsilon}.
 }
-%\end{dmath}
+%\end{equation}
 %
 Note that if \( \BJ = \BJ_i + \BJ_c = \BJ_i + \sigma \BE \), then \cref{eqn:emtproblemSet9Problem3:360} is not fully decoupled.  Instead we have
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:440}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:440}
 -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA
 = \mu \lr{
    \BJ_i + \sigma \lr{
       -\partial_t \BA - \spacegrad V
    }
 }.
-\end{dmath}
+\end{equation}
 %
 To decouple this, we can take the divergence of both sides
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:460}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:460}
+\begin{aligned}
 -\spacegrad^2 \spacegrad \cdot \BA + \mu\epsilon \partial_{tt} \spacegrad \cdot \BA
-= \mu \lr{
+&= \mu \lr{
    \spacegrad \cdot \BJ_i + \sigma \lr{
       -\partial_t \spacegrad \cdot \BA - \spacegrad^2 V
    }
 }
-= \mu \lr{
+\\ &= \mu \lr{
    \spacegrad \cdot \BJ_i + \sigma \lr{
       -\partial_t \spacegrad \cdot \BA + \frac{\rho}{\epsilon} + \partial_t \spacegrad \cdot \BA
    }
 }
-%= \mu \lr{
+%\\ &= \mu \lr{
 %   \spacegrad \cdot \BJ_i + \sigma \lr{
 %\frac{\rho}{\epsilon}
 %   }
 %}
-=
+\\ &=
 \mu \spacegrad \cdot \BJ_i
  + \frac{\mu \sigma}{\epsilon} \rho,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 which yields a third order equation for \( \BA \)
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:480}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:480}
 \spacegrad \cdot \lr{
 -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA
 }
 =
 \mu \spacegrad \cdot \BJ_i
  + \frac{\mu \sigma}{\epsilon} \rho.
-\end{dmath}
+\end{equation}
 %
 \makeSubAnswer{}{emt:problemSet9:3c}
 %
@@ -231,23 +241,23 @@ In the Coulomb gauge we set \( \spacegrad \cdot \BA = 0 \), leaving
 }
 %
 and
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:520}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:520}
 -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA + \epsilon\mu \partial_t \spacegrad V = \mu \BJ.
-\end{dmath}
+\end{equation}
 %
 This can clearly be separated by taking the divergence of both sides
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:540}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:540}
 \spacegrad \cdot \lr{ -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA } + \epsilon\mu \partial_t \lr{ -\frac{\rho}{\epsilon}} = \mu \spacegrad \cdot \BJ.
-\end{dmath}
+\end{equation}
 %
 Using the continuity equation, this is a wave equation for the divergence of the vector potential \( \BA \)
 %
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:740}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:740}
 \boxedEquation{eqn:emtproblemSet9Problem3:760}{
 -\spacegrad^2 \lr{ \spacegrad \cdot \BA } + \mu\epsilon \partial_{tt} \lr{ \spacegrad \cdot \BA } = 0.
 }
-%\end{dmath}
+%\end{equation}
 %
 Another way to look at this, as outlined in \citep{jackson1975cew} is to note that
 the potential equation \cref{eqn:emtproblemSet9Problem3:540}
@@ -255,24 +265,25 @@ depends only on the divergence of \( \BJ \), and not on the curl of \( \BJ \).  
 %
 That decomposition follows from expanding \( \spacegrad^2 \BJ/R \) in two ways using the delta function \( -4 \pi \delta(\Bx - \Bx') = \spacegrad^2 1/R \) representation, as well as directly
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:560}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:560}
+\begin{aligned}
 - 4 \pi \BJ(\Bx)
-=
+&=
 \int \spacegrad^2 \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
-=
+\\ &=
 \spacegrad
 \int \spacegrad \cdot \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
 +
 \spacegrad \cdot
 \int \spacegrad \wedge \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
-=
+\\ &=
 -\spacegrad
 \int \BJ(\Bx') \cdot \spacegrad' \inv{\Abs{\Bx - \Bx'}} d^3 x'
 +
 \spacegrad \cdot \lr{ \spacegrad \wedge
 \int \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
 }
-=
+\\ &=
 -\spacegrad
 \int \spacegrad' \cdot \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
 +\spacegrad
@@ -282,17 +293,18 @@ That decomposition follows from expanding \( \spacegrad^2 \BJ/R \) in two ways u
 \spacegrad \cross
 \int \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The first term can be converted to a surface integral
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:580}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:580}
 -\spacegrad
 \int \spacegrad' \cdot \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'
 =
 -\spacegrad
 \int d\BA' \cdot \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}},
-\end{dmath}
+\end{equation}
 %
 so provided the currents are either localized or \( \Abs{\BJ}/R \rightarrow 0 \) on an infinite sphere, we can make the identification
 %
@@ -310,42 +322,46 @@ so provided the currents are either localized or \( \Abs{\BJ}/R \rightarrow 0 \)
 %
 where \( \spacegrad \cross \BJ_l = 0 \) (irrotational, or longitudinal), whereas \( \spacegrad \cdot \BJ_t = 0 \) (solenoidal or transverse).  The irrotational property is clear from inspection, and the transverse property can be verified readily
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:620}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:620}
+\begin{aligned}
 \spacegrad \cdot \lr{ \spacegrad \cross \lr{ \spacegrad \cross \BX } }
-=
+&=
 -\spacegrad \cdot \lr{ \spacegrad \cdot \lr{ \spacegrad \wedge \BX } }
-=
+\\ &=
 -\spacegrad \cdot \lr{ \spacegrad^2 \BX - \spacegrad \lr{ \spacegrad \cdot \BX } }
-=
+\\ &=
 -\spacegrad \cdot \lr{\spacegrad^2 \BX} + \spacegrad^2 \lr{ \spacegrad \cdot \BX }
-= 0.
-\end{dmath}
+\\ &= 0.
+\end{aligned}
+\end{equation}
 %
 Since
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:640}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:640}
 V(\Bx, t)
 =
 \inv{4 \pi \epsilon} \int \frac{\rho(\Bx', t)}{\Abs{\Bx - \Bx'}} d^3 x',
-\end{dmath}
+\end{equation}
 %
 we have
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:660}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:660}
+\begin{aligned}
 \spacegrad \PD{t}{V}
-=
+&=
 \inv{4 \pi \epsilon} \spacegrad \int \frac{\partial_t \rho(\Bx', t)}{\Abs{\Bx - \Bx'}} d^3 x'
-=
+\\ &=
 \inv{4 \pi \epsilon} \spacegrad \int \frac{-\spacegrad' \cdot \BJ}{\Abs{\Bx - \Bx'}} d^3 x'
-=
+\\ &=
 \frac{\BJ_l}{\epsilon}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 The Ampere-Maxwell equation \cref{eqn:emtproblemSet9Problem3:520} is reduced to
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:680}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:680}
 -\spacegrad^2 \BA + \mu\epsilon \partial_{tt} \BA + \epsilon\mu \lr{ \frac{\BJ_l}{\epsilon} } = \mu \BJ,
-\end{dmath}
+\end{equation}
 %
 or
 \boxedEquation{eqn:emtproblemSet9Problem3:700}{
@@ -353,87 +369,92 @@ or
 }
 %
 where
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:720}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:720}
 \BJ_t =
 -
 \spacegrad \cross \spacegrad \cross \inv{4 \pi} \int \frac{\BJ(\Bx')}{\Abs{\Bx - \Bx'}} d^3 x'.
-\end{dmath}
+\end{equation}
 %
 \makeSubAnswer{}{emt:problemSet9:3d}
 %
 Because the magnetic field is defined in terms of the curl of a potential, we can alter that potential by any gradient, and not change the magnetic field
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:780}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:780}
 \BB = \spacegrad \lr{ \BA + \spacegrad \chi }.
-\end{dmath}
+\end{equation}
 %
 What corresponding change to the scalar potential must be made after a mapping
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:800}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:800}
 \BA \rightarrow \BA + \spacegrad \chi = \BA'.
-\end{dmath}
+\end{equation}
 %
 The electric field is
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:820}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:820}
+\begin{aligned}
 \BE
-= -\spacegrad V - \partial_t \BA
-= -\spacegrad V - \partial_t \lr{ \BA' - \spacegrad \chi }
-= -\spacegrad \lr{ V - \partial_t \chi } - \partial_t \BA'.
-\end{dmath}
+&= -\spacegrad V - \partial_t \BA
+\\ &= -\spacegrad V - \partial_t \lr{ \BA' - \spacegrad \chi }
+\\ &= -\spacegrad \lr{ V - \partial_t \chi } - \partial_t \BA'.
+\end{aligned}
+\end{equation}
 %
 We see that the electric and magnetic fields will be unchanged provided the vector and scalar potential are changed in pairs as
-%\begin{dmath}\label{eqn:emtproblemSet9Problem3:840}
+%\begin{equation}\label{eqn:emtproblemSet9Problem3:840}
 \boxedEquation{eqn:emtproblemSet9Problem3:860}{
 \begin{aligned}
 \BA' &= \BA + \spacegrad \chi \\
 V' &= V - \partial_t \chi.
 \end{aligned}
 }
-%\end{dmath}
 %
 We should also expect that the form of Maxwell's equations will be left unchanged.  Plugging these transformed potentials into Gauss's law \cref{eqn:emtproblemSet9Problem3:320}, we recover the original field equation in terms of the unaltered potentials
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:880}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:880}
+\begin{aligned}
 \frac{\rho}{\epsilon}
-=
+&=
 -\spacegrad^2 V'
 -\partial_t \spacegrad \cdot \BA'
-=
+\\ &=
 -\spacegrad^2 \lr{ V - \partial_t \chi }
 -\partial_t \spacegrad \cdot \lr{ \BA + \spacegrad \chi }
-=
+\\ &=
 -\spacegrad^2 V
 -\partial_t \spacegrad \cdot \BA
 - \spacegrad \partial_t \chi
 -\partial_t \spacegrad^2 \chi
-=
+\\ &=
 -\spacegrad^2 V
 -\partial_t \spacegrad \cdot \BA.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Similarly, plugging in the transformed potentials into \cref{eqn:emtproblemSet9Problem3:240} gives
 %
-\begin{dmath}\label{eqn:emtproblemSet9Problem3:900}
+\begin{equation}\label{eqn:emtproblemSet9Problem3:900}
+\begin{aligned}
 \mu \BJ
-=
+&=
 -\spacegrad^2 \BA' + \mu\epsilon \partial_{tt} \BA' + \spacegrad \lr{ \spacegrad \cdot \BA' + \epsilon\mu \partial_t V' }
-=
+\\ &=
 -\spacegrad^2 \lr{ \BA + \spacegrad \chi }
 + \mu\epsilon \partial_{tt} \lr{ \BA + \spacegrad \chi }
 + \spacegrad \lr{ \spacegrad \cdot \lr{ \BA + \spacegrad \chi } + \epsilon\mu \partial_t \lr{ V - \partial_t \chi } }
-=
+\\ &=
 -\spacegrad^2 \BA
 + \mu\epsilon \partial_{tt} \BA
 + \spacegrad \lr{ \spacegrad \cdot \BA } + \epsilon\mu \partial_t V
 -\spacegrad^2 \spacegrad \chi
 + \mu\epsilon \partial_{tt} \spacegrad \chi
 + \spacegrad \spacegrad^2 \chi - \epsilon\mu \spacegrad \partial_{tt} \chi
-=
+\\ &=
 -\spacegrad^2 \BA
 + \mu\epsilon \partial_{tt} \BA
 + \spacegrad \lr{ \spacegrad \cdot \BA } + \epsilon\mu \partial_t V,
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 showing that both pairs of potential equations are unaltered by a transformation of the form \cref{eqn:emtproblemSet9Problem3:860}.
 }}

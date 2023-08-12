@@ -18,73 +18,89 @@ interface is at \( z=0 \) plane.
 From the figure, with \( i = \Be_3 \Be_1 \) the propagation unit vectors are
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem1:20}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:40}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:40}
+\begin{aligned}
 \kcap_1
-= \Be_3 e^{i \theta_1}
-= \Be_3 \cos\theta_1 + \Be_1 \sin\theta_1
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:60}
+&= \Be_3 e^{i \theta_1}
+\\ &= \Be_3 \cos\theta_1 + \Be_1 \sin\theta_1
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:60}
+\begin{aligned}
 \kcap_1'
-= -\Be_3 e^{-i \theta_1'}
-= -\Be_3 \cos\theta_1' + \Be_1 \sin\theta_1'
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:80}
+&= -\Be_3 e^{-i \theta_1'}
+\\ &= -\Be_3 \cos\theta_1' + \Be_1 \sin\theta_1'
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:80}
+\begin{aligned}
 \kcap_2
-= \Be_3 e^{i \theta_2}
-= \Be_3 \cos\theta_2 + \Be_1 \sin\theta_2.
-\end{dmath}
+&= \Be_3 e^{i \theta_2}
+\\ &= \Be_3 \cos\theta_2 + \Be_1 \sin\theta_2.
+\end{aligned}
+\end{equation}
 \end{subequations}
 Recall that Faraday's law shows that \( \Bk, \BE, \BH \) is a right handed triple.  In particular
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:100}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:100}
+\begin{aligned}
 -j \omega \mu \BH
-=
+&=
 \spacegrad \cross \BE
-=
+\\ &=
 -\BE_0 \cross \spacegrad e^{j \omega t - j \Bk \cdot \Bx}
-=
+\\ &=
 -\BE_0 \cross (-j \Bk) e^{j \omega t - j \Bk \cdot \Bx}
-=
+\\ &=
 j \BE \cross \Bk,
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:120}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:120}
+\begin{aligned}
 \BH
-=
+&=
 \inv{-j \omega \mu} j \BE \cross \Bk
-=
+\\ &=
 \inv{\omega \mu} \Bk \cross \BE.
-=
+\\ &=
 \inv{\eta} \kcap \cross \BE.
-\end{dmath}
+\end{aligned}
+\end{equation}
 This means that \( \BH_i, \BH_t \) must be directed along the \( +\Be_2 \) direction, whereas \( \BH_r \) is directed in the \( -\Be_2 \) direction.  Note that the phase of this reflected magnetic field is opposite to what might be considered a natural choice, so we should that \( r \) is negative compared to a reference that picks the opposite phase convention.
 
 The electric field directions from the figure are
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem1:140}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:160}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:160}
+\begin{aligned}
 \Ecap_i
-=
+&=
 \kcap_1 i
-= \Be_3 e^{i \theta_1} i
-= \Be_1 e^{i \theta_1}
-= \Be_1 \cos\theta_1 - \Be_3 \sin\theta_1
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:180}
+\\ &= \Be_3 e^{i \theta_1} i
+\\ &= \Be_1 e^{i \theta_1}
+\\ &= \Be_1 \cos\theta_1 - \Be_3 \sin\theta_1
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:180}
+\begin{aligned}
 \Ecap_r
-=
+&=
 \kcap_1' (-i)
-= -\Be_3 e^{-i \theta_1'} (-i)
-= \Be_1 e^{-i \theta_1'}
-= \Be_1 \cos\theta_1' + \Be_3 \sin\theta_1'
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:200}
+\\ &= -\Be_3 e^{-i \theta_1'} (-i)
+\\ &= \Be_1 e^{-i \theta_1'}
+\\ &= \Be_1 \cos\theta_1' + \Be_3 \sin\theta_1'
+\end{aligned}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:200}
+\begin{aligned}
 \Ecap_t
-=
+&=
 \kcap_2 i
-= \Be_3 e^{i \theta_2} i
-= \Be_1 e^{i \theta_2}
-= \Be_1 \cos\theta_2 - \Be_3 \sin\theta_2.
-\end{dmath}
+\\ &= \Be_3 e^{i \theta_2} i
+\\ &= \Be_1 e^{i \theta_2}
+\\ &= \Be_1 \cos\theta_2 - \Be_3 \sin\theta_2.
+\end{aligned}
+\end{equation}
 \end{subequations}
 The boundary value conditions, with \( \ncap = \Be_3 \), are
 \begin{equation}\label{eqn:emtproblemSet8Problem1:220}
@@ -129,17 +145,17 @@ E_0 t \lr{ \Be_1 \cos\theta_2 - \Be_3 \sin\theta_2 } e^{-j \Bk_2 \cdot \Bx }
 The boundary value constraints can be seen to resolve to the following set of scalar equations
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem1:340}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:360}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:360}
 \frac{E_0}{\eta_1} e^{-j \Bk_1 \cdot \Bx}
 -\frac{E_0 r}{\eta_1} e^{-j \Bk_1' \cdot \Bx}
 =
 \frac{t E_0}{\eta_2} e^{-j \Bk_2 \cdot \Bx}
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:380}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:380}
 E_0 \cos\theta_1 e^{-j \Bk_1 \cdot \Bx } + E_0 r \cos\theta_1' e^{-j \Bk_1' \cdot \Bx }
 =
 E_0 t \cos\theta_2 e^{-j \Bk_2 \cdot \Bx }
-\end{dmath}
+\end{equation}
 \begin{equation}\label{eqn:emtproblemSet8Problem1:400}
 \begin{aligned}
 -\epsilon_1 &E_0 \sin\theta_1 e^{-j \Bk_1 \cdot \Bx }
@@ -156,52 +172,55 @@ In order for the phase factors to cancel out, as they do at the origin, we requi
 \Bk_1 \cdot \Be_1 = \Bk_1' \cdot \Be_1 = \Bk_2 \cdot \Be_2.
 \end{equation}
 The \( \Bk_1, \Bk_1' \) equality is Snell's first law, a requirement that the incident angle equals the reflection angle
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:440}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:440}
 k_1 \sin\theta_1 = k_1 \sin\theta_1'.
-\end{dmath}
+\end{equation}
 %
 The remaining phase equality is Snell's second law in disguise
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:460}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:460}
+\begin{aligned}
 0
-= \Bk_1 \cdot \Be_1 - \Bk_2 \cdot \Be_2
-= k_1 \sin\theta_1 - k_2 \sin\theta_2
-= \frac{\omega}{v_1} \sin\theta_1 - \frac{\omega}{v_2} \sin\theta_2
-= \frac{\omega}{c}\frac{c}{v_1} \sin\theta_1 - \frac{\omega}{c}\frac{c}{v_2} \sin\theta_2
-= \frac{\omega}{c} \lr{ n_1 \sin\theta_1 - n_2 \sin\theta_2 },
-\end{dmath}
+&= \Bk_1 \cdot \Be_1 - \Bk_2 \cdot \Be_2
+\\ &= k_1 \sin\theta_1 - k_2 \sin\theta_2
+\\ &= \frac{\omega}{v_1} \sin\theta_1 - \frac{\omega}{v_2} \sin\theta_2
+\\ &= \frac{\omega}{c}\frac{c}{v_1} \sin\theta_1 - \frac{\omega}{c}\frac{c}{v_2} \sin\theta_2
+\\ &= \frac{\omega}{c} \lr{ n_1 \sin\theta_1 - n_2 \sin\theta_2 },
+\end{aligned}
+\end{equation}
 or
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:480}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:480}
 n_1 \sin\theta_1 = n_2 \sin\theta_2.
-\end{dmath}
+\end{equation}
 %
 With equality of all the phase terms, we are left with
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem1:500}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:520}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:520}
 \frac{1}{\eta_1}
 -\frac{r}{\eta_1}
 =
 \frac{t}{\eta_2}
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:540}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:540}
 \cos\theta_1(1 + r)
 =
 t \cos\theta_2
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:560}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:560}
 -\epsilon_1 \sin\theta_1 (1 - r)
 =
 -\epsilon_2 t \sin\theta_2.
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 Since \( \epsilon \eta = \sqrt{\epsilon\mu} = n/c \), one of these is redundant since the first and last just re-express Snell's law.  That leaves two equations in two unknowns (\(r,t\))
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:580}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:580}
+\begin{aligned}
 \begin{bmatrix}
 r \\
 t
 \end{bmatrix}
-=
+&=
 {
 \begin{bmatrix}
 1 & \eta_1/\eta_2 \\
@@ -212,7 +231,7 @@ t
 1 \\
 \cos\theta_1
 \end{bmatrix}
-=
+\\ &=
 \inv{ \eta_1 \cos\theta_1 + \eta_2 \cos\theta_2 }
 \begin{bmatrix}
 \eta_2 \cos\theta_2 & -\eta_1 \\
@@ -222,7 +241,8 @@ t
 1 \\
 \cos\theta_1
 \end{bmatrix},
-\end{dmath}
+\end{aligned}
+\end{equation}
 or
 \begin{equation}\label{eqn:emtproblemSet8Problem1:600}
 \begin{aligned}
@@ -237,17 +257,19 @@ t &=
 As expected, this reflection coefficient has a different sign, than \citep{hecht1998hecht} (4.38), where the magnetic fields were all aligned along \( +\Be_2 \).
 
 To express this in terms of \( k_{1z}, k_{2z} \) we have to rewrite expressions of the form
-\begin{dmath}\label{eqn:emtproblemSet8Problem1:620}
+\begin{equation}\label{eqn:emtproblemSet8Problem1:620}
+\begin{aligned}
 \eta_1 \cos\theta_1
-=
+&=
 \frac{\eta_1}{k_1} k_{1z}
-=
+\\ &=
 \frac{\eta_1 v_1}{\omega} k_{1z}
-=
+\\ &=
 \frac{k_{1z}}{\omega} \sqrt{\frac{\mu_1}{\epsilon_1}} \inv{\sqrt{\epsilon_1 \mu_1}}
-=
+\\ &=
 \frac{k_{1z}}{\epsilon_1 \omega}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 This gives
 \begin{equation}\label{eqn:emtproblemSet8Problem1:640}
 \begin{aligned}

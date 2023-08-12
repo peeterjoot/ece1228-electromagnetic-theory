@@ -11,7 +11,7 @@ are the indices of refractions (in general complex) associated with the regions 
 and \( j \) having thicknesses \( d_i \) and \( d_j \). The one period transfer matrix \( \BM \) relates the fields according to
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem3:120}
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:20}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:20}
 \begin{bmatrix}
 E_{l,i}' \\
 E_{r,i}'
@@ -22,30 +22,30 @@ E_{r,i}'
 E_{l,i+1}' \\
 E_{r,i+1}'
 \end{bmatrix}
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:40}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:40}
 \BM =
 g
 \begin{bmatrix}
 a & b \\
 \hat{b} & \hat{a}
 \end{bmatrix}
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:60}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:60}
 g = \inv{1 - \rho_{i,j}^2},
-\end{dmath}
+\end{equation}
 \end{subequations}
 and \( \rho_{i,j} \) is the Fresnel coefficient.  Give the expressions for \( a, \hat{a}, b, \hat{b} \) in terms of \( \beta_i \), \(\beta_j\), and \( \rho_{i,j} \) where
 the phase constants in regions \( i \) and \( j \) are
 %
 \begin{subequations}
 \label{eqn:emtproblemSet8Problem3:140}
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:80}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:80}
 \beta_i = \frac{\omega}{c} n_i d_i \cos\theta_i
-\end{dmath}
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:100}
+\end{equation}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:100}
 \beta_j = \frac{\omega}{c} n_j d_j \cos\theta_j,
-\end{dmath}
+\end{equation}
 \end{subequations}
 %
 and \( \theta_i \) or \( \theta_j \) are the incident angles.
@@ -70,9 +70,9 @@ E'_{r,i+1} &= F /\gamma',
 %
 \imageFigure{../figures/ece1228-electromagnetic-theory/1DPCFig1}{Fields inside and outside of a slab.}{fig:1DPC:1DPCFig1}{0.4}
 where
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:180}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:180}
 \gamma' = e^{ j \beta_{i+1} d_{i+1} }.
-\end{dmath}
+\end{equation}
 %
 Relating fields at \( z = 0 \), with \( \rho_{ij} \) and \( \tau_{ij} \) for the Fresnel reflection and transmission coefficients, we have
 %
@@ -85,9 +85,9 @@ D &= B \tau_{ij} + C \rho_{ji}.
 %
 To express the boundary conditions for the fields at \( z = d_j \), let
 %
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:220}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:220}
 \gamma = e^{ j \beta_j d_j } .
-\end{dmath}
+\end{equation}
 %
 Those boundary conditions are
 \begin{equation}\label{eqn:emtproblemSet8Problem3:240}
@@ -151,12 +151,13 @@ F
 \end{equation}
 %
 This gives
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:300}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:300}
+\begin{aligned}
 \begin{bmatrix}
 A \\
 B
 \end{bmatrix}
-=
+&=
 \gamma
 {\begin{bmatrix}
 1 & - \rho_{ij} \\
@@ -178,7 +179,7 @@ B
 E \\
 F
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma \tau_{ij} \tau_{ji}}
 \begin{bmatrix}
 \tau_{ij} & \rho_{ij} \\
@@ -200,7 +201,7 @@ F
 E \\
 F
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma \tau_{ij} \tau_{ji}}
 \begin{bmatrix}
 \tau_{ij}\tau_{ji} - \rho_{ij} \rho_{ji} &  \rho_{ij} \\
@@ -214,7 +215,7 @@ F
 E \\
 F
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma \tau_{ij} \tau_{ji}}
 \begin{bmatrix}
 \tau_{ij}\tau_{ji} + \rho_{ij}^2 &  \rho_{ij} \\
@@ -228,7 +229,8 @@ F
 E \\
 F
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 A digression is now required, since the problem asks for this matrix in terms of the reflection coefficients, and we have both the reflection coefficients and transmission coefficients in the mix.  For TE we have
 %
@@ -266,9 +268,9 @@ or
 \end{equation}
 %
 In particular, we have
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:380}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:380}
 \tau_{12} \tau_{21} = 1 - \rho_{12}^2.
-\end{dmath}
+\end{equation}
 %
 Does this relation also hold for TM modes?  In problem 1 for TM, we found
 %
@@ -309,23 +311,24 @@ or
 \end{equation}
 %
 so we also find
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:460}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:460}
 \tau_{12} \tau_{21} = 1 - \rho_{12}^2.
-\end{dmath}
+\end{equation}
 %
 Inserting this into \cref{eqn:emtproblemSet8Problem3:300}, we have
 %
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:480}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:480}
+\begin{aligned}
 \begin{bmatrix}
 E'_{l,i} \\
 E'_{r,i} \\
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 A \\
 B
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma (1 - \rho_{12}^2)}
 \begin{bmatrix}
 1                       &  \rho_{ij} \\
@@ -339,7 +342,7 @@ B
 E \\
 F
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma (1 - \rho_{12}^2)}
 \begin{bmatrix}
 1 - \gamma^2 \rho_{ij}^2 & - \rho_{ij}( 1 - \gamma^2 ) \\
@@ -349,20 +352,22 @@ F
 E \\
 F
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Since
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:500}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:500}
+\begin{aligned}
 \begin{bmatrix}
 E \\
 F
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 E'_{l,i+1}/\gamma' \\
 E'_{r,i+1} \gamma'
 \end{bmatrix}
-=
+\\ &=
 \begin{bmatrix}
 1/\gamma' & 0 \\
 0         & \gamma'
@@ -371,15 +376,17 @@ E'_{r,i+1} \gamma'
 E'_{l,i+1} \\
 E'_{r,i+1}
 \end{bmatrix},
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 so
-\begin{dmath}\label{eqn:emtproblemSet8Problem3:520}
+\begin{equation}\label{eqn:emtproblemSet8Problem3:520}
+\begin{aligned}
 \begin{bmatrix}
 E'_{l,i} \\
 E'_{r,i} \\
 \end{bmatrix}
-=
+&=
 \frac{1}{\gamma (1 - \rho_{12}^2)}
 \begin{bmatrix}
 1 - \gamma^2 \rho_{ij}^2 & - \rho_{ij}( 1 - \gamma^2 ) \\
@@ -393,7 +400,7 @@ E'_{r,i} \\
 E'_{l,i+1} \\
 E'_{r,i+1}
 \end{bmatrix}
-=
+\\ &=
 \frac{1}{\gamma (1 - \rho_{12}^2)}
 \begin{bmatrix}
 (1 - \gamma^2 \rho_{ij}^2)/\gamma' & - \rho_{ij}( 1 - \gamma^2 ) \gamma' \\
@@ -403,7 +410,8 @@ E'_{r,i+1}
 E'_{l,i+1} \\
 E'_{r,i+1}
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 With the leading coefficient including a \( g = 1/(1 - \rho_{ij}^2) \) factor, the desired matrix elements can be read off
 %
@@ -461,35 +469,38 @@ e^{ j\phi_i }
 \end{equation}
 %
 %
-%%\begin{dmath}\label{eqn:emtproblemSet8Problem3:560}
 %\boxedEquation{eqn:emtproblemSet8Problem3:560}{
 %\begin{aligned}
 %a &= e^{-j(\beta_i d_i + \beta_j d_j)} \lr{ 1 - e^{2 j \beta_j d_j} \rho_{ij}^2 } \\
 %\hat{a} &= \lr{e^{2 j \beta_j d_j} - \rho_{ij}^2 } e^{j (\beta_i d_i - \beta_j d_j)} \\
 %b &= - \rho_{ij}\lr{ 1 - e^{2 j \beta_j d_j} } e^{j (\beta_i d_i - \beta_j d_j)} \\
-%\hat{b} &= e^{-j(\beta_i d_i + \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
+%\hat{b} &\\ &= e^{-j(\beta_i d_i + \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
 %\end{aligned}
 %}
-%%\end{dmath}
-%
+%%
 %%%The \( a,b \) and \( \hat{a}, \hat{b} \) differ from each other by phase factors.  Factoring those out we have
 %%%
-%%%\begin{dmath}\label{eqn:emtproblemSet8Problem3:580}
+%%%\begin{equation}\label{eqn:emtproblemSet8Problem3:580}
+%%%\begin{aligned}
 %%%\hat{a}
-%%%= e^{2 j \beta_j d_j} \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{j (\beta_i d_i - \beta_j d_j)}
-%%%= \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{j (\beta_i d_i - 3 \beta_j d_j)}
-%%%= e^{-j(\beta_i d_i + \beta_j d_j)} \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{2 j (\beta_i d_i - \beta_j d_j)}
-%%%= e^{2 j (\beta_i d_i - \beta_j d_j)} a,
-%%%\end{dmath}
+%%%&= e^{2 j \beta_j d_j} \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{j (\beta_i d_i - \beta_j d_j)}
+%%%\\ &= \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{j (\beta_i d_i - 3 \beta_j d_j)}
+%%%\\ &= e^{-j(\beta_i d_i + \beta_j d_j)} \lr{1 - e^{-2 j \beta_j d_j} \rho_{ij}^2 } e^{2 j (\beta_i d_i - \beta_j d_j)}
+%%%\\ &= e^{2 j (\beta_i d_i - \beta_j d_j)} a,
+%%%
+%%%\end{aligned}
+%%%\end{equation}
 %%%
 %%%and
 %%%
-%%%\begin{dmath}\label{eqn:emtproblemSet8Problem3:600}
+%%%\begin{equation}\label{eqn:emtproblemSet8Problem3:600}
+%%%\begin{aligned}
 %%%\hat{b}
-%%%= e^{-j(\beta_i d_i + \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
-%%%= e^{-2 j(\beta_i d_i) } e^{j(\beta_i d_i - \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
-%%%= -e^{-2 j(\beta_i d_i) } b,
-%%%\end{dmath}
+%%%&= e^{-j(\beta_i d_i + \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
+%%%\\ &= e^{-2 j(\beta_i d_i) } e^{j(\beta_i d_i - \beta_j d_j)} \rho_{ij} \lr{ 1 - e^{2 j \beta_j d_j} }
+%%%\\ &= -e^{-2 j(\beta_i d_i) } b,
+%%%\end{aligned}
+%%%\end{equation}
 %%%
 %%%\boxedEquation{eqn:emtproblemSet8Problem3:620}{
 %%%\begin{aligned}

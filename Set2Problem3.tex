@@ -7,22 +7,22 @@
 %
 If gradient of a scalar function \( \psi \) rectangular coordinate system is given by
 %
-\begin{dmath}\label{eqn:emtproblemSet2Problem3:20}
+\begin{equation}\label{eqn:emtproblemSet2Problem3:20}
 \spacegrad \psi =
 \xcap_1 \PD{x}{\psi}
 +\ycap_2 \PD{y}{\psi}
 +\zcap \PD{z}{\psi},
-\end{dmath}
+\end{equation}
 %
 using coordinate transformation and chain rule show
 that the gradient of \( \psi \) in cylindrical coordinates is given by
 %
-\begin{dmath}\label{eqn:emtproblemSet2Problem3:40}
+\begin{equation}\label{eqn:emtproblemSet2Problem3:40}
 \spacegrad \psi =
 \rhocap \PD{\rho}{\psi}
 +\phicap \inv{\rho} \PD{\phi}{\psi}
 +\zcap \PD{z}{\psi}.
-\end{dmath}
+\end{equation}
 } % makeproblem
 %
 \skipIfRedacted{
@@ -31,19 +31,20 @@ that the gradient of \( \psi \) in cylindrical coordinates is given by
 The components of the gradient in the cylindrical coordinate system can be factored into a product of a rotation matrix and the Cartesian components of the gradient
 \index{rotation matrix}
 \index{basis vectors}
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:60}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:60}
+\begin{aligned}
 \begin{bmatrix}
 \rhocap \cdot \spacegrad \psi \\
 \phicap \cdot \spacegrad \psi \\
 \zcap \cdot \spacegrad \psi \\
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 \rhocap \cdot \lr{ \xcap \PDi{x}{\psi} +\ycap \PDi{y}{\psi} +\zcap \PDi{z}{\psi} } \\
 \phicap \cdot \lr{ \xcap \PDi{x}{\psi} +\ycap \PDi{y}{\psi} +\zcap \PDi{z}{\psi} } \\
 \zcap \cdot \lr{ \xcap \PDi{x}{\psi} +\ycap \PDi{y}{\psi} +\zcap \PDi{z}{\psi} } \\
 \end{bmatrix}
-=
+\\ &=
 \begin{bmatrix}
 \rhocap \cdot \xcap & \rhocap \cdot \ycap & \rhocap \cdot \zcap \\
 \phicap \cdot \xcap & \phicap \cdot \ycap & \phicap \cdot \zcap \\
@@ -54,7 +55,8 @@ The components of the gradient in the cylindrical coordinate system can be facto
 \PDi{y}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 \index{coordinate transformation!cylindrical}
 The coordinate transformation is
@@ -77,7 +79,7 @@ where the unit vectors are
 \end{aligned}
 \end{equation}
 so
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:120}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:120}
 \begin{bmatrix}
 \rhocap \cdot \spacegrad \psi \\
 \phicap \cdot \spacegrad \psi \\
@@ -94,7 +96,7 @@ so
 \PDi{y}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}
-\end{dmath}
+\end{equation}
 The \( x, y \) partials on the RHS can be expanded by chain rule
 \begin{equation}\label{eqn:emtProblemSet2Problem3:140}
 \begin{aligned}
@@ -103,7 +105,7 @@ The \( x, y \) partials on the RHS can be expanded by chain rule
 \end{aligned}
 \end{equation}
 or, in matrix form
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:160}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:160}
 \begin{bmatrix}
 \PDi{x}{\psi} \\
 \PDi{y}{\psi} \\
@@ -120,7 +122,7 @@ or, in matrix form
 \PDi{\phi}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 The partials of \( \rho \) can be computed from \( \rho^2 = x^2 + y^2 \), and are
 \begin{equation}\label{eqn:emtProblemSet2Problem3:180}
 \begin{aligned}
@@ -143,20 +145,24 @@ We can compute the partials with respect to \( \phi \) from
 \end{aligned}
 \end{equation}
 For example
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:220}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:220}
+\begin{aligned}
 -\sin \phi \PD{x}{\phi}
-= \inv{\sqrt{x^2 + y^2}} + \frac{x (-1/2) 2 x}{\lr{x^2 + y^2}^{3/2}}
-= \frac{x^2 + y^2 - x^2}{\lr{x^2 + y^2}^{3/2}}
-= \frac{y^2}{\lr{x^2 + y^2}^{3/2}}.
-= \frac{y^2}{\rho^3}
-= \frac{\sin^2\phi}{\rho}.
-\end{dmath}
+&= \inv{\sqrt{x^2 + y^2}} + \frac{x (-1/2) 2 x}{\lr{x^2 + y^2}^{3/2}}
+\\ &= \frac{x^2 + y^2 - x^2}{\lr{x^2 + y^2}^{3/2}}
+\\ &= \frac{y^2}{\lr{x^2 + y^2}^{3/2}}.
+\\ &= \frac{y^2}{\rho^3}
+\\ &= \frac{\sin^2\phi}{\rho}.
+\end{aligned}
+\end{equation}
 Similarly
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:240}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:240}
+\begin{aligned}
 \cos \phi \PD{y}{\phi}
-= \frac{x^2}{\rho^3}
-= \frac{\cos^2\phi}{\rho}.
-\end{dmath}
+&= \frac{x^2}{\rho^3}
+\\ &= \frac{\cos^2\phi}{\rho}.
+\end{aligned}
+\end{equation}
 In terms of \( \rho, \phi \), these are
 \begin{equation}\label{eqn:emtProblemSet2Problem3:260}
 \begin{aligned}
@@ -165,7 +171,7 @@ In terms of \( \rho, \phi \), these are
 \end{aligned}
 \end{equation}
 so
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:280}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:280}
 \begin{bmatrix}
 \PDi{x}{\psi} \\
 \PDi{y}{\psi} \\
@@ -182,15 +188,16 @@ so
 \PDi{\phi}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 Substitution back into \cref{eqn:emtProblemSet2Problem3:120} gives
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:320}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:320}
+\begin{aligned}
 \begin{bmatrix}
 \rhocap \cdot \spacegrad \psi \\
 \phicap \cdot \spacegrad \psi \\
 \zcap \cdot \spacegrad \psi \\
 \end{bmatrix}
-=
+&=
 \begin{bmatrix}
 \cos\phi & \sin\phi & 0 \\
 - \sin\phi & \cos\phi & 0 \\
@@ -206,7 +213,7 @@ Substitution back into \cref{eqn:emtProblemSet2Problem3:120} gives
 \PDi{\phi}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}
-=
+\\ &=
 \begin{bmatrix}
 1 & 0 & 0 \\
 0 & \inv{\rho} & 0 \\
@@ -217,24 +224,25 @@ Substitution back into \cref{eqn:emtProblemSet2Problem3:120} gives
 \PDi{\phi}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}
-=
+\\ &=
 \begin{bmatrix}
 \PDi{\rho}{\psi} \\
 \inv{\rho} \PDi{\phi}{\psi} \\
 \PDi{z}{\psi}
 \end{bmatrix}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Finally, the gradient can be reassembled in terms of its projections onto each of the basis vectors in the cylindrical coordinate system
-\begin{dmath}\label{eqn:emtProblemSet2Problem3:340}
+\begin{equation}\label{eqn:emtProblemSet2Problem3:340}
 \spacegrad \psi
 =
 \rhocap (\rhocap \cdot \spacegrad \psi)
 +\phicap (\phicap \cdot \spacegrad \psi)
 +\zcap (\zcap \cdot \spacegrad \psi),
-\end{dmath}
+\end{equation}
 or
-%\begin{dmath}\label{eqn:emtProblemSet2Problem3:360}
+%\begin{equation}\label{eqn:emtProblemSet2Problem3:360}
 \boxedEquation{eqn:emtProblemSet2Problem3:380}{
 \spacegrad \psi
 =
@@ -242,5 +250,5 @@ or
 +\frac{\phicap }{\rho}\PD{\phi}{\psi}
 +\zcap \PD{z}{\psi}.
 }
-%\end{dmath}
+%\end{equation}
 }}

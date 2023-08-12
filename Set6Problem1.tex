@@ -6,14 +6,14 @@
 The constitutive relation for superconductors in weak magnetic fields can be macroscopically
 characterized by the first London equation
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:20}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:20}
 \PD{t}{\BJ_{\mathrm{sup}}} = \alpha \BE,
-\end{dmath}
+\end{equation}
 %
 and the second London equation
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:40}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:40}
 \spacegrad \cross \BJ_{\mathrm{sup}} = -\alpha_1 \BB,
-\end{dmath}
+\end{equation}
 where \( \BJ_{\mathrm{sup}} \)
 stands for the superconducting current,
 \( \alpha = n_s q^2 /m \) and \( \alpha_1 \approx \alpha \), with
@@ -51,86 +51,94 @@ magnetic field in a superconductor is known as the Meissner effect experimentall
 %
 Taking the curl of the first London equation \cref{eqn:emtproblemSet6Problem1:20} gives
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:80}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:80}
+\begin{aligned}
 \spacegrad \cross \dot{\BJ}_{\mathrm{sup}}
-= \alpha \spacegrad \cross \BE
-= \alpha \lr{ -\dot{\BB} },
-\end{dmath}
+&= \alpha \spacegrad \cross \BE
+\\ &= \alpha \lr{ -\dot{\BB} },
+\end{aligned}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:100}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:100}
 \spacegrad \cross \dot{\BJ}_{\mathrm{sup}}
 = -\alpha \dot{\BB},
-\end{dmath}
+\end{equation}
 %
 which has the same structure as the time derivative of the second London equation, but with \( \alpha \) instead of \( \alpha_1 \).  Taking the curl once more gives
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:120}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:120}
+\begin{aligned}
 0
-=
+&=
 \PD{t}{} \lr{
 \spacegrad \cross \lr{ \spacegrad \cross \BJ_{\mathrm{sup}} } + \alpha \spacegrad \cross \BB
 }
-=
+\\ &=
 \PD{t}{} \lr{
 -\spacegrad^2 \BJ_{\mathrm{sup}} + \spacegrad \lr{ \spacegrad \cdot \BJ_{\mathrm{sup}} }
 + \alpha \mu_0 \spacegrad \cross \BH
 }
-=
+\\ &=
 \PD{t}{} \lr{
 -\spacegrad^2 \BJ_{\mathrm{sup}} + \spacegrad \lr{ \spacegrad \cdot \BJ_{\mathrm{sup}} }
 + \alpha \mu_0 \lr{ \BJ_{\mathrm{sup}} + \cancel{ \PD{t}{\BD} } }
 },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:140}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:140}
 \alpha \mu_0 \dot{\BJ}_{\mathrm{sup}} = \spacegrad^2 \dot{\BJ}_{\mathrm{sup}} + \spacegrad \lr{ \spacegrad \cdot \dot{\BJ}_{\mathrm{sup}} }.
-\end{dmath}
+\end{equation}
 %
 One final application of the curl operator gives
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:160}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:160}
+\begin{aligned}
 0
-=
+&=
 -\alpha \mu_0 \spacegrad \cross \dot{\BJ}_{\mathrm{sup}} + \spacegrad \cross \lr{ \spacegrad^2 \dot{\BJ}_{\mathrm{sup}}} + \cancel{\spacegrad \cross \lr{ \spacegrad \lr{ \spacegrad \cdot \dot{\BJ}_{\mathrm{sup}} }}}.
-=
+\\ &=
 -\alpha \mu_0 \lr{ -\alpha \dot{\BB} } + \spacegrad^2 \lr{ \spacegrad \cross \dot{\BJ}_{\mathrm{sup}} }
-=
+\\ &=
 -\alpha \mu_0 \lr{ -\alpha \dot{\BB} } + \spacegrad^2 \lr{ -\alpha \dot{\BB} }
-=
+\\ &=
 -\alpha \lr{ -\mu_0 \alpha \dot{\BB} + \spacegrad^2 \dot{\BB} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Note that this used
 the fact that the curl of a gradient is zero, the fact that the curl and the Laplacian commute (\( \spacegrad^2 \epsilon_{rst} \Be_r \partial_s A_t = \epsilon_{rst} \Be_r \partial_s \spacegrad^2 A_t = \spacegrad \cross ( \spacegrad^2 \BA ) \)), and made two substitutions of
 \cref{eqn:emtproblemSet6Problem1:100}
 .  This gives the desired result
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:180}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:180}
 \mu_0 \alpha \dot{\BB} = \spacegrad^2 \dot{\BB}.      \qedmarker
-\end{dmath}
+\end{equation}
 %
 \makeSubAnswer{}{emt:problemSet6:1b}
 %
 Taking the double curl of the second London equation, we have
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:200}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:200}
+\begin{aligned}
 \spacegrad \cross \lr{ \spacegrad \cross \lr{ -\alpha_1 \BB } }
-=
+&=
 -\alpha_1 \spacegrad \cross \lr{ \spacegrad \cross \BB }
-=
+\\ &=
 -\alpha_1 \mu_0 \spacegrad \cross \lr{ \spacegrad \cross \BH }
-=
+\\ &=
 -\alpha_1 \mu_0 \spacegrad \cross \lr{ \BJ + \cancel{\PD{t}{\BD}} }
-=
+\\ &=
 -\alpha_1 \mu_0 \lr{ -\alpha_1 \BB }
-=
+\\ &=
 -\alpha_1 \lr{ -\spacegrad^2 \BB + \spacegrad \cancel{ \spacegrad \cdot \BB } },
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:220}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:220}
 \spacegrad^2 \BB = \alpha_1 \mu_0 \BB.
-\end{dmath}
+\end{equation}
 %
 This has the structure of a homogeneous Helmholtz equation \( (\spacegrad^2 + k^2) \BB = 0 \) with an imaginary \( k \).
 %
@@ -138,39 +146,41 @@ This has the structure of a homogeneous Helmholtz equation \( (\spacegrad^2 + k^
 %
 The solution of \cref{eqn:emtproblemSet6Problem1:60} is
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:240}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:240}
 \dot{\BB} = \dot{\BB}_0 \exp \lr{ \pm \sqrt{\alpha \mu_0} \kcap \cdot \Br },
-\end{dmath}
+\end{equation}
 %
 and the solution of \cref{eqn:emtproblemSet6Problem1:220} is
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:260}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:260}
 \BB = \BB_0 \exp \lr{ \pm \sqrt{\alpha_1 \mu_0} \kcap \cdot \Br },
-\end{dmath}
+\end{equation}
 %
 when \( \alpha_1 = \alpha \), a magnetic field solution that satisfies both is
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:280}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:280}
 \BB(\Br, t) = \BB_0 \cos( \omega t ) \exp \lr{ \pm \sqrt{\alpha_1 \mu_0} \kcap \cdot \Br }.
-\end{dmath}
+\end{equation}
 %
 Anchoring the coordinate system at the boundary of the material, and picking an unbounded solution, requires that at depth \( \delta \) from that surface the exponential goes as
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:300}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:300}
 e^{-\sqrt{\alpha \mu_0} \delta}.
-\end{dmath}
+\end{equation}
 %
 The \( e^{-1} \) point is when
 %
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:320}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:320}
 \sqrt{\alpha \mu_0} \delta = 1,
-\end{dmath}
+\end{equation}
 %
 or
-\begin{dmath}\label{eqn:emtproblemSet6Problem1:340}
+\begin{equation}\label{eqn:emtproblemSet6Problem1:340}
+\begin{aligned}
 \delta
-= \inv{\sqrt{\alpha \mu_0} }
-= \inv{\sqrt{n_s q^2 \mu_0/m} }.
-\end{dmath}
+&= \inv{\sqrt{\alpha \mu_0} }
+\\ &= \inv{\sqrt{n_s q^2 \mu_0/m} }.
+\end{aligned}
+\end{equation}
 %
 That is
 \boxedEquation{eqn:emtproblemSet6Problem1:360}{

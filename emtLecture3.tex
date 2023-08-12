@@ -53,12 +53,14 @@ where
 \section{Point charge.}
 \index{point charge}
 %
-\begin{dmath}\label{eqn:emtLecture3:60}
+\begin{equation}\label{eqn:emtLecture3:60}
+\begin{aligned}
 \BE
-= \frac{q}{4 \pi \epsilon_0} \frac{\rcap}{\Br^2}
-= \frac{q}{4 \pi \epsilon_0} \frac{\Br}{\Abs{\Br}^3}
-= \frac{q}{4 \pi \epsilon_0} \frac{\Br}{r^3}.
-\end{dmath}
+&= \frac{q}{4 \pi \epsilon_0} \frac{\rcap}{\Br^2}
+\\ &= \frac{q}{4 \pi \epsilon_0} \frac{\Br}{\Abs{\Br}^3}
+\\ &= \frac{q}{4 \pi \epsilon_0} \frac{\Br}{r^3}.
+\end{aligned}
+\end{equation}
 %
 In more complex media the \( \epsilon_0 \) here can be replaced by \( \epsilon \).
 Here the vector \( \Br \) points from the charge to the observation point.
@@ -67,11 +69,13 @@ Note that the class notes use \( \hat{a}_R \) instead of \( \rcap \).
 %
 When the charge isn't located at the origin, we must modify this accordingly
 %
-\begin{dmath}\label{eqn:emtLecture3:80}
+\begin{equation}\label{eqn:emtLecture3:80}
+\begin{aligned}
 \BE
-= \frac{q}{4 \pi \epsilon_0} \frac{\BR}{\Abs{\BR}^3}
-= \frac{q}{4 \pi \epsilon_0} \frac{\BR}{R^3},
-\end{dmath}
+&= \frac{q}{4 \pi \epsilon_0} \frac{\BR}{\Abs{\BR}^3}
+\\ &= \frac{q}{4 \pi \epsilon_0} \frac{\BR}{R^3},
+\end{aligned}
+\end{equation}
 %
 \index{electric field!direction vector}
 where \( \BR = \Br - \Br' \) still points from the location of the charge to the point of observation, as sketched in \cref{fig:VectorFromChargeToObservationL3:VectorFromChargeToObservationL3Fig1}.
@@ -81,18 +85,18 @@ where \( \BR = \Br - \Br' \) still points from the location of the charge to the
 \index{superposition}
 This can be further generalized to collections of point charges by superposition
 %
-\begin{dmath}\label{eqn:emtLecture3:100}
+\begin{equation}\label{eqn:emtLecture3:100}
 \BE
 = \frac{1}{4 \pi \epsilon_0} \sum_i q_i \frac{\Br - \Br_i'}{\Abs{\Br - \Br_i'}^3}.
-\end{dmath}
+\end{equation}
 %
 \index{gradient}
 Observe that a potential that satisfies \( \BE = - \spacegrad V \) can be defined as
 %
-\begin{dmath}\label{eqn:emtLecture3:120}
+\begin{equation}\label{eqn:emtLecture3:120}
 V
 = \frac{1}{4 \pi \epsilon_0} \sum_i \frac{q_i}{\Abs{\Br - \Br_i'}}.
-\end{dmath}
+\end{equation}
 %
 When we are considering real world scenarios (like touching your hair, and then the table), how do we deal with the billions of charges involved.  This can be done by considering the charges so small that they can be approximated as a continuous distribution of charges.
 %
@@ -100,47 +104,47 @@ This can be done by introducing the concept of a continuous charge distribution 
 The charge that is in a small differential volume element \( dV' \) is \( \rho(\Br') dV' \), and
 the superposition has the form
 %
-\begin{dmath}\label{eqn:emtLecture3:140}
+\begin{equation}\label{eqn:emtLecture3:140}
 \BE
 = \frac{1}{4 \pi \epsilon_0} \iiint dV' \rho_\txtv(\Br') \frac{\Br - \Br'}{\Abs{\Br - \Br'}^3},
-\end{dmath}
+\end{equation}
 %
 with potential
 %
-\begin{dmath}\label{eqn:emtLecture3:160}
+\begin{equation}\label{eqn:emtLecture3:160}
 V
 = \frac{1}{4 \pi \epsilon_0} \iiint dV' \frac{\rho_\txtv(\Br')}{\Abs{\Br - \Br'}}.
-\end{dmath}
+\end{equation}
 %
 \index{surface charge density}
 The surface charge density analogue is
 %
-\begin{dmath}\label{eqn:emtLecture3:180}
+\begin{equation}\label{eqn:emtLecture3:180}
 \BE
 = \frac{1}{4 \pi \epsilon_0} \iint dA' \rho_\txts(\Br') \frac{\Br - \Br'}{\Abs{\Br - \Br'}^3},
-\end{dmath}
+\end{equation}
 %
 with potential
 %
 \index{potential!electric}
-\begin{dmath}\label{eqn:emtLecture3:200}
+\begin{equation}\label{eqn:emtLecture3:200}
 V
 = \frac{1}{4 \pi \epsilon_0} \iint dA' \frac{\rho_\txts(\Br')}{\Abs{\Br - \Br'}}.
-\end{dmath}
+\end{equation}
 %
 The line charge density analogue is
 %
-\begin{dmath}\label{eqn:emtLecture3:220}
+\begin{equation}\label{eqn:emtLecture3:220}
 \BE
 = \frac{1}{4 \pi \epsilon_0} \int dl' \rho_\txtl(\Br') \frac{\Br - \Br'}{\Abs{\Br - \Br'}^3},
-\end{dmath}
+\end{equation}
 %
 with potential
 %
-\begin{dmath}\label{eqn:emtLecture3:240}
+\begin{equation}\label{eqn:emtLecture3:240}
 V
 = \frac{1}{4 \pi \epsilon_0} \int dl' \frac{\rho_\txtl(\Br')}{\Abs{\Br - \Br'}}.
-\end{dmath}
+\end{equation}
 %
 The difficulty with any of these approaches is the charge density is hardly ever known.  When the charge density is known, this sorts of integrals may not be analytically calculable, but they do yield to numeric calculation.
 %
@@ -161,14 +165,16 @@ An equal charge dipole configuration is sketched in \cref{fig:dipoleSignConventi
 \end{equation}
 %
 The electric field is
-\begin{dmath}\label{eqn:emtLecture3:300}
+\begin{equation}\label{eqn:emtLecture3:300}
+\begin{aligned}
 \BE
-= \frac{q}{4 \pi \epsilon_0} \lr{
+&= \frac{q}{4 \pi \epsilon_0} \lr{
 \frac{\Br_1}{r_1^3} - \frac{\Br_2}{r_2^3} }
-=
+\\ &=
 \frac{q}{4 \pi \epsilon_0} \lr{
 \frac{\Br - \Bd/2}{\Abs{\Br - \Bd/2}^3} - \frac{\Br + \Bd/2}{\Abs{\Br + \Bd/2}^3} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 For \( r \gg \Abs{\Bd} \), this can be reduced using the normal first order reduction techniques, left to an exercise.
 % (homework question).
@@ -177,22 +183,22 @@ For \( r \gg \Abs{\Bd} \), this can be reduced using the normal first order redu
 %
 This is essentially requires an expansion of
 %
-\begin{dmath}\label{eqn:emtLecture3:320}
+\begin{equation}\label{eqn:emtLecture3:320}
 \Abs{\Br \pm \Bd/2}^{-3/2} = \lr{
 (\Br \pm \Bd/2) \cdot (\Br \pm \Bd/2) }^{-3/2}.
-\end{dmath}
+\end{equation}
 %
 The final result with \( \Bp = q \Bd \) (the dipole moment) can be found to be
 %
-\begin{dmath}\label{eqn:emtLecture3:340}
+\begin{equation}\label{eqn:emtLecture3:340}
 \BE
 = \frac{1}{4 \pi \epsilon_0 r^3} \lr{ 3 \frac{\Br \cdot \Bp }{r^2} \Br - \Bp }
-\end{dmath}
+\end{equation}
 %
 With \( \Bp = q \zcap \), we have spherical coordinates for the observation point, and Cartesian for the dipole moment.  To convert the moment to spherical we can use
 %
 \index{spherical coordinates!rotation matrix}
-\begin{dmath}\label{eqn:emtLecture3:360}
+\begin{equation}\label{eqn:emtLecture3:360}
 \begin{bmatrix}
 A_r \\
 A_\theta \\
@@ -209,11 +215,11 @@ A_x \\
 A_y \\
 A_z
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 %
 All such rotation matrices can be found in the appendix of \citep{balanis1989advanced} for example.  For the dipole vector this gives
 %
-\begin{dmath}\label{eqn:emtLecture3:380}
+\begin{equation}\label{eqn:emtLecture3:380}
 \begin{bmatrix}
 p_r \\
 p_\theta \\
@@ -225,7 +231,7 @@ p_\phi
 -\sin\theta p \\
 0
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 %
 or
 \begin{equation}\label{eqn:emtLecture3:400}
@@ -233,18 +239,18 @@ or
 \end{equation}
 %
 Plugging in this eventually gives
-\begin{dmath}\label{eqn:emtLecture3:420}
+\begin{equation}\label{eqn:emtLecture3:420}
 \BE = \frac{p}{4 \pi \epsilon_0 r^3} \lr{ 2 \cos\theta \rcap + \sin\theta \thetacap },
-\end{dmath}
+\end{equation}
 %
 where \( \Abs{\Br} = r \).
 %
 It will be left to a problem to show that
 the potential for an electric dipole is given by
 %
-\begin{dmath}\label{eqn:emtLecture3:440}
+\begin{equation}\label{eqn:emtLecture3:440}
 V = \frac{\Bp \cdot \rcap}{4 \pi \epsilon_0 r^2 }.
-\end{dmath}
+\end{equation}
 %
 Observe that the dipole field drops off faster than the field for a single electric charge.  This is true generally, with quadrupole and higher order moments dropping off faster as the degree is increased.
 %
@@ -264,9 +270,9 @@ Consider, for example, a capacitor using glass as a dielectric.  The charges are
 \index{polarization}
 How many materials behave is largely determined by electric dipole effects.  In particular, the polarization \( \BP \) can be considered the density of electric dipoles.
 %
-\begin{dmath}\label{eqn:emtLecture3:260}
+\begin{equation}\label{eqn:emtLecture3:260}
 \BP = \lim_{\Delta v' \rightarrow 0} \sum_k^{N \Delta v'} \frac{\Bp_k}{\Delta v'},
-\end{dmath}
+\end{equation}
 %
 \index{number density}
 where \( N \) is the number density in the volume at that point, and \( \Delta v' \) is the differential volume element.
@@ -283,46 +289,50 @@ In particular, when the electron cloud density of a material is not symmetric, a
 %
 As the volume shrinks to zero, the dipole moment can be expressed as
 %
-\begin{dmath}\label{eqn:emtLecture3:460}
+\begin{equation}\label{eqn:emtLecture3:460}
 \BP = \frac{d\Bp}{dv}.
-\end{dmath}
+\end{equation}
 %
 \index{dipole!elemental}
 For an elemental dipole \( d\Bp = \BP dv' \), the contribution to the potential is
 %
-\begin{dmath}\label{eqn:emtLecture3:480}
+\begin{equation}\label{eqn:emtLecture3:480}
+\begin{aligned}
 dV
-= \frac{d \Bp \cdot \rcap}{4 \pi \epsilon_0 R^2}
-= \frac{\BP \cdot \rcap}{4 \pi \epsilon_0 R^2} dv'
-\end{dmath}
+&= \frac{d \Bp \cdot \rcap}{4 \pi \epsilon_0 R^2}
+\\ &= \frac{\BP \cdot \rcap}{4 \pi \epsilon_0 R^2} dv'
+\end{aligned}
+\end{equation}
 %
 Since
 %
-\begin{dmath}\label{eqn:emtLecture3:500}
+\begin{equation}\label{eqn:emtLecture3:500}
 \spacegrad' \inv{R} = \frac{\rcap}{R^2},
-\end{dmath}
+\end{equation}
 %
 this can be written as
 %
-\begin{dmath}\label{eqn:emtLecture3:520}
+\begin{equation}\label{eqn:emtLecture3:520}
+\begin{aligned}
 V
-=
+&=
 \inv{4 \pi \epsilon_0 }
 \int_{v'} dv' \BP \cdot \spacegrad' \inv{R}
-=
+\\ &=
 \inv{4 \pi \epsilon_0 }
 \int_{v'} dv' \spacegrad' \cdot \frac{\BP}{R}
 -
 \inv{4 \pi \epsilon_0 }
 \int_{v'} dv' \frac{\spacegrad' \cdot \BP}{R}
-=
+\\ &=
 \inv{4 \pi \epsilon_0 }
 \lr{
 \oint_{S'} ds' \ncap \cdot \frac{\BP}{R}
 -
 \int_{v'} dv' \frac{\spacegrad' \cdot \BP}{R}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Looking back to the potentials in their volume density \cref{eqn:emtLecture3:160}
 and surface charge density \cref{eqn:emtLecture3:180}
@@ -345,51 +355,55 @@ Dropping primes, these are respectively
 %
 Recall that in Maxwell's equations for the vacuum we have
 %
-\begin{dmath}\label{eqn:emtLecture3:640}
+\begin{equation}\label{eqn:emtLecture3:640}
 \spacegrad \cdot \BE = \frac{\rho_\txtv}{\epsilon_0}.
-\end{dmath}
+\end{equation}
 %
 Here \( \rho_\txtv \) represents ``free'' charge density.  Adding in potential bound charges we have
-\begin{dmath}\label{eqn:emtLecture3:660}
-\spacegrad \cdot \BE =
+\begin{equation}\label{eqn:emtLecture3:660}
+\begin{aligned}
+\spacegrad \cdot \BE &=
 \frac{\rho_\txtv}{\epsilon_0}
 +
 \frac{\rho_{\txtv\txtP}}{\epsilon_0}
-=
+\\ &=
 \frac{\rho_\txtv}{\epsilon_0}
 -
 \frac{\spacegrad \cdot \BP}{\epsilon_0}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 %
 Rearranging we can write
-\begin{dmath}\label{eqn:emtLecture3:680}
+\begin{equation}\label{eqn:emtLecture3:680}
 \spacegrad \cdot \lr{ \epsilon_0 \BE + \BP } = \rho_\txtv.
-\end{dmath}
+\end{equation}
 %
 \index{Gauss's law!matter}
 This finally justifies the Maxwell equation
-\begin{dmath}\label{eqn:emtLecture3:700}
+\begin{equation}\label{eqn:emtLecture3:700}
 \spacegrad \cdot \BD = \rho_\txtv,
-\end{dmath}
+\end{equation}
 %
 where \( \BD = \epsilon_0 \BE + \BP \).
 %
 Assuming a relationship between the polarization vector and the electric field of the form
 %
-\begin{dmath}\label{eqn:emtLecture3:720}
+\begin{equation}\label{eqn:emtLecture3:720}
 \BP = \epsilon_0 \chi_e \BE,
-\end{dmath}
+\end{equation}
 %
 possibly a tensor relationship.  The bound charges in the material are seen to related the displacement current and the electric field
 %
-\begin{dmath}\label{eqn:emtLecture3:740}
+\begin{equation}\label{eqn:emtLecture3:740}
+\begin{aligned}
 \BD
-= \epsilon_0 \BE + \BP
-= \epsilon_0 \BE + \epsilon_0 \chi_e \BE,
-= \epsilon_0 \lr{ 1 + \chi_e } \BE,
-= \epsilon_0 \epsilon_r \BE,
-= \epsilon \BE.
-\end{dmath}
+&= \epsilon_0 \BE + \BP
+\\ &= \epsilon_0 \BE + \epsilon_0 \chi_e \BE,
+\\ &= \epsilon_0 \lr{ 1 + \chi_e } \BE,
+\\ &= \epsilon_0 \epsilon_r \BE,
+\\ &= \epsilon \BE.
+\end{aligned}
+\end{equation}
 
 Question: Think about why do we ignore the surface charges here?   Answer: we are not considering boundaries... they are at infinity.
 %
