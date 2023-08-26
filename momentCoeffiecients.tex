@@ -341,7 +341,7 @@ q_{1, 0} r Y_{1,0}(\theta, \phi)
 %
 \begin{equation}\label{eqn:momentCoeffiecients:600}
 \begin{aligned}
-2 \Real q_{22} r^2 Y_{22}(\theta, \phi)
+2 &\Real q_{22} r^2 Y_{22}(\theta, \phi) \\
 &= 2 \frac{15}{32 \pi} \int d^3 x' \rho(\Bx') \Real \lr{
 (x' - i y')^2
 (x + i y)^2
@@ -375,12 +375,12 @@ The dipole term of the potential is
 %
 \begin{equation}\label{eqn:momentCoeffiecients:660}
 \begin{aligned}
-\inv{ 4 \pi \epsilon_0 } \frac{4 \pi}{3 r^3}
+&\inv{ 4 \pi \epsilon_0 } \frac{4 \pi}{3 r^3}
 \lr{
 \frac{3}{4 \pi} \int d^3 x' \rho(\Bx') \lr{ x x' + y y' }
 +
 \frac{3}{4 \pi} \int d^3 x' \rho(\Bx') z' z
-}
+} \\
 &=
 \inv{ 4 \pi \epsilon_0 r^3}
 \Bx \cdot \int d^3 x' \rho(\Bx') \Bx'
@@ -476,10 +476,11 @@ y^2 &\lr{
 %
 The quadrupole sum can now be written as
 \begin{equation}\label{eqn:momentCoeffiecients:720}
-\inv{2}
+\begin{aligned}
+&\inv{2}
 \inv{ 4 \pi \epsilon r^5 }
-\int d^3 x' \rho(\Bx')
-\biglr{
+\int d^3 x' \rho(\Bx') \\
+&\quad\biglr{
 x^2 \lr{ 3 (x')^2 - (r')^2 }
 +y^2 \lr{ 3 (y')^2 - (r')^2 }
 +z^2 \lr{ 3 (z')^2 - (r')^2 }
@@ -493,6 +494,7 @@ x y x' y'
 +z y z' y'
 }
 },
+\end{aligned}
 \end{equation}
 %
 which is precisely \cref{eqn:momentCoeffiecients:120}, the quadrupole potential stated in the text and class notes.
