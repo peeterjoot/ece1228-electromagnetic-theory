@@ -171,7 +171,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
          \partial_\rho ( \rho A_\phi ) - \partial_\phi A_\rho
       }
    } 
-\\&\quad
+\\
+&\quad
    - \partial_z \lr{
       \partial_z A_\rho -\partial_\rho A_z
    }
@@ -181,7 +182,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \partial_\rho \lr{ \frac{1}{\rho} \partial_\phi A_\phi}
 + \partial_{\rho z} A_z
 - \inv{\rho^2}\partial_{\phi \rho} ( \rho A_\phi )
-\\&\quad
+\\
+&\quad
 + \inv{\rho^2}\partial_{\phi\phi} A_\rho
 + \partial_{zz} A_\rho
 - \partial_{z\rho} A_z
@@ -191,7 +193,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \partial_{zz} A_\rho
 - \frac{1}{\rho^2} \partial_\phi A_\phi
 + \frac{1}{\rho} \partial_{\rho\phi} A_\phi
-\\&\quad
+\\
+&\quad
 - \inv{\rho^2}\partial_{\phi} A_\phi
 - \inv{\rho}\partial_{\phi\rho} A_\phi
 \\ &=
@@ -216,7 +219,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 \lr{
    \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
 }
-\\&\quad
+\\
+&\quad
 -
 \lr{
    \lr{
@@ -234,7 +238,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho}\partial_{\phi z} A_z
 - \inv{\rho} \partial_{z\phi} A_z
 + \partial_{z z} A_\phi
-\\&\quad
+\\
+&\quad
 +\partial_\rho \lr{ \inv{\rho} \partial_\rho ( \rho A_\phi ) }
 - \partial_\rho \lr{ \inv{\rho} \partial_\phi A_\rho}
 \\ &=
@@ -243,7 +248,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \partial_{z z} A_\phi
 %
 + \inv{\rho^2} \partial_{\phi\rho} (\rho A_\rho)
-\\&\quad
+\\
+&\quad
 + \inv{\rho}\partial_{\phi z} A_z
 - \inv{\rho} \partial_{z\phi} A_z
 - \partial_\rho \lr{ \inv{\rho} \partial_\phi A_\rho}
@@ -254,7 +260,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 %
 + \inv{\rho^2} \partial_{\phi} A_\rho
 + \inv{\rho} \partial_{\phi\rho} A_\rho
-\\&\quad
+\\
+&\quad
 + \inv{\rho^2} \partial_\phi A_\rho
 - \inv{\rho} \partial_{\rho\phi} A_\rho
 \\ &=
@@ -282,11 +289,13 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
    \inv{\rho} \partial_\rho (\rho A_\rho) + \frac{1}{\rho} \partial_\phi A_\phi + \partial_z A_z
 }
 -
-\inv{\rho} \lr{
+\inv{\rho} \Biglr{
    \partial_\rho \lr{ \rho \lr{
          \partial_z A_\rho -\partial_\rho A_z
       }
    }
+\\
+&\quad
  - \partial_\phi \lr{
       \inv{\rho} \partial_\phi A_z - \partial_z A_\phi
    }
@@ -297,6 +306,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \partial_{zz} A_z
 - \inv{\rho}\partial_\rho \lr{ \rho \partial_z A_\rho }
 + \inv{\rho}\partial_\rho \lr{ \rho \partial_\rho A_z }
+\\
+&\quad
 + \inv{\rho^2} \partial_{\phi\phi} A_z
 - \inv{\rho} \partial_{\phi z} A_\phi
 \\ &=
@@ -307,6 +318,8 @@ Should we want to, it is now possible to evaluate the Laplacian of \( \BA \) usi
 + \inv{\rho} \partial_{z} A_\rho
 +\partial_{z\rho} A_\rho
 + \frac{1}{\rho} \partial_{z\phi} A_\phi
+\\
+&\quad
 - \inv{\rho}\partial_z A_\rho
 - \partial_{\rho z} A_\rho
 - \inv{\rho} \partial_{\phi z} A_\phi
@@ -352,6 +365,8 @@ Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 =
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
 + \frac{\phicap}{\rho} \partial_\phi
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
+\\
+&\quad
 + \zcap \partial_z
 \lr{ \rhocap \partial_\rho \psi + \frac{\phicap}{\rho} \partial_\phi \psi + \zcap \partial_z \psi }
 \\ &=
@@ -360,6 +375,8 @@ Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 =
 + \rhocap \zcap \partial_{\rho z} \psi
 + \frac{\phicap}{\rho} \partial_\phi \lr{ \rhocap \partial_\rho \psi }
 + \frac{\phicap}{\rho} \partial_\phi \lr{ \frac{\phicap}{\rho} \partial_\phi \psi }
+\\
+&\quad
 + \frac{\phicap \zcap }{\rho} \partial_{\phi z} \psi
 + \zcap \rhocap \partial_{z\rho} \psi
 + \frac{\zcap \phicap}{\rho} \partial_{z\phi} \psi
@@ -370,6 +387,8 @@ Let's check that explicitly.  Here I use the vector product where \( \rhocap^2 =
 + \frac{1}{\rho^2} \partial_{\phi \phi} \psi
 + \partial_{zz} \psi
 %
+\\
+&\quad
 + \rhocap \phicap
 \lr{
    -\frac{1}{\rho^2} \partial_\phi \psi

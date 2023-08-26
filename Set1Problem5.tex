@@ -90,6 +90,8 @@ Using this relation and proceeding with a few applications of the chain rule, pl
 \\ &=
 -\spacegrad \int_V dV' \spacegrad' \cdot \frac{ \BM(\Bx') }{\Norm{\Bx - \Bx'}}
 +\spacegrad \int_V dV' \frac{ \spacegrad' \cdot \BM(\Bx')}{\Norm{\Bx - \Bx'}}
+\\
+&\quad
 +\spacegrad \cross \int_V dV' \spacegrad' \cross \frac{\BM(\Bx')}{\Norm{\Bx - \Bx'}}
 -\spacegrad \cross \int_V dV' \frac{ \spacegrad' \cross \BM(\Bx')}{\Norm{\Bx - \Bx'}}
 %\\ &=
