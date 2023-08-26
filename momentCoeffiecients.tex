@@ -240,19 +240,23 @@ d^3 x'
 In particular, for \( m \ne 0 \)
 %
 \begin{equation}\label{eqn:momentCoeffiecients:320}
-(r')^l Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi)
-+ (r')^l Y_{l, -m}^\conj (\theta', \phi') r^l Y_{l, -m}(\theta, \phi)
-=
+\begin{aligned}
+(r')^l &Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi)
++ (r')^l Y_{l, -m}^\conj (\theta', \phi') r^l Y_{l, -m}(\theta, \phi) \\
+&=
 (r')^l Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi)
 + (r')^l Y_{l, m} (\theta', \phi') r^l Y_{l, m}^\conj(\theta, \phi) ,
+\end{aligned}
 \end{equation}
 %
 or
 \begin{equation}\label{eqn:momentCoeffiecients:340}
-(r')^l Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi)
-+ (r')^l Y_{l, -m}^\conj (\theta', \phi') r^l Y_{l, -m}(\theta, \phi)
-=
+\begin{aligned}
+(r')^l &Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi)
++ (r')^l Y_{l, -m}^\conj (\theta', \phi') r^l Y_{l, -m}(\theta, \phi) \\
+&=
 2 \Real \lr{ (r')^l Y_{l, m}^\conj (\theta', \phi') r^l Y_{l, m}(\theta, \phi) }.
+\end{aligned}
 \end{equation}
 %
 To verify the quadrupole expansion formula in a compact way it is helpful to compute some intermediate results.
@@ -479,10 +483,10 @@ The quadrupole sum can now be written as
 \begin{aligned}
 &\inv{2}
 \inv{ 4 \pi \epsilon r^5 }
-\int d^3 x' \rho(\Bx') \\
-&\quad\biglr{
+\int d^3 x' \rho(\Bx') \Biglr{
 x^2 \lr{ 3 (x')^2 - (r')^2 }
-+y^2 \lr{ 3 (y')^2 - (r')^2 }
++y^2 \lr{ 3 (y')^2 - (r')^2 } \\
+&\quad
 +z^2 \lr{ 3 (z')^2 - (r')^2 }
 +
 3 \lr{
