@@ -381,7 +381,7 @@ which can be factored as
 The bivector grade of \( \spacegrad \BA \) is the bivector curl
 \begin{equation}\label{eqn:sphericalLaplacian:480}
 \begin{aligned}
-\spacegrad \wedge \BA
+&\spacegrad \wedge \BA \\
 &=
 \lr{
    \rcap \thetacap \partial_r A_\theta + \rcap \phicap \partial_r A_\phi
@@ -391,6 +391,8 @@ The bivector grade of \( \spacegrad \BA \) is the bivector curl
    \thetacap (-\rcap) A_\theta
    +\thetacap \rcap \partial_\theta A_r + \thetacap \phicap \partial_\theta A_\phi
 }
+\\
+&\quad
 +
 \frac{1}{r S_\theta}
 \lr{
@@ -406,6 +408,8 @@ The bivector grade of \( \spacegrad \BA \) is the bivector curl
     \rcap \thetacap A_\theta
    -\rcap \thetacap \partial_\theta A_r + \thetacap \phicap \partial_\theta A_\phi
 }
+\\
+&\quad
 +
 \frac{1}{r S_\theta}
 \lr{
@@ -427,6 +431,8 @@ The bivector grade of \( \spacegrad \BA \) is the bivector curl
       + \partial_\phi A_r
    }
 }
+\\
+&\quad
 +\rcap \thetacap \lr{
      \partial_r A_\theta
    + \frac{1}{r} A_\theta
@@ -442,6 +448,8 @@ I
    \frac{1}{r S_\theta} \partial_\phi A_r
    -\inv{r} \partial_r (r A_\phi)
 }
+\\
+&\quad
 + I \phicap \lr{
      \inv{r} \partial_r (r A_\theta)
    - \inv{r} \partial_\theta A_r
@@ -449,7 +457,6 @@ I
 \end{aligned}
 \end{equation}
 This gives
-%\begin{equation}\label{eqn:sphericalLaplacian:500}
 \boxedEquation{eqn:sphericalLaplacian:520}{
 \begin{aligned}
 \spacegrad \cross \BA
@@ -468,7 +475,6 @@ This gives
    }.
 \end{aligned}
 }
-%\end{equation}
 This and the divergence result above both check against the back cover of \citep{jackson1975cew}.
 \paragraph{Laplacian.}
 Using the divergence and curl it's possible to compute the Laplacian from those, but we saw in cylindrical coordinates that it was much harder to do it that way than to do it directly.
@@ -557,9 +563,9 @@ All the bivector factors are expected to cancel out, but this should be checked.
 and those with a \( \thetacap \phicap \) factor are
 \begin{equation}\label{eqn:sphericalLaplacian:580}
 \begin{aligned}
-\frac{1}{r^2} \partial_{\theta} \lr{ \frac{1}{S_\theta} \partial_{\phi} \psi }
+\frac{1}{r^2} &\partial_{\theta} \lr{ \frac{1}{S_\theta} \partial_{\phi} \psi }
    - \frac{1}{r^2 S_\theta} \partial_{\phi\theta} \psi
-   + \frac{1}{r^2 S_\theta^2} C_\theta \partial_{\phi} \psi
+   + \frac{1}{r^2 S_\theta^2} C_\theta \partial_{\phi} \psi \\
 &=
    - \frac{1}{r^2} \frac{C_\theta}{S_\theta^2} \partial_{\phi} \psi
    + \frac{1}{r^2 S_\theta} \partial_{\theta \phi} \psi
@@ -571,9 +577,9 @@ and those with a \( \thetacap \phicap \) factor are
 and those with a \( \phicap \rcap \) factor are
 \begin{equation}\label{eqn:sphericalLaplacian:600}
 \begin{aligned}
-- \inv{S_\theta} \partial_r \lr{ \inv{r} \partial_\phi \psi }
+- \inv{S_\theta} &\partial_r \lr{ \inv{r} \partial_\phi \psi }
    + \frac{1}{r S_\theta} \partial_{\phi r} \psi
-   - \frac{1}{r^2 S_\theta^2} S_\theta \partial_{\phi} \psi
+   - \frac{1}{r^2 S_\theta^2} S_\theta \partial_{\phi} \psi \\
 &=
      \inv{S_\theta} \frac{1}{r^2} \partial_\phi \psi
    - \inv{r S_\theta} \partial_{r \phi} \psi
